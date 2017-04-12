@@ -1,0 +1,1074 @@
+{
+  "name" : "Sonar C#",
+  "patterns" : [ {
+    "patternId" : "S3603",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1699",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2223",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3234",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3459",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S108",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1206",
+    "level" : "Info",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3604",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3626",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1697",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S101",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1854",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1172",
+    "level" : "Warning",
+    "category" : "UnusedCode",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3903",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3217",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S104",
+    "level" : "Warning",
+    "category" : "Complexity",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2386",
+    "level" : "Info",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S927",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3256",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1226",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S105",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1227",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1301",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1481",
+    "level" : "Info",
+    "category" : "UnusedCode",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2674",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S107",
+    "level" : "Warning",
+    "category" : "Complexity",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2743",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2758",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S818",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1116",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1210",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2342",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1848",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3052",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2995",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2681",
+    "level" : "Warning",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3264",
+    "level" : "Warning",
+    "category" : "UnusedCode",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3456",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3257",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3440",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3246",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2583",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2971",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1155",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2952",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3532",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2326",
+    "level" : "Warning",
+    "category" : "UnusedCode",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3240",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2339",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3249",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1309",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2070",
+    "level" : "Error",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3215",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2225",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2346",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2197",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S131",
+    "level" : "Error",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3885",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2761",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2933",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1117",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2184",
+    "level" : "Info",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S126",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3450",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3244",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S103",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2931",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1134",
+    "level" : "Warning",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3610",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2372",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3263",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1541",
+    "level" : "Error",
+    "category" : "Complexity",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2290",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1109",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2328",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1118",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S112",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1135",
+    "level" : "Info",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2360",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1905",
+    "level" : "Info",
+    "category" : "UnusedCode",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2259",
+    "level" : "Warning",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2234",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3598",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2996",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3877",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3898",
+    "level" : "Warning",
+    "category" : "Performance",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2156",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1698",
+    "level" : "Warning",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3251",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3881",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3872",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3466",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1125",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3397",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3441",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1939",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2930",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2190",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3237",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2486",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1186",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1944",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S125",
+    "level" : "Warning",
+    "category" : "UnusedCode",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2387",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3451",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3444",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3172",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2330",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3254",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2757",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1643",
+    "level" : "Info",
+    "category" : "Performance",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3169",
+    "level" : "Warning",
+    "category" : "Performance",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2688",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1144",
+    "level" : "Warning",
+    "category" : "UnusedCode",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S100",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3010",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3904",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2292",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S121",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3887",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2376",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3443",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3442",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1694",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2333",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2345",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1659",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3262",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3600",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2325",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2306",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S134",
+    "level" : "Error",
+    "category" : "Complexity",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2436",
+    "level" : "Warning",
+    "category" : "Complexity",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3218",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2291",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1104",
+    "level" : "Info",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3457",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2953",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S127",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3926",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3376",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2178",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3902",
+    "level" : "Warning",
+    "category" : "Performance",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2955",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2696",
+    "level" : "Error",
+    "category" : "Performance",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3005",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2551",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3216",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1163",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3597",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2737",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3884",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3889",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1313",
+    "level" : "Warning",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1858",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1185",
+    "level" : "Info",
+    "category" : "UnusedCode",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2219",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3869",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1862",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S110",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2275",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2692",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3265",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2997",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3776",
+    "level" : "Error",
+    "category" : "Complexity",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2760",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1451",
+    "level" : "Error",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1994",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3449",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2228",
+    "level" : "Info",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3445",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2344",
+    "level" : "Info",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1145",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1006",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1215",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1066",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3447",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1656",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1121",
+    "level" : "Warning",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3458",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3241",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1764",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1067",
+    "level" : "Error",
+    "category" : "Complexity",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3247",
+    "level" : "Info",
+    "category" : "Performance",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3880",
+    "level" : "Warning",
+    "category" : "Performance",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3168",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3453",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2201",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3655",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1479",
+    "level" : "Warning",
+    "category" : "Complexity",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2934",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1244",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1449",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2368",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3220",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1940",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S122",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S907",
+    "level" : "Warning",
+    "category" : "CodeStyle",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3236",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2357",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1871",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3897",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3876",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3261",
+    "level" : "Info",
+    "category" : "UnusedCode",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3427",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3235",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S1450",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2278",
+    "level" : "Error",
+    "category" : "Security",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3874",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3875",
+    "level" : "Error",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2437",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3253",
+    "level" : "Info",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S3871",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  }, {
+    "patternId" : "S2123",
+    "level" : "Warning",
+    "category" : "ErrorProne",
+    "languages" : [ "CSharp" ]
+  } ]
+}

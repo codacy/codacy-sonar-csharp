@@ -1,0 +1,643 @@
+[ {
+  "patternId" : "S2757",
+  "title" : "\"=+\" should not be used instead of \"+=\""
+}, {
+  "patternId" : "S3445",
+  "title" : "Exceptions should not be explicitly rethrown"
+}, {
+  "patternId" : "S3216",
+  "title" : "\"ConfigureAwait(false)\" should be used"
+}, {
+  "patternId" : "S1994",
+  "title" : "\"for\" loop incrementers should modify the variable being tested in the loop's stop condition"
+}, {
+  "patternId" : "S2234",
+  "title" : "Parameters should be passed in the correct order"
+}, {
+  "patternId" : "S2692",
+  "title" : "\"IndexOf\" checks should not be for positive numbers"
+}, {
+  "patternId" : "S2436",
+  "title" : "Classes and methods should not have too many generic parameters"
+}, {
+  "patternId" : "S2971",
+  "title" : "\"IEnumerable\" LINQs should be simplified"
+}, {
+  "patternId" : "S3466",
+  "title" : "Optional parameters should be passed to \"base\" calls"
+}, {
+  "patternId" : "S1215",
+  "title" : "\"GC.Collect\" should not be called"
+}, {
+  "patternId" : "S2123",
+  "title" : "Values should not be uselessly incremented"
+}, {
+  "patternId" : "S1313",
+  "title" : "IP addresses should not be hardcoded"
+}, {
+  "patternId" : "S3249",
+  "title" : "Classes directly extending \"object\" should not call \"base\" in \"GetHashCode\" or \"Equals\""
+}, {
+  "patternId" : "S2328",
+  "title" : "\"GetHashCode\" should not reference mutable fields"
+}, {
+  "patternId" : "S1118",
+  "title" : "Utility classes should not have public constructors"
+}, {
+  "patternId" : "S2259",
+  "title" : "Null pointers should not be dereferenced"
+}, {
+  "patternId" : "S3169",
+  "title" : "Multiple \"OrderBy\" calls should not be used"
+}, {
+  "patternId" : "S2290",
+  "title" : "Field-like events should not be virtual"
+}, {
+  "patternId" : "S3440",
+  "title" : "Variables should not be checked against the values they're about to be assigned"
+}, {
+  "patternId" : "S1481",
+  "title" : "Unused local variables should be removed"
+}, {
+  "patternId" : "S2156",
+  "title" : "\"sealed\" classes should not have \"protected\" members"
+}, {
+  "patternId" : "S3447",
+  "title" : "\"[Optional]\" should not be used on \"ref\" or \"out\" parameters"
+}, {
+  "patternId" : "S2934",
+  "title" : "Property assignments should not be made for \"readonly\" fields not constrained to reference types"
+}, {
+  "patternId" : "S131",
+  "title" : "\"switch/Select\" statements should end with \"default/Case Else\" clauses"
+}, {
+  "patternId" : "S3010",
+  "title" : "Static fields should not be updated in constructors"
+}, {
+  "patternId" : "S3241",
+  "title" : "Methods should not return values that are never used"
+}, {
+  "patternId" : "S3442",
+  "title" : "\"abstract\" classes should not have \"public\" constructors"
+}, {
+  "patternId" : "S3776",
+  "title" : "Cognitive Complexity of methods should not be too high"
+}, {
+  "patternId" : "S3427",
+  "title" : "Method overloads with default parameter values should not overlap "
+}, {
+  "patternId" : "S3897",
+  "title" : "Classes that provide \"Equals(<T>)\" or override \"Equals(Object)\" should implement \"IEquatable<T>\""
+}, {
+  "patternId" : "S2583",
+  "title" : "Expressions should not unconditionally evaluate to \"true\""
+}, {
+  "patternId" : "S1066",
+  "title" : "Collapsible \"if\" statements should be merged"
+}, {
+  "patternId" : "S110",
+  "title" : "Inheritance tree of classes should not be too deep"
+}, {
+  "patternId" : "S1117",
+  "title" : "Local variables should not shadow class fields"
+}, {
+  "patternId" : "S2931",
+  "title" : "Classes with \"IDisposable\" members should implement \"IDisposable\""
+}, {
+  "patternId" : "S1135",
+  "title" : "Track uses of \"TODO\" tags"
+}, {
+  "patternId" : "S2997",
+  "title" : "\"IDisposables\" created in a \"using\" statement should not be returned"
+}, {
+  "patternId" : "S105",
+  "title" : "Tabulation characters should not be used"
+}, {
+  "patternId" : "S1227",
+  "title" : "break statements should not be used except for switch cases"
+}, {
+  "patternId" : "S1479",
+  "title" : "\"switch\" statements should not have too many \"case\" clauses"
+}, {
+  "patternId" : "S3598",
+  "title" : "One-way \"OperationContract\" methods should have \"void\" return type"
+}, {
+  "patternId" : "S2486",
+  "title" : "Generic exceptions should not be ignored"
+}, {
+  "patternId" : "S2278",
+  "title" : "Neither DES (Data Encryption Standard) nor DESede (3DES) should be used"
+}, {
+  "patternId" : "S3254",
+  "title" : "Default parameter values should not be passed as arguments"
+}, {
+  "patternId" : "S2437",
+  "title" : "Silly bit operations should not be performed"
+}, {
+  "patternId" : "S2326",
+  "title" : "Unused type parameters should be removed"
+}, {
+  "patternId" : "S2306",
+  "title" : "\"async\" and \"await\" should not be used as identifiers"
+}, {
+  "patternId" : "S2360",
+  "title" : "Optional parameters should not be used"
+}, {
+  "patternId" : "S2178",
+  "title" : "Short-circuit logic should be used in boolean contexts"
+}, {
+  "patternId" : "S3869",
+  "title" : "\"SafeHandle.DangerousGetHandle\" should not be called"
+}, {
+  "patternId" : "S1905",
+  "title" : "Redundant casts should not be used"
+}, {
+  "patternId" : "S3871",
+  "title" : "Exception types should be \"public\""
+}, {
+  "patternId" : "S2952",
+  "title" : "Classes should \"Dispose\" of members from the classes' own \"Dispose\" methods"
+}, {
+  "patternId" : "S2376",
+  "title" : "Write-only properties should not be used"
+}, {
+  "patternId" : "S2955",
+  "title" : "Generic parameters not constrained to reference types should not be compared to \"null\""
+}, {
+  "patternId" : "S1858",
+  "title" : "\"ToString()\" calls should not be redundant"
+}, {
+  "patternId" : "S1939",
+  "title" : "Inheritance list should not be redundant"
+}, {
+  "patternId" : "S1006",
+  "title" : "Method overrides should not change parameter defaults"
+}, {
+  "patternId" : "S2223",
+  "title" : "Non-constant static fields should not be visible"
+}, {
+  "patternId" : "S2372",
+  "title" : "Exceptions should not be thrown from property getters"
+}, {
+  "patternId" : "S1643",
+  "title" : "Strings should not be concatenated using '+' in a loop"
+}, {
+  "patternId" : "S3215",
+  "title" : "\"interface\" instances should not be cast to concrete types"
+}, {
+  "patternId" : "S1862",
+  "title" : "Related \"if/else if\" statements should not have the same condition"
+}, {
+  "patternId" : "S2184",
+  "title" : "Results of integer division should not be assigned to floating point variables"
+}, {
+  "patternId" : "S134",
+  "title" : "Control flow statements \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\"  and \"try\" should not be nested too deeply"
+}, {
+  "patternId" : "S1172",
+  "title" : "Unused method parameters should be removed"
+}, {
+  "patternId" : "S3235",
+  "title" : "Redundant parentheses should not be used"
+}, {
+  "patternId" : "S3453",
+  "title" : "Classes should not have only \"private\" constructors"
+}, {
+  "patternId" : "S3244",
+  "title" : "Anonymous delegates should not be used to unsubscribe from Events"
+}, {
+  "patternId" : "S3257",
+  "title" : "Declarations and initializations should be as concise as possible"
+}, {
+  "patternId" : "S1541",
+  "title" : "Methods and properties should not be too complex"
+}, {
+  "patternId" : "S1301",
+  "title" : "\"switch\" statements should have at least 3 \"case\" clauses"
+}, {
+  "patternId" : "S3262",
+  "title" : "\"params\" should be used on overrides"
+}, {
+  "patternId" : "S818",
+  "title" : "Literal suffixes should be upper case"
+}, {
+  "patternId" : "S125",
+  "title" : "Sections of code should not be \"commented out\""
+}, {
+  "patternId" : "S1944",
+  "title" : "Inappropriate casts should not be made"
+}, {
+  "patternId" : "S1121",
+  "title" : "Assignments should not be made from within sub-expressions"
+}, {
+  "patternId" : "S2201",
+  "title" : "Return values should not be ignored when function calls don't have any side effects"
+}, {
+  "patternId" : "S2342",
+  "title" : "Enumeration types should comply with a naming convention"
+}, {
+  "patternId" : "S3256",
+  "title" : "\"string.IsNullOrEmpty\" should be used"
+}, {
+  "patternId" : "S2344",
+  "title" : "Enumeration type names should not have \"Flags\" or \"Enum\" suffixes"
+}, {
+  "patternId" : "S2953",
+  "title" : "Methods named \"Dispose\" should implement \"IDisposable.Dispose\""
+}, {
+  "patternId" : "S2190",
+  "title" : "Recursion should not be infinite"
+}, {
+  "patternId" : "S3246",
+  "title" : "Generic type parameters should be co/contravariant when possible"
+}, {
+  "patternId" : "S3451",
+  "title" : "\"[DefaultValue]\" should not be used when \"[DefaultParameterValue]\" is meant"
+}, {
+  "patternId" : "S3005",
+  "title" : "\"ThreadStatic\" should not be used on non-static fields"
+}, {
+  "patternId" : "S1940",
+  "title" : "Boolean checks should not be inverted"
+}, {
+  "patternId" : "S1451",
+  "title" : "Track lack of copyright and license headers"
+}, {
+  "patternId" : "S3459",
+  "title" : "Unassigned members should be removed"
+}, {
+  "patternId" : "S3898",
+  "title" : "Value types should implement \"IEquatable<T>\""
+}, {
+  "patternId" : "S3237",
+  "title" : "\"value\" parameters should be used"
+}, {
+  "patternId" : "S3052",
+  "title" : "Members should not be initialized to default values"
+}, {
+  "patternId" : "S3264",
+  "title" : "Events should be invoked"
+}, {
+  "patternId" : "S2995",
+  "title" : "\"Object.ReferenceEquals\" should not be used for value types"
+}, {
+  "patternId" : "S1854",
+  "title" : "Dead stores should be removed"
+}, {
+  "patternId" : "S101",
+  "title" : "Types should be named in camel case"
+}, {
+  "patternId" : "S3261",
+  "title" : "Namespaces should not be empty"
+}, {
+  "patternId" : "S2228",
+  "title" : "Console logging should not be used"
+}, {
+  "patternId" : "S3603",
+  "title" : "Methods with \"Pure\" attribute should return a value "
+}, {
+  "patternId" : "S3885",
+  "title" : "\"Assembly.Load\" should be used"
+}, {
+  "patternId" : "S2275",
+  "title" : "Composite format strings should not lead to unexpected behavior at runtime"
+}, {
+  "patternId" : "S3597",
+  "title" : "\"ServiceContract\" and \"OperationContract\" attributes should be used together"
+}, {
+  "patternId" : "S104",
+  "title" : "Files should not have too many lines of code"
+}, {
+  "patternId" : "S1698",
+  "title" : "\"==\" should not be used when \"Equals\" is overridden"
+}, {
+  "patternId" : "S3458",
+  "title" : "Empty \"case\" clauses that fall through to the \"default\" should be omitted"
+}, {
+  "patternId" : "S3626",
+  "title" : "Jump statements should not be redundant"
+}, {
+  "patternId" : "S1309",
+  "title" : "Track uses of in-source issue suppressions"
+}, {
+  "patternId" : "S100",
+  "title" : "Methods and properties should be named in camel case"
+}, {
+  "patternId" : "S2346",
+  "title" : "Flags enumerations zero-value members should be named \"None\""
+}, {
+  "patternId" : "S3884",
+  "title" : "\"CoSetProxyBlanket\" and \"CoInitializeSecurity\" should not be used"
+}, {
+  "patternId" : "S3604",
+  "title" : "Member initializer values should not be redundant"
+}, {
+  "patternId" : "S1450",
+  "title" : "Private fields only used as local variables in methods should become local variables"
+}, {
+  "patternId" : "S2219",
+  "title" : "Runtime type checking should be simplified"
+}, {
+  "patternId" : "S3220",
+  "title" : "Method calls should not resolve ambiguously to overloads with \"params\""
+}, {
+  "patternId" : "S1155",
+  "title" : "\"Any()\" should be used to test for emptiness"
+}, {
+  "patternId" : "S3532",
+  "title" : "Empty \"default\" clauses should be removed"
+}, {
+  "patternId" : "S3874",
+  "title" : "\"out\" and \"ref\" parameters should not be used"
+}, {
+  "patternId" : "S3877",
+  "title" : "Exceptions should not be thrown from unexpected methods"
+}, {
+  "patternId" : "S1104",
+  "title" : "Fields should not have public accessibility"
+}, {
+  "patternId" : "S1871",
+  "title" : "Two branches in a conditional structure should not have exactly the same implementation"
+}, {
+  "patternId" : "S1659",
+  "title" : "Multiple variables should not be declared on the same line"
+}, {
+  "patternId" : "S2743",
+  "title" : "Static fields should not be used in generic types"
+}, {
+  "patternId" : "S108",
+  "title" : "Nested blocks of code should not be left empty"
+}, {
+  "patternId" : "S2760",
+  "title" : "Sequential tests should not check the same condition"
+}, {
+  "patternId" : "S1226",
+  "title" : "Method parameters and caught exceptions should not be reassigned"
+}, {
+  "patternId" : "S3881",
+  "title" : "\"IDisposable\" should be implemented correctly"
+}, {
+  "patternId" : "S2225",
+  "title" : "\"ToString()\" method should not return null"
+}, {
+  "patternId" : "S2339",
+  "title" : "Public constant members should not be used"
+}, {
+  "patternId" : "S3926",
+  "title" : "Deserialization methods should be provided for \"OptionalField\" members"
+}, {
+  "patternId" : "S3240",
+  "title" : "The simplest possible condition syntax should be used"
+}, {
+  "patternId" : "S1694",
+  "title" : "An abstract class should have both abstract and concrete methods"
+}, {
+  "patternId" : "S3610",
+  "title" : "Nullable type comparison should not be redundant"
+}, {
+  "patternId" : "S2386",
+  "title" : "Mutable fields should not be \"public static\""
+}, {
+  "patternId" : "S907",
+  "title" : "\"goto\" statement should not be used"
+}, {
+  "patternId" : "S122",
+  "title" : "Statements should be on separate lines"
+}, {
+  "patternId" : "S2737",
+  "title" : "\"catch\" clauses should do more than rethrow"
+}, {
+  "patternId" : "S3253",
+  "title" : "Constructor and destructor declarations should not be redundant"
+}, {
+  "patternId" : "S2674",
+  "title" : "The length returned from a stream read should be checked"
+}, {
+  "patternId" : "S121",
+  "title" : "Control structures should use curly braces"
+}, {
+  "patternId" : "S2333",
+  "title" : "Redundant modifiers should not be used"
+}, {
+  "patternId" : "S3456",
+  "title" : "\"string.ToCharArray()\" should not be called redundantly"
+}, {
+  "patternId" : "S2330",
+  "title" : "Array covariance should not be used"
+}, {
+  "patternId" : "S3875",
+  "title" : "\"operator==\" should not be overloaded on reference types"
+}, {
+  "patternId" : "S2325",
+  "title" : "Methods and properties that don't access instance data should be static"
+}, {
+  "patternId" : "S3168",
+  "title" : "\"async\" methods should not return \"void\""
+}, {
+  "patternId" : "S1163",
+  "title" : "Exceptions should not be thrown in finally blocks"
+}, {
+  "patternId" : "S1144",
+  "title" : "Unused private types or members should be removed"
+}, {
+  "patternId" : "S2758",
+  "title" : "The ternary operator should not return the same value regardless of the condition"
+}, {
+  "patternId" : "S2933",
+  "title" : "Fields that are only assigned in the constructor should be \"readonly\""
+}, {
+  "patternId" : "S1244",
+  "title" : "Floating point numbers should not be tested for equality"
+}, {
+  "patternId" : "S1186",
+  "title" : "Methods should not be empty"
+}, {
+  "patternId" : "S3450",
+  "title" : "Parameters with \"[DefaultParameterValue]\" attributes should also be marked \"[Optional]\""
+}, {
+  "patternId" : "S2681",
+  "title" : "Multiline blocks should be enclosed in curly braces"
+}, {
+  "patternId" : "S3251",
+  "title" : "Implementations should be provided for \"partial\" methods"
+}, {
+  "patternId" : "S3449",
+  "title" : "Right operands of shift operators should be integers"
+}, {
+  "patternId" : "S1109",
+  "title" : "A close curly brace should be located at the beginning of a line"
+}, {
+  "patternId" : "S103",
+  "title" : "Lines should not be too long"
+}, {
+  "patternId" : "S3444",
+  "title" : "Interfaces should not simply inherit from base interfaces with colliding members"
+}, {
+  "patternId" : "S2696",
+  "title" : "Instance members should not write to \"static\" fields"
+}, {
+  "patternId" : "S3172",
+  "title" : "Delegates should not be subtracted"
+}, {
+  "patternId" : "S3889",
+  "title" : "Neither \"Thread.Resume\" nor \"Thread.Suspend\" should be used"
+}, {
+  "patternId" : "S3887",
+  "title" : "Mutable, non-private fields should not be \"readonly\""
+}, {
+  "patternId" : "S1697",
+  "title" : "Short-circuit logic should be used to prevent null pointer dereferences in conditionals"
+}, {
+  "patternId" : "S1185",
+  "title" : "Overriding members should do more than simply call the same member in the base class"
+}, {
+  "patternId" : "S2357",
+  "title" : "Fields should be private"
+}, {
+  "patternId" : "S3903",
+  "title" : "Types should be defined in named namespaces"
+}, {
+  "patternId" : "S3265",
+  "title" : "Non-flags enums should not be used in bitwise operations"
+}, {
+  "patternId" : "S2291",
+  "title" : "Overflow checking should not be disabled for \"Enumerable.Sum\""
+}, {
+  "patternId" : "S2345",
+  "title" : "Flags enumerations should explicitly initialize all their members"
+}, {
+  "patternId" : "S127",
+  "title" : "\"for\" loop stop conditions should be invariant"
+}, {
+  "patternId" : "S1656",
+  "title" : "Variables should not be self-assigned"
+}, {
+  "patternId" : "S2761",
+  "title" : "Doubled prefix operators \"!!\" and \"~~\" should not be used"
+}, {
+  "patternId" : "S3600",
+  "title" : "\"params\" should not be introduced on overrides"
+}, {
+  "patternId" : "S3457",
+  "title" : "Composite format strings should be used correctly"
+}, {
+  "patternId" : "S3441",
+  "title" : "Redundant property names should be omitted in anonymous classes"
+}, {
+  "patternId" : "S1134",
+  "title" : "Track uses of \"FIXME\" tags"
+}, {
+  "patternId" : "S112",
+  "title" : "General exceptions should never be thrown"
+}, {
+  "patternId" : "S2292",
+  "title" : "Trivial properties should be auto-implemented"
+}, {
+  "patternId" : "S3376",
+  "title" : "Attribute, EventArgs, and Exception type names should end with the type being extended"
+}, {
+  "patternId" : "S1116",
+  "title" : "Empty statements should be removed"
+}, {
+  "patternId" : "S2070",
+  "title" : "SHA-1 and Message-Digest hash algorithms should not be used"
+}, {
+  "patternId" : "S1449",
+  "title" : "Culture should be specified for \"string\" operations"
+}, {
+  "patternId" : "S1210",
+  "title" : "\"Equals\" and the comparison operators should be overridden when implementing \"IComparable\""
+}, {
+  "patternId" : "S3218",
+  "title" : "Inner class members should not shadow outer class \"static\" or type members"
+}, {
+  "patternId" : "S3217",
+  "title" : "\"Explicit\" conversions of \"foreach\" loops should not be used"
+}, {
+  "patternId" : "S3880",
+  "title" : "Finalizers should not be empty"
+}, {
+  "patternId" : "S2387",
+  "title" : "Child class fields should not shadow parent class fields"
+}, {
+  "patternId" : "S3872",
+  "title" : "Parameter names should not duplicate the names of their methods"
+}, {
+  "patternId" : "S1848",
+  "title" : "Objects should not be created to be dropped immediately without being used"
+}, {
+  "patternId" : "S107",
+  "title" : "Methods should not have too many parameters"
+}, {
+  "patternId" : "S3655",
+  "title" : "Empty nullable value should not be accessed"
+}, {
+  "patternId" : "S1206",
+  "title" : "\"Equals(Object)\" and \"GetHashCode()\" should be overridden in pairs"
+}, {
+  "patternId" : "S3876",
+  "title" : "Strings or integral types should be used for indexers"
+}, {
+  "patternId" : "S3902",
+  "title" : "\"Assembly.GetExecutingAssembly\" should not be called"
+}, {
+  "patternId" : "S2197",
+  "title" : "Modulus results should not be checked for direct equality"
+}, {
+  "patternId" : "S3234",
+  "title" : "\"GC.SuppressFinalize\" should not be invoked for types without destructors"
+}, {
+  "patternId" : "S1125",
+  "title" : "Boolean literals should not be redundant"
+}, {
+  "patternId" : "S3904",
+  "title" : "Assemblies should have version information"
+}, {
+  "patternId" : "S1067",
+  "title" : "Expressions should not be too complex"
+}, {
+  "patternId" : "S3236",
+  "title" : "Caller information arguments should not be provided explicitly"
+}, {
+  "patternId" : "S1764",
+  "title" : "Identical expressions should not be used on both sides of a binary operator"
+}, {
+  "patternId" : "S2551",
+  "title" : "Types and \"this\" should not be used for locking"
+}, {
+  "patternId" : "S2688",
+  "title" : "\"NaN\" should not be used in comparisons"
+}, {
+  "patternId" : "S1145",
+  "title" : "Useless \"if(true) {...}\" and \"if(false){...}\" blocks should be removed"
+}, {
+  "patternId" : "S3443",
+  "title" : "Type should not be examined on \"System.Type\" instances"
+}, {
+  "patternId" : "S927",
+  "title" : "\"partial\" method parameter names should match"
+}, {
+  "patternId" : "S3397",
+  "title" : "\"base.Equals\" should not be used to check for reference equality in \"Equals\" if \"base\" is not \"object\""
+}, {
+  "patternId" : "S126",
+  "title" : "\"if ... else if\" constructs should end with \"else\" clauses"
+}, {
+  "patternId" : "S2996",
+  "title" : "\"ThreadStatic\" fields should not be initialized"
+}, {
+  "patternId" : "S2930",
+  "title" : "\"IDisposables\" should be disposed"
+}, {
+  "patternId" : "S2368",
+  "title" : "Public methods should not have multidimensional array parameters"
+}, {
+  "patternId" : "S1699",
+  "title" : "Constructors should only call non-overridable methods"
+}, {
+  "patternId" : "S3263",
+  "title" : "Static fields should appear in the order they must be initialized "
+}, {
+  "patternId" : "S3247",
+  "title" : "Duplicate casts should not be made"
+} ]
