@@ -71,15 +71,13 @@ listView.PreviewTextInput -= func;
     <name>Caller information arguments should not be provided explicitly</name>
     <severity>MINOR</severity>
     <cardinality>SINGLE</cardinality>
-    <description><![CDATA[<p>Caller information attributes (<code>CallerFilePathAttribute</code>, <code>CallerLineNumberAttribute</code>, and
-<code>CallerMemberNameAttribute</code>) provide a way to get information about the caller of a method through optional parameters. But the arguments
-for these optional parameters are only generated if they are not explicitly defined in the call. Thus, specifying the argument values defeats the
-purpose of the attributes.</p>
+    <description><![CDATA[<p>Caller information attributes: <code>CallerFilePathAttribute</code> and <code>CallerLineNumberAttribute</code> provide a way to get information
+about the caller of a method through optional parameters. But the arguments for these optional parameters are only generated if they are not
+explicitly defined in the call. Thus, specifying the argument values defeats the purpose of the attributes.</p>
 <h2>Noncompliant Code Example</h2>
 <pre>
 void TraceMessage(string message,
-  [CallerMemberName] string memberName = "",
-  [CallerFilePath] string filePath = "",
+  [CallerFilePath] string filePath = null,
   [CallerLineNumber] int lineNumber = 0)
 {
   /* ... */
@@ -87,13 +85,12 @@ void TraceMessage(string message,
 
 void MyMethod()
 {
-  TraceMessage("my message", "MyMethod"); // Noncompliant
+  TraceMessage("my message", "A.B.C.Foo.cs", 42); // Noncompliant
 }
 </pre>
 <h2>Compliant Solution</h2>
 <pre>
 void TraceMessage(string message,
-  [CallerMemberName] string memberName = "",
   [CallerFilePath] string filePath = "",
   [CallerLineNumber] int lineNumber = 0)
 {
@@ -105,9 +102,10 @@ void MyMethod()
   TraceMessage("my message");
 }
 </pre>
+<h2>Exceptions</h2>
+<p><code>CallerMemberName</code> is not checked to avoid False-Positives with WPF/UWP applications.</p>
 
 ]]></description>
-    <tag>bug</tag>
     <tag>suspicious</tag>
   </rule>
   <rule>
@@ -170,28 +168,6 @@ class Program
 
 ]]></description>
     <tag>pitfall</tag>
-  </rule>
-  <rule>
-    <key>S3885</key>
-    <name>"Assembly.Load" should be used</name>
-    <severity>MAJOR</severity>
-    <cardinality>SINGLE</cardinality>
-    <description><![CDATA[<p>The parameter to <code>Assembly.Load</code> includes the full specification of the dll to be loaded. Use another method, and you might end up with
-a dll other than the one you expected. </p>
-<p>This rule raises an issue when <code>Assembly.LoadFrom</code>, <code>Assembly.LoadFile</code>, or <code>Assembly.LoadWithPartialName</code> is
-called.</p>
-<h2>Noncompliant Code Example</h2>
-<pre>
-static void Main(string[] args)
-{
-    Assembly.LoadFrom(...); // Noncompliant
-    Assembly.LoadFile(...); // Noncompliant
-    Assembly.LoadWithPartialName(...); // Noncompliant + deprecated
-}
-</pre>
-
-]]></description>
-    <tag>unpredictable</tag>
   </rule>
   <rule>
     <key>S1121</key>
@@ -354,6 +330,12 @@ oriented design which has led to systematically use 'inheritance' when for insta
       <type>INTEGER</type>
       <defaultValue>5</defaultValue>
     </param>
+    <param>
+      <key>filteredClasses</key>
+      <description><![CDATA[Classes to be filtered out of the count of inheritance. Depth counting will stop when a filtered class is reached. (String)]]></description>
+      <type>STRING</type>
+      <defaultValue />
+    </param>
   </rule>
   <rule>
     <key>S1764</key>
@@ -383,8 +365,11 @@ if ( a == b || a == b ) // if the first one is true, the second one is too
   doW();
 }
 
-int j = 5 / 5; / /always 1
+int j = 5 / 5; //always 1
 int k = 5 - 5; // always 0
+
+c.Equals(c);    //always true
+Object.Equals(c, c); //always true
 </pre>
 <h2>See</h2>
 <ul>
@@ -620,7 +605,6 @@ catch (Exception exc)
 ]]></description>
     <tag>cwe</tag>
     <tag>error-handling</tag>
-    <tag>bug</tag>
     <tag>suspicious</tag>
   </rule>
   <rule>
@@ -672,12 +656,57 @@ string s = File.ReadAllText(fileName);
     <tag>clumsy</tag>
   </rule>
   <rule>
+    <key>S3928</key>
+    <name>Parameter names used into ArgumentException constructors should match an existing one </name>
+    <severity>MAJOR</severity>
+    <cardinality>SINGLE</cardinality>
+    <description><![CDATA[<p>Some constructors of the <code>ArgumentException</code>, <code>ArgumentNullException</code>, <code>ArgumentOutOfRangeException</code> and
+<code>DuplicateWaitObjectException</code> classes must be fed with a valid parameter name. This rule raises an issue in two cases:</p>
+<ul>
+  <li> When this parameter name doesn't match any existing ones. </li>
+  <li> When a call is made to the default (parameterless) constructor </li>
+</ul>
+<h2>Noncompliant Code Example</h2>
+<pre>
+public void Foo(Bar a, int[] b)
+{
+  throw new ArgumentException(); // Noncompliant
+  throw new ArgumentException("My error message", "c"); // Noncompliant
+  throw new ArgumentException("My error message", "c", innerException); // Noncompliant
+  throw new ArgumentNullException("c"); // Noncompliant
+  throw new ArgumentNullException("My error message", "c"); // Noncompliant
+  throw new ArgumentOutOfRangeException("c");
+  throw new ArgumentOutOfRangeException("c", "My error message"); // Noncompliant
+  throw new ArgumentOutOfRangeException("c", b, "My error message"); // Noncompliant
+}
+</pre>
+<h2>Exceptions</h2>
+<p>The rule won't raise an issue if the parameter name is not a constant value (inline declaration, nameof() or const variable).</p>
+
+]]></description>
+  </rule>
+  <rule>
     <key>S1451</key>
     <name>Track lack of copyright and license headers</name>
     <severity>BLOCKER</severity>
     <cardinality>SINGLE</cardinality>
     <description><![CDATA[<p>Each source file should start with a header stating file ownership and the license which must be used to distribute the application. </p>
 <p>This rule must be fed with the header text that is expected at the beginning of every file.</p>
+<p>The <code>headerFormat</code> must end with an empty line if you want to have an empty line between the file header and the first line for your
+source file (<code>using</code>, <code>namespace</code>...).</p>
+<p>For example, if you want the source file to look like this</p>
+<pre>
+// Copyright (c) SonarSource. All Rights Reserved. Licensed under the LGPL License.  See License.txt in the project root for license information.
+
+namespace Foo
+{
+}
+</pre>
+<p>then the <code>headerFormat</code> parameter should end with an empty line like this</p>
+<pre>
+// Copyright (c) SonarSource. All Rights Reserved. Licensed under the LGPL License.  See License.txt in the project root for license information.
+
+</pre>
 <h2>Compliant Solution</h2>
 <pre>
 /*
@@ -724,7 +753,8 @@ string s = File.ReadAllText(fileName);
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- */</defaultValue>
+ */
+</defaultValue>
     </param>
     <param>
       <key>isRegularExpression</key>
@@ -960,6 +990,9 @@ public class StringUtils
   }
 }
 </pre>
+<h2>Exceptions</h2>
+<p>When class contains <code>public static void main(String[] args)</code> method it is not considered as utility class and will be ignored by this
+rule.</p>
 
 ]]></description>
     <tag>design</tag>
@@ -1511,19 +1544,88 @@ if (b == c)
   </rule>
   <rule>
     <key>S2583</key>
-    <name>Expressions should not unconditionally evaluate to "true"</name>
-    <severity>MINOR</severity>
+    <name>Conditionally executed blocks should be reachable</name>
+    <severity>MAJOR</severity>
     <cardinality>SINGLE</cardinality>
-    <description><![CDATA[<p>If a boolean expression cannot evaluate to anything but <code>true</code>, this expression is completely redundant. From time to time, such useless
-expression can be used on purpose to increase the readability of the code. But such expression deserves to be carefully reviewed to make sure that was
-the initial programmer's intent.</p>
+    <description><![CDATA[<p>Conditional expressions which are always <code>true</code> or <code>false</code> can lead to dead code. Such code is always buggy and should never
+be used in production.</p>
 <h2>Noncompliant Code Example</h2>
 <pre>
-if (a &amp;&amp; b)
+a = false;
+if (a) // Noncompliant
 {
-  if(a)   //a is always true
-  {
-  }
+  DoSomething(); // never executed
+}
+
+if (!a || b) // Noncompliant; "!a" is always "true", "b" is never evaluated
+{
+  DoSomething();
+}
+else
+{
+  DoSomethingElse(); // never executed
+}
+</pre>
+<h2>See</h2>
+<ul>
+  <li> MISRA C:2004, 13.7 - Boolean operations whose results are invariant shall not be permitted. </li>
+  <li> MISRA C:2012, 14.3 - Controlling expressions shall not be invariant </li>
+  <li> <a href="http://cwe.mitre.org/data/definitions/570.html">MITRE, CWE-570</a> - Expression is Always False </li>
+  <li> <a href="http://cwe.mitre.org/data/definitions/571">MITRE, CWE-571</a> - Expression is Always True </li>
+  <li> <a href="https://www.securecoding.cert.org/confluence/x/NYA5">CERT, MSC12-C.</a> - Detect and remove code that has no effect or is never
+  executed </li>
+  <li> <a href="https://www.securecoding.cert.org/confluence/x/SIIyAQ">CERT, MSC12-CPP.</a> - Detect and remove code that has no effect </li>
+</ul>
+
+]]></description>
+    <tag>cwe</tag>
+    <tag>bug</tag>
+    <tag>misra</tag>
+    <tag>cert</tag>
+    <tag>unused</tag>
+    <tag>pitfall</tag>
+  </rule>
+  <rule>
+    <key>S2589</key>
+    <name>Boolean expressions should not be gratuitous</name>
+    <severity>MAJOR</severity>
+    <cardinality>SINGLE</cardinality>
+    <description><![CDATA[<p>If a boolean expression doesn't change the evaluation of the condition, then it is entirely unnecessary, and can be removed. If it is gratuitous
+because it does not match the programmer's intent, then it's a bug and the expression should be fixed.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+a = true;
+if (a) // Noncompliant
+{
+  DoSomething();
+}
+
+if (b &amp;&amp; a) // Noncompliant; "a" is always "true"
+{
+  DoSomething();
+}
+
+if (c || !a) // Noncompliant; "!a" is always "false"
+{
+  DoSomething();
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+a = true;
+if (Foo(a))
+{
+  DoSomething();
+}
+
+if (b)
+{
+  DoSomething();
+}
+
+if (c)
+{
+  DoSomething();
 }
 </pre>
 <h2>See</h2>
@@ -1542,7 +1644,7 @@ if (a &amp;&amp; b)
     <tag>bug</tag>
     <tag>misra</tag>
     <tag>cert</tag>
-    <tag>pitfall</tag>
+    <tag>redundant</tag>
   </rule>
   <rule>
     <key>S2228</key>
@@ -1627,28 +1729,6 @@ public class Child : Parent
     <tag>pitfall</tag>
   </rule>
   <rule>
-    <key>S3869</key>
-    <name>"SafeHandle.DangerousGetHandle" should not be called</name>
-    <severity>BLOCKER</severity>
-    <cardinality>SINGLE</cardinality>
-    <description><![CDATA[<p>Not surprisingly, the <code>SafeHandle.DangerousGetHandle</code> method is dangerous. That's because it may not return a valid handle. Using it can
-lead to leaks and vulnerabilities. While it is possible to use the method successfully, it's extremely difficult to do correctly, so the method should
-simply be avoided altogether.</p>
-<h2>Noncompliant Code Example</h2>
-<pre>
-static void Main(string[] args)
-{
-    System.Reflection.FieldInfo fieldInfo = ...;
-    SafeHandle handle = (SafeHandle)fieldInfo.GetValue(rKey);
-    IntPtr dangerousHandle = handle.DangerousGetHandle();  // Noncompliant
-}
-</pre>
-
-]]></description>
-    <tag>leak</tag>
-    <tag>unpredictable</tag>
-  </rule>
-  <rule>
     <key>S1854</key>
     <name>Dead stores should be removed</name>
     <severity>MAJOR</severity>
@@ -1710,7 +1790,6 @@ void CalculateRate(int a, int b)
     <tag>bug</tag>
     <tag>cert</tag>
     <tag>unused</tag>
-    <tag>suspicious</tag>
   </rule>
   <rule>
     <key>S3903</key>
@@ -1799,20 +1878,20 @@ public class ResourceHolder   // Noncompliant; doesn't implement IDisposable
 <pre>
 public class ResourceHolder : IDisposable
 {
-  private FileStream fs;
-  public void OpenResource(string path)
-  {
-    this.fs = new FileStream(path, FileMode.Open);
-  }
-  public void CloseResource()
-  {
-    this.fs.Close();
-  }
+&nbsp;&nbsp;private FileStream fs;
+&nbsp;&nbsp;public void OpenResource(string path)
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;this.fs = new FileStream(path, FileMode.Open);
+&nbsp;&nbsp;}
+&nbsp;&nbsp;public void CloseResource()
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;this.fs.Close();
+&nbsp;&nbsp;}
 
-  public void Dispose()
-  {
-    this.fs.Dispose();
-  }
+&nbsp;&nbsp;public void Dispose()
+&nbsp;&nbsp;{
+&nbsp;&nbsp;&nbsp;&nbsp;this.fs.Dispose();
+&nbsp;&nbsp;}
 }
 </pre>
 <h2>See</h2>
@@ -2134,14 +2213,169 @@ public class Example
     <tag>performance</tag>
   </rule>
   <rule>
+    <key>S3885</key>
+    <name>"Assembly.Load" should be used</name>
+    <severity>MAJOR</severity>
+    <cardinality>SINGLE</cardinality>
+    <description><![CDATA[<p>The parameter to <code>Assembly.Load</code> includes the full specification of the dll to be loaded. Use another method, and you might end up with
+a dll other than the one you expected. </p>
+<p>This rule raises an issue when <code>Assembly.LoadFrom</code>, <code>Assembly.LoadFile</code>, or <code>Assembly.LoadWithPartialName</code> is
+called.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+static void Main(string[] args)
+{
+    Assembly.LoadFrom(...); // Noncompliant
+    Assembly.LoadFile(...); // Noncompliant
+    Assembly.LoadWithPartialName(...); // Noncompliant + deprecated
+}
+</pre>
+
+]]></description>
+    <tag>unpredictable</tag>
+  </rule>
+  <rule>
+    <key>S3869</key>
+    <name>"SafeHandle.DangerousGetHandle" should not be called</name>
+    <severity>BLOCKER</severity>
+    <cardinality>SINGLE</cardinality>
+    <description><![CDATA[<p>Not surprisingly, the <code>SafeHandle.DangerousGetHandle</code> method is dangerous. That's because it may not return a valid handle. Using it can
+lead to leaks and vulnerabilities. While it is possible to use the method successfully, it's extremely difficult to do correctly, so the method should
+simply be avoided altogether.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+static void Main(string[] args)
+{
+    System.Reflection.FieldInfo fieldInfo = ...;
+    SafeHandle handle = (SafeHandle)fieldInfo.GetValue(rKey);
+    IntPtr dangerousHandle = handle.DangerousGetHandle();  // Noncompliant
+}
+</pre>
+
+]]></description>
+    <tag>leak</tag>
+    <tag>unpredictable</tag>
+  </rule>
+  <rule>
+    <key>S1215</key>
+    <name>"GC.Collect" should not be called</name>
+    <severity>CRITICAL</severity>
+    <cardinality>SINGLE</cardinality>
+    <description><![CDATA[<p>Calling <code>GC.Collect</code> is rarely necessary, and can significantly affect application performance. That's because it triggers a blocking
+operation that examines <em>every object in memory</em> for cleanup. Further, you don't have control over when this blocking cleanup will actually
+run.</p>
+<p>As a general rule, the consequences of calling this method far outweigh the benefits unless perhaps you've just triggered some event that is unique
+in the run of your program that caused a lot of long-lived objects to die.</p>
+<p>This rule raises an issue when <code>GC.Collect</code> is invoked.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+static void Main(string[] args)
+{
+  // ...
+  GC.Collect(2, GCCollectionMode.Optimized); // Noncompliant
+}
+</pre>
+
+]]></description>
+    <tag>performance</tag>
+    <tag>unpredictable</tag>
+    <tag>bad-practice</tag>
+  </rule>
+  <rule>
+    <key>S3971</key>
+    <name>"GC.SuppressFinalize" should not be called</name>
+    <severity>MAJOR</severity>
+    <cardinality>SINGLE</cardinality>
+    <description><![CDATA[<p><code>GC.SuppressFinalize</code> requests that the system not call the finalizer for the specified object. This should only be done when
+implementing <code>Dispose</code> as part of the <a href="https://msdn.microsoft.com/en-us/library/b1yfkh5e.aspx">Dispose Pattern</a>.</p>
+<p>This rule raises an issue when <code>GC.SuppressFinalize</code> is called outside that pattern.</p>
+
+]]></description>
+  </rule>
+  <rule>
+    <key>S3889</key>
+    <name>Neither "Thread.Resume" nor "Thread.Suspend" should be used</name>
+    <severity>BLOCKER</severity>
+    <cardinality>SINGLE</cardinality>
+    <description><![CDATA[<p><code>Thread.Suspend</code> and <code>Thread.Resume</code> can give unpredictable results, and both methods have been deprecated. Indeed, if
+<code>Thread.Suspend</code> is not used very carefully, a thread can be suspended while holding a lock, thus leading to a deadlock. Other safer
+synchronization mechanisms should be used, such as <code>Monitor</code>, <code>Mutex</code>, and <code>Semaphore</code>.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+static void Main(string[] args)
+{
+  // ...
+  Thread.CurrentThread.Suspend(); // Noncompliant
+  Thread.CurrentThread.Resume(); // Noncompliant
+}
+</pre>
+<h2>See</h2>
+<ul>
+  <li> <a href="https://msdn.microsoft.com/en-us/library/system.threading.thread.resume.aspx">Thread.Resume Method ()</a> </li>
+  <li> <a href="https://msdn.microsoft.com/en-us/library/system.threading.thread.suspend(v=vs.110).aspx">Thread.Suspend Method ()</a> </li>
+</ul>
+
+]]></description>
+    <tag>multi-threading</tag>
+    <tag>unpredictable</tag>
+  </rule>
+  <rule>
+    <key>S2365</key>
+    <name>Properties should not make collection or array copies</name>
+    <severity>CRITICAL</severity>
+    <cardinality>SINGLE</cardinality>
+    <description><![CDATA[<p>Most developers expect property access to be as efficient as field access. However, if a property returns a copy of an array or collection, it will
+be much slower than a simple field access, contrary to the caller's likely expectations. Therefore, such properties should be refactored into methods
+so that callers are not surprised by unexpectedly poor performance.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+private List&lt;string&gt; _foo = new List&lt;string&gt; { "a", "b", "c" };
+public IEnumerable&lt;string&gt; Foo  // Noncompliant
+{
+    get
+    {
+        return _foo.ToList();
+    }
+}
+
+private string[] _bar = new string[] { "a", "b", "c" };
+public IEnumerable&lt;string&gt; Bar // Noncompliant
+{
+    get
+    {
+        return (string[])_bar.Clone();
+    }
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+private List&lt;string&gt; _foo = new List&lt;string&gt; { "a", "b", "c" };
+private string[] _bar = new string[] { "a", "b", "c" };
+
+public IEnumerable&lt;string&gt; GetFoo()
+{
+    return _foo.ToList();
+}
+
+public IEnumerable&lt;string&gt; GetBar()
+{
+    return (string[])_bar.Clone();
+}
+</pre>
+
+]]></description>
+    <tag>api-design</tag>
+    <tag>performance</tag>
+  </rule>
+  <rule>
     <key>S3874</key>
     <name>"out" and "ref" parameters should not be used</name>
-    <severity>MAJOR</severity>
+    <severity>CRITICAL</severity>
     <cardinality>SINGLE</cardinality>
     <description><![CDATA[<p>Passing a parameter by reference, which is what happens when you use the <code>out</code> or <code>ref</code> parameter modifiers, means that the
 method will receive a pointer to the argument, rather than the argument itself. If the argument was a value type, the method will be able to change
-the argument's values. If it was a reference type, then the method receives a pointer to a pointer, is is usually not what was intended. Even when it
-is what was intended, this is the sort of thing that's difficult to get right, and should be used with caution.</p>
+the argument's values. If it was a reference type, then the method receives a pointer to a pointer, which is usually not what was intended. Even when
+it is what was intended, this is the sort of thing that's difficult to get right, and should be used with caution.</p>
 <p>This rule raises an issue when <code>out</code> or <code>ref</code> is used on a non-<code>Optional</code> parameter in a public method.
 <code>Optional</code> parameters are covered by S3447.</p>
 <h2>Noncompliant Code Example</h2>
@@ -2379,7 +2613,6 @@ void doSomethingElse()
 </ul>
 
 ]]></description>
-    <tag>bug</tag>
     <tag>misra</tag>
     <tag>cert</tag>
     <tag>unused</tag>
@@ -2387,7 +2620,7 @@ void doSomethingElse()
   <rule>
     <key>S2291</key>
     <name>Overflow checking should not be disabled for "Enumerable.Sum"</name>
-    <severity>MINOR</severity>
+    <severity>CRITICAL</severity>
     <cardinality>SINGLE</cardinality>
     <description><![CDATA[<p><code>Enumerable.Sum()</code> always executes addition in a <code>checked</code> context, so an <code>OverflowException</code> will be thrown if
 the value exceeds <code>MaxValue</code> even if an <code>unchecked</code> context was specified. Using an <code>unchecked</code> context anyway
@@ -2584,7 +2817,7 @@ if (myNumber &lt; 4 || myNumber &gt; 4) // Noncompliant indirect inequality test
   <rule>
     <key>S2197</key>
     <name>Modulus results should not be checked for direct equality</name>
-    <severity>MINOR</severity>
+    <severity>CRITICAL</severity>
     <cardinality>SINGLE</cardinality>
     <description><![CDATA[<p>When the modulus of a negative number is calculated, the result will either be negative or zero. Thus, comparing the modulus of a variable for
 equality with a positive number (or a negative one) could result in unexpected results. </p>
@@ -2620,7 +2853,6 @@ public bool IsOdd(uint x)
 </ul>
 
 ]]></description>
-    <tag>bug</tag>
     <tag>cert</tag>
     <tag>suspicious</tag>
   </rule>
@@ -2662,7 +2894,6 @@ catch (ExceptionType2 exc)
 
 ]]></description>
     <tag>error-handling</tag>
-    <tag>bug</tag>
     <tag>confusing</tag>
   </rule>
   <rule>
@@ -2705,7 +2936,7 @@ derivatives are ignored in event accessors.</p>
   <rule>
     <key>S3871</key>
     <name>Exception types should be "public"</name>
-    <severity>MAJOR</severity>
+    <severity>CRITICAL</severity>
     <cardinality>SINGLE</cardinality>
     <description><![CDATA[<p>The point of having custom exception types is to convey more information than is available in standard types. But custom exception types must be
 <code>public</code> for that to work. </p>
@@ -2731,6 +2962,7 @@ public class MyException : Exception
 
 ]]></description>
     <tag>error-handling</tag>
+    <tag>api-design</tag>
   </rule>
   <rule>
     <key>S1067</key>
@@ -3192,11 +3424,11 @@ class Foo
   </rule>
   <rule>
     <key>S1994</key>
-    <name>"for" loop incrementers should modify the variable being tested in the loop's stop condition</name>
-    <severity>MAJOR</severity>
+    <name>"for" loop increment clauses should modify the loops' counters</name>
+    <severity>CRITICAL</severity>
     <cardinality>SINGLE</cardinality>
-    <description><![CDATA[<p>It is almost always an error when a <code>for</code> loop's stop condition and incrementer don't act on the same variable. Even when it is not, it
-could confuse future maintainers of the code, and should be avoided.</p>
+    <description><![CDATA[<p>It can be extremely confusing when a <code>for</code> loop's counter is incremented outside of its increment clause. In such cases, the increment
+should be moved to the loop's increment clause if at all possible.</p>
 <h2>Noncompliant Code Example</h2>
 <pre>
 for (i = 0; i &lt; 10; j++) // Noncompliant
@@ -3213,8 +3445,7 @@ for (i = 0; i &lt; 10; i++)
 </pre>
 
 ]]></description>
-    <tag>bug</tag>
-    <tag>suspicious</tag>
+    <tag>confusing</tag>
   </rule>
   <rule>
     <key>S3376</key>
@@ -3310,31 +3541,6 @@ if (condition1) // Compliant - depth = 1
       <type>INTEGER</type>
       <defaultValue>3</defaultValue>
     </param>
-  </rule>
-  <rule>
-    <key>S1215</key>
-    <name>"GC.Collect" should not be called</name>
-    <severity>MINOR</severity>
-    <cardinality>SINGLE</cardinality>
-    <description><![CDATA[<p>Calling <code>GC.Collect</code> is rarely necessary, and can significantly affect application performance. That's because it triggers a blocking
-operation that examines <em>every object in memory</em> for cleanup. Further, you don't have control over when this blocking cleanup will actually
-run.</p>
-<p>As a general rule, the consequences of calling this method far outweigh the benefits unless perhaps you've just triggered some event that is unique
-in the run of your program that caused a lot of long-lived objects to die.</p>
-<p>This rule raises an issue when <code>GC.Collect</code> is invoked.</p>
-<h2>Noncompliant Code Example</h2>
-<pre>
-static void Main(string[] args)
-{
-  // ...
-  GC.Collect(2, GCCollectionMode.Optimized); // Noncompliant
-}
-</pre>
-
-]]></description>
-    <tag>performance</tag>
-    <tag>unpredictable</tag>
-    <tag>bad-practice</tag>
   </rule>
   <rule>
     <key>S2934</key>
@@ -3995,23 +4201,20 @@ DoSomething();
     <cardinality>SINGLE</cardinality>
     <description><![CDATA[<p>The <code>IDisposable</code> interface is a mechanism to release unmanaged resources, if not implemented correctly this could result in resource
 leaks or more severe bugs.</p>
-<p>This rule raises an issue when the recommended dispose pattern, as defined by Microsoft, is not adhered to.</p>
-<p>In particular the <code>Dispose()</code> method should only contain the following code:</p>
-<pre>
-public void Dispose()
-{
-    Dispose(true);
-    GC.SuppressFinalize(this);
-}
-</pre>
-<p>Specifically this rule checks for these problems:</p>
+<p>This rule raises an issue when the recommended dispose pattern, as defined by Microsoft, is not adhered to. See the <strong>Compliant
+Solution</strong> section for examples.</p>
+<p>Satisfying the rule's conditions will enable potential derived classes to correctly dispose the members of your class:</p>
 <ul>
-  <li> <code>Dispose()</code> is virtual. </li>
-  <li> <code>Dispose()</code> is not public. </li>
-  <li> An exception is thrown inside <code>Dispose()</code> or <code>Dispose(bool)</code>. </li>
-  <li> This is an unsealed type and <code>Dispose(bool)</code> is not <code>protected virtual</code>. </li>
-  <li> This is an unsealed type and <code>Dispose()</code> doesn't match the implementation above. </li>
-  <li> This is an unsealed type and the finalizer doesn't call <code>Dispose(bool)</code> or the class finalizer. </li>
+  <li> <code>sealed</code> classes are not checked. </li>
+  <li> If a base class implements <code>IDisposable</code> your class should not have <code>IDisposable</code> in the list of its interfaces. In such
+  cases it is recommended to override the base class's <code>protected virtual void Dispose(bool)</code> method or its equivalent. </li>
+  <li> The class should not implement <code>IDisposable</code> explicitly, e.g. the <code>Dispose()</code> method should be public. </li>
+  <li> The class should contain <code>protected virtual void Dispose(bool)</code> method. This method allows the derived classes to correctly dispose
+  the resources of this class. </li>
+  <li> The content of the <code>Dispose()</code> method should be a single invocation of <code>Dispose(true)</code>. </li>
+  <li> If the class has a finalizer, i.e. a destructor, the only code in its body should be a single invocation of <code>Dispose(false)</code>. </li>
+  <li> If the class has a finalizer, an additional call to <code>GC.SuppressFinalize(this)</code> is required in the <code>Dispose()</code> method.
+  </li>
 </ul>
 <h2>Noncompliant Code Example</h2>
 <pre>
@@ -4059,7 +4262,8 @@ public class Foo : IDisposable
 </pre>
 <h2>Compliant Solution</h2>
 <pre>
-public sealed class Foo : IDisposable
+// Sealed class
+public sealed class Foo1 : IDisposable
 {
     public void Dispose()
     {
@@ -4067,7 +4271,22 @@ public sealed class Foo : IDisposable
     }
 }
 
-public class Foo : IDisposable
+// Simple implementation
+public class Foo2 : IDisposable
+{
+    public void Dispose()
+    {
+        Dispose(true);
+    }
+
+    protected virtual void Dispose(bool disposing)
+    {
+        // Cleanup
+    }
+}
+
+// Implementation with a finalizer
+public class Foo3 : IDisposable
 {
     public void Dispose()
     {
@@ -4079,24 +4298,21 @@ public class Foo : IDisposable
     {
         // Cleanup
     }
-}
 
-public class Foo : IDisposable
-{
-    public void Dispose()
-    {
-        Dispose(true);
-        GC.SuppressFinalize(this);
-    }
-
-    protected virtual void Dispose(bool disposing)
-    {
-        // Cleanup
-    }
-
-    ~Foo()
+    ~Foo3()
     {
         Dispose(false);
+    }
+}
+
+// Base disposable class
+public class Foo4 : DisposableBase
+{
+    protected override void Dispose(bool disposing)
+    {
+        // Cleanup
+        // Do not forget to call base
+        base.Dispose(disposing);
     }
 }
 </pre>
@@ -4104,9 +4320,106 @@ public class Foo : IDisposable
 ]]></description>
   </rule>
   <rule>
+    <key>S3925</key>
+    <name>"ISerializable" should be implemented correctly</name>
+    <severity>CRITICAL</severity>
+    <cardinality>SINGLE</cardinality>
+    <description><![CDATA[<p>The <code>ISerializable</code> interface is the mechanism to control the type serialization process. If not implemented correctly this could result
+in an invalid serialization and hard to detect bugs.</p>
+<p>This rules raises an issue on types that implement <code>ISerializable</code> without following the serialization pattern recommended by
+Microsoft.</p>
+<p>Specifically this rule checks for these problems:</p>
+<ul>
+  <li> The <code>System.SerializableAttribute</code> attribute is missing. </li>
+  <li> Non-serializable fields are not marked with the <code>System.NonSerializedAttribute</code> attribute. </li>
+  <li> There is no serialization constructor. </li>
+  <li> An unsealed type has a serialization constructor that is not <code>protected</code>. </li>
+  <li> A sealed type has a serialization constructor that is not <code>private</code>. </li>
+  <li> An unsealed type has a <code>ISerializable.GetObjectData</code> that is not both <code>public</code> and <code>virtual</code>. </li>
+  <li> A derived type has a serialization constructor that does not call the <code>base</code> constructor. </li>
+  <li> A derived type has a <code>ISerializable.GetObjectData</code> method that does not call the <code>base</code> method. </li>
+  <li> A derived type has serializable fields but the <code>ISerializable.GetObjectData</code> method is not overridden. </li>
+</ul>
+<h2>Noncompliant Code Example</h2>
+<pre>
+public class Foo : ISerializable // Noncompliant the [Serializable] attribute is missing
+{
+}
+</pre>
+<p>or</p>
+<pre>
+public class Bar
+{
+}
+
+[Serializable]
+public class Foo : ISerializable // Noncompliant the serialization constructor is missing
+{
+    private readonly Bar bar; // Noncompliant the field is not marked with [NonSerialized]
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+public class Bar
+{
+}
+
+[Serializable]
+public class Foo : ISerializable
+{
+    [NonSerialized]
+    private readonly Bar bar;
+
+    public Foo()
+    {
+        // ...
+    }
+
+    protected Foo(SerializationInfo info, StreamingContext context)
+    {
+        // ...
+    }
+
+    public virtual void GetObjectData(SerializationInfo info, StreamingContext context)
+    {
+        // ...
+    }
+}
+
+[Serializable]
+public sealed class SubFoo : Foo
+{
+    private int val;
+
+    public SubFoo()
+    {
+        // ...
+    }
+
+    private SubFoo(SerializationInfo info, StreamingContext context)
+        : base(info, context)
+    {
+        // ...
+    }
+
+    public override void GetObjectData(SerializationInfo info, StreamingContext context)
+    {
+        base.GetObjectData(info, context);
+        // ...
+    }
+}
+</pre>
+<h2>Exceptions</h2>
+<ul>
+  <li> Classes in test projects are not checked. </li>
+</ul>
+
+]]></description>
+  </rule>
+  <rule>
     <key>S2692</key>
     <name>"IndexOf" checks should not be for positive numbers</name>
-    <severity>MINOR</severity>
+    <severity>CRITICAL</severity>
     <cardinality>SINGLE</cardinality>
     <description><![CDATA[<p>Most checks against an <code>IndexOf</code> value compare it with -1 because 0 is a valid index. Any checks which look for values
 <code>&gt;0</code> ignore the first element, which is likely a bug. If the intent is merely to check inclusion of a value in a <code>string</code>,
@@ -4169,7 +4482,6 @@ if (Array.IndexOf(stringArray, color) &gt;= 0)
 </pre>
 
 ]]></description>
-    <tag>bug</tag>
     <tag>suspicious</tag>
   </rule>
   <rule>
@@ -4297,6 +4609,52 @@ public interface IDerived : IBase1, IBase2
 
 ]]></description>
     <tag>design</tag>
+  </rule>
+  <rule>
+    <key>S3963</key>
+    <name>"static" fields should be initialized inline</name>
+    <severity>MINOR</severity>
+    <cardinality>SINGLE</cardinality>
+    <description><![CDATA[<p>When a <code>static</code> constructor serves no other purpose that initializing <code>static</code> fields, it comes with an unnecessary
+performance cost because the compiler generates a check before each <code>static</code> method or instance constructor invocation.</p>
+<p>Instead, inline initialization is highly recommended.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+namespace myLib
+{
+  public class Foo
+  {
+    static int i;
+    static string s;
+
+    static Foo() // Noncompliant
+    {
+      i = 3;
+      ResourceManager sm =  new ResourceManager("strings", Assembly.GetExecutingAssembly());
+      s = sm.GetString("mystring");
+    }
+  }
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+namespace myLib
+{
+  public class Foo
+  {
+    static int i =3;
+    static string s = InitString();
+
+    static string InitString()
+    {
+      ResourceManager sm = new ResourceManager("strings", Assembly.GetExecutingAssembly());
+      return sm.GetString("mystring");
+    }
+  }
+}
+</pre>
+
+]]></description>
   </rule>
   <rule>
     <key>S2278</key>
@@ -4715,6 +5073,7 @@ class Person
     <description><![CDATA[<p>Overriding a method just to call the same method from the base class without performing any other actions is useless and misleading. The only time
 this is justified is in <code>sealed</code> overriding methods, where the effect is to lock in the parent class behavior. This rule ignores overrides
 of <code>Equals</code> and <code>GetHashCode</code>.</p>
+<p>NOTE: In some cases it might be dangerous to add or remove empty overrides, as they might be breaking changes.</p>
 <h2>Noncompliant Code Example</h2>
 <pre>
 public override void Method() // Noncompliant
@@ -4751,6 +5110,19 @@ public class Derived : Base
       base.Name = value;
     }
   }
+}
+</pre>
+<p>If there is a documentation comment on the overriding method, it will be ignored:</p>
+<pre>
+public class Foo : Bar
+{
+    /// &lt;summary&gt;
+    /// Keep this method for backwards compatibility.
+    /// &lt;/summary&gt;
+    public override void DoSomething()
+    {
+        base.DoSomething();
+    }
 }
 </pre>
 
@@ -5163,7 +5535,7 @@ public void MyMethod([DefaultParameterValue(5)][Optional] int j)
     <name>Unused method parameters should be removed</name>
     <severity>MAJOR</severity>
     <cardinality>SINGLE</cardinality>
-    <description><![CDATA[<p>Unused parameters are misleading. Whatever the value passed to such parameters is, the behavior will be the same.</p>
+    <description><![CDATA[<p>Unused parameters are misleading. Whatever the values passed to such parameters, the behavior will be the same.</p>
 <h2>Noncompliant Code Example</h2>
 <pre>
 void DoSomething(int a, int b) // "b" is unused
@@ -5261,6 +5633,11 @@ if (condition)
   FirstActionInBlock();
   SecondAction();  // Noncompliant; executed unconditionally
 ThirdAction();
+
+if(condition) FirstActionInBlock(); SecondAction();  // Noncompliant; secondAction executed unconditionally
+
+if(condition) FirstActionInBlock();  // Noncompliant
+  SecondAction();  // Executed unconditionally
 
 string str = null;
 for (int i = 0; i &lt; array.Length; i++)
@@ -5428,11 +5805,10 @@ public class A
   <rule>
     <key>S1163</key>
     <name>Exceptions should not be thrown in finally blocks</name>
-    <severity>MAJOR</severity>
+    <severity>CRITICAL</severity>
     <cardinality>SINGLE</cardinality>
     <description><![CDATA[<p>Throwing an exception from within a finally block will mask any exception which was previously thrown in the <code>try</code> or <code>catch</code>
-block.</p>
-<p>The masked's exception message and stack trace will be lost.</p>
+block, and the masked's exception message and stack trace will be lost.</p>
 <h2>Noncompliant Code Example</h2>
 <pre>
 try
@@ -5466,7 +5842,6 @@ finally
 
 ]]></description>
     <tag>error-handling</tag>
-    <tag>bug</tag>
     <tag>cert</tag>
     <tag>suspicious</tag>
   </rule>
@@ -5633,12 +6008,12 @@ void Notify(string company)
 {
   Notify(company, "QJZ");
 }
-void Notify(string company, string office = "QJZ")
+void Notify(string company, string office)
 {
 }
 </pre>
 <h2>Exceptions</h2>
-<p>The rule ignores parameters with caller info attributes.</p>
+<p>The rule ignores non externally visible methods.</p>
 
 ]]></description>
     <tag>pitfall</tag>
@@ -5708,7 +6083,7 @@ public class DerivedClass : BaseClass
   <rule>
     <key>S3451</key>
     <name>"[DefaultValue]" should not be used when "[DefaultParameterValue]" is meant</name>
-    <severity>MAJOR</severity>
+    <severity>CRITICAL</severity>
     <cardinality>SINGLE</cardinality>
     <description><![CDATA[<p>The use of <code>[DefaultValue]</code> with <code>[Optional]</code> has no more effect than <code>[Optional]</code> alone. That's because
 <code>[DefaultValue]</code> doesn't actually do anything; it merely indicates the intent for the value. More than likely, <code>[DefaultValue]</code>
@@ -5745,7 +6120,6 @@ class MyClass
 </pre>
 
 ]]></description>
-    <tag>bug</tag>
     <tag>suspicious</tag>
   </rule>
   <rule>
@@ -5946,7 +6320,6 @@ class MyClass
 </ul>
 
 ]]></description>
-    <tag>bug</tag>
     <tag>misra</tag>
     <tag>pitfall</tag>
   </rule>
@@ -6111,6 +6484,41 @@ partial class C
     <tag>suspicious</tag>
   </rule>
   <rule>
+    <key>S3967</key>
+    <name>Multidimensional arrays should not be used</name>
+    <severity>MINOR</severity>
+    <cardinality>SINGLE</cardinality>
+    <description><![CDATA[<p>A jagged array is an array whose elements are arrays. It is recommended over a multidimensional array because the arrays that make up the elements
+can be of different sizes, which avoids wasting memory space.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+int [,] myArray =  // Noncompliant
+    {
+        {1,2,3,4},
+        {5,6,7,0},
+        {8,0,0,0},
+        {9,0,0,0}
+    };
+// ...
+myArray[1,1] = 0;
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+int[][] myArray =
+    {
+        new int[] {1,2,3,4},
+        new int[] {5,6,7},
+        new int[] {8},
+        new int[] {9}
+    };
+// ...
+myArray[1][1] = 0;
+</pre>
+
+]]></description>
+    <tag>design</tag>
+  </rule>
+  <rule>
     <key>S1450</key>
     <name>Private fields only used as local variables in methods should become local variables</name>
     <severity>MINOR</severity>
@@ -6163,23 +6571,22 @@ public int Foo
   {
     throw new Exception(); // Noncompliant
   }
-  set
-  {
-    // do set ...
-  }
 }
 </pre>
 <h2>Compliant Solution</h2>
 <pre>
-public void SetFoo(int foo)
-{
-  // do set ...
-}
+Module Module1
+    Sub SetFoo(ByVal value As Integer)         ' Compliant
+        ' ... some code ...
+    End Sub
+End Module
 </pre>
+<h2>Exceptions</h2>
+<p>No issue is raised when the thrown exception derives from or is of type <code>NotImplementedException</code>, <code>NotSupportedException</code> or
+<code>PlatformNotSupportedException</code>.</p>
 
 ]]></description>
     <tag>error-handling</tag>
-    <tag>bug</tag>
   </rule>
   <rule>
     <key>S2292</key>
@@ -6895,14 +7302,13 @@ var v = string.Format("{0}", 1.ToString());
 </pre>
 
 ]]></description>
-    <tag>bug</tag>
     <tag>finding</tag>
     <tag>clumsy</tag>
   </rule>
   <rule>
     <key>S1698</key>
     <name>"==" should not be used when "Equals" is overridden</name>
-    <severity>MAJOR</severity>
+    <severity>MINOR</severity>
     <cardinality>SINGLE</cardinality>
     <description><![CDATA[<p>Using the equality <code>==</code> and inequality <code>!=</code> operators to compare two objects generally works. The operators can be
 overloaded, and therefore the comparison can resolve to the appropriate method. However, when the operators are used on interface instances, then
@@ -6973,8 +7379,8 @@ public class Program
 
 ]]></description>
     <tag>cwe</tag>
-    <tag>bug</tag>
     <tag>cert</tag>
+    <tag>suspicious</tag>
   </rule>
   <rule>
     <key>S2995</key>
@@ -7090,10 +7496,10 @@ var isEqual = "this string".Equals("other string");
     <name>"=+" should not be used instead of "+="</name>
     <severity>MAJOR</severity>
     <cardinality>SINGLE</cardinality>
-    <description><![CDATA[<p>The use of operators pairs (<code>=+</code>, <code>=-</code> or <code>=!</code>) where the reversed, single operator was meant (<code>+=</code>,
+    <description><![CDATA[<p>The use of operators pairs ( <code>=+</code>, <code>=-</code> or <code>=!</code> ) where the reversed, single operator was meant (<code>+=</code>,
 <code>-=</code> or <code>!=</code>) will compile and run, but not produce the expected results.</p>
-<p>This rule raises an issue when <code>=+</code>, <code>=-</code> and <code>=!</code> are used, but ignores the operators when they're spaced out:
-<code>= +</code>, <code>= -</code>, and <code>= !</code>.</p>
+<p>This rule raises an issue when <code>=+</code>, <code>=-</code>, or <code>=!</code> is used without any spacing between the two operators and when
+there is at least one whitespace character after.</p>
 <h2>Noncompliant Code Example</h2>
 <pre>
 int target = -5;
@@ -7243,7 +7649,6 @@ public void SetName(string name)
 </ul>
 
 ]]></description>
-    <tag>bug</tag>
     <tag>cert</tag>
   </rule>
   <rule>
@@ -7305,14 +7710,13 @@ if (str != null &amp;&amp; str.Length &gt; 0)
   <rule>
     <key>S2437</key>
     <name>Silly bit operations should not be performed</name>
-    <severity>MAJOR</severity>
+    <severity>BLOCKER</severity>
     <cardinality>SINGLE</cardinality>
     <description><![CDATA[<p>Certain bit operations are just silly and should not be performed because their results are predictable.</p>
 <p>Specifically, using <code>&amp; -1</code> with any value will always result in the original value, as will <code>anyValue ^ 0</code> and
 <code>anyValue | 0</code>.</p>
 
 ]]></description>
-    <tag>bug</tag>
     <tag>suspicious</tag>
   </rule>
   <rule>
@@ -7340,7 +7744,7 @@ Func&lt;object, bool&gt; item1 = o =&gt; { var r = false; return r; }; // Noncom
 </pre>
 
 ]]></description>
-    <tag>convention</tag>
+    <tag>style</tag>
   </rule>
   <rule>
     <key>S2743</key>
@@ -8118,7 +8522,6 @@ var response = await httpClient.GetAsync(url).ConfigureAwait(false);
 
 ]]></description>
     <tag>multi-threading</tag>
-    <tag>bug</tag>
     <tag>suspicious</tag>
   </rule>
   <rule>
@@ -8148,33 +8551,6 @@ public bool CanVote(Person person)
 <p>This rule is deprecated; use {rule:csharpsquid:S1871} instead.</p>
 
 ]]></description>
-  </rule>
-  <rule>
-    <key>S3889</key>
-    <name>Neither "Thread.Resume" nor "Thread.Suspend" should be used</name>
-    <severity>BLOCKER</severity>
-    <cardinality>SINGLE</cardinality>
-    <description><![CDATA[<p><code>Thread.Suspend</code> and <code>Thread.Resume</code> can give unpredictable results, and both methods have been deprecated. Indeed, if
-<code>Thread.Suspend</code> is not used very carefully, a thread can be suspended while holding a lock, thus leading to a deadlock. Other safer
-synchronization mechanisms should be used, such as <code>Monitor</code>, <code>Mutex</code>, and <code>Semaphore</code>.</p>
-<h2>Noncompliant Code Example</h2>
-<pre>
-static void Main(string[] args)
-{
-  // ...
-  Thread.CurrentThread.Suspend(); // Noncompliant
-  Thread.CurrentThread.Resume(); // Noncompliant
-}
-</pre>
-<h2>See</h2>
-<ul>
-  <li> <a href="https://msdn.microsoft.com/en-us/library/system.threading.thread.resume.aspx">Thread.Resume Method ()</a> </li>
-  <li> <a href="https://msdn.microsoft.com/en-us/library/system.threading.thread.suspend(v=vs.110).aspx">Thread.Suspend Method ()</a> </li>
-</ul>
-
-]]></description>
-    <tag>multi-threading</tag>
-    <tag>unpredictable</tag>
   </rule>
   <rule>
     <key>S3005</key>
@@ -8305,7 +8681,6 @@ public void DoSomething(object obj)
 ]]></description>
     <tag>cwe</tag>
     <tag>error-handling</tag>
-    <tag>bug</tag>
     <tag>cert</tag>
   </rule>
   <rule>
@@ -8428,7 +8803,7 @@ public override string ToString ()
   <rule>
     <key>S3443</key>
     <name>Type should not be examined on "System.Type" instances</name>
-    <severity>MAJOR</severity>
+    <severity>BLOCKER</severity>
     <cardinality>SINGLE</cardinality>
     <description><![CDATA[<p>If you call <code>GetType()</code> on a <code>Type</code> variable, the return value will always be <code>typeof(System.Type)</code>. So there's no
 real point in making that call. The same applies to passing a type argument to <code>IsInstanceOfType</code>. In both cases the results are entirely
@@ -8452,7 +8827,6 @@ if (s.GetType().IsInstanceOfType("ssss"))
 </pre>
 
 ]]></description>
-    <tag>bug</tag>
     <tag>suspicious</tag>
   </rule>
   <rule>
@@ -8482,6 +8856,71 @@ var v4 = ~v2;
 
 ]]></description>
     <tag>bug</tag>
+  </rule>
+  <rule>
+    <key>S1751</key>
+    <name>Jump statements should not be used unconditionally</name>
+    <severity>MAJOR</severity>
+    <cardinality>SINGLE</cardinality>
+    <description><![CDATA[<p>Having an unconditional <code>break</code>, <code>return</code>, <code>(@)throw</code> or <code>goto</code> in a loop renders it useless; the loop
+will only execute once and the loop structure itself is simply wasted keystrokes.</p>
+<p>Having an unconditional <code>continue</code> in a loop can render the loop meaningless, or is itself wasted keystrokes, depending on where in the
+loop it occurs.</p>
+<p>Having an unconditional <code>return</code> anywhere other than at the end of a function or method simply renders all the rest of the code in the
+method useless.</p>
+<p>For these reasons, unconditional jump statements should never be used except for the final <code>return</code> in a function or method.</p>
+<h2>Noncompliant Code Example</h2>
+<pre>
+for (var i = 0; i &lt; 10; i++)
+{
+    Console.WriteLine(i);
+    break;  // loop only executes once
+}
+
+for (var i = 0; i &lt; 10; i++)
+{
+    continue;
+    Console.WriteLine(i); // this is never executed
+}
+
+for (var i = 0; i &lt; 10; i++)
+{
+    Console.WriteLine(i);
+    continue;  // this is meaningless; the loop would continue anyway
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+for (var i = 0; i &lt; 10; i++)
+{
+    Console.WriteLine(i);
+}
+
+for (var i = 0; i &lt; 10; i++)
+{
+    Console.WriteLine(i);
+    if (ErrorOccurred())
+    {
+        break;
+    }
+}
+</pre>
+<h2>See</h2>
+<ul>
+  <li> MISRA C:2004, 14.1 - There shall be no unreachable code. </li>
+  <li> MISRA C++:2008, 0-1-1 - A <em>project</em> shall not contain <em>unreachable code</em>. </li>
+  <li> MISRA C++:2008, 0-1-9 - There shall be no dead code. </li>
+  <li> MISRA C:2012, 2.2 - There shall be no dead code </li>
+  <li> <a href="https://www.securecoding.cert.org/confluence/x/NYA5">CERT, MSC12-C.</a> - Detect and remove code that has no effect or is never
+  executed </li>
+  <li> <a href="https://www.securecoding.cert.org/confluence/x/SIIyAQ">CERT, MSC12-CPP.</a> - Detect and remove code that has no effect </li>
+</ul>
+
+]]></description>
+    <tag>bug</tag>
+    <tag>misra</tag>
+    <tag>cert</tag>
+    <tag>unused</tag>
   </rule>
   <rule>
     <key>S3264</key>
@@ -8518,8 +8957,9 @@ class UninvokedEventSample
     <name>Unused private types or members should be removed</name>
     <severity>MAJOR</severity>
     <cardinality>SINGLE</cardinality>
-    <description><![CDATA[<p>Private types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should be removed. Cleaning out
-dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from being introduced.</p>
+    <description><![CDATA[<p>Private, or <code>internal</code>, types or members that are never executed or referenced are dead code: unnecessary, inoperative code that should
+be removed. Cleaning out dead code decreases the size of the maintained codebase, making it easier to understand the program and preventing bugs from
+being introduced.</p>
 <h2>Noncompliant Code Example</h2>
 <pre>
 public class Foo
@@ -8552,6 +8992,7 @@ public class Foo
   <li> Empty constructors </li>
   <li> Attributed members </li>
   <li> Empty serialization constructor on type with <code>System.SerializableAttribute</code> attribute. </li>
+  <li> Internals in assemblies that have a <code>System.Runtime.CompilerServices.InternalsVisibleToAttribute</code> attribute. </li>
 </ul>
 <h2>See</h2>
 <ul>
@@ -8578,6 +9019,107 @@ callers, then clearly there is no need to actually make the return, and it shoul
     <tag>design</tag>
     <tag>cert</tag>
     <tag>unused</tag>
+  </rule>
+  <rule>
+    <key>S3962</key>
+    <name>"static readonly" constants should be "const" instead</name>
+    <severity>MINOR</severity>
+    <cardinality>SINGLE</cardinality>
+    <description><![CDATA[<p>The value of a <code>static readonly</code> field is computed at runtime while the value of a <code>const</code> field is calculated at compile
+time, which improves performance.</p>
+<p>This rule raises an issue when a <code>static readonly</code> field is initialiazed with a value that is computable at compile time.</p>
+<p>As specified by Microsoft, the list of types that can have a constant value are:</p>
+<table>
+  <tbody>
+    <tr>
+      <th>C# type</th>
+      <th>.Net Fwk type</th>
+    </tr>
+    <tr>
+      <td>bool</td>
+      <td>System.Boolean</td>
+    </tr>
+    <tr>
+      <td>byte</td>
+      <td>System.Byte</td>
+    </tr>
+    <tr>
+      <td>sbyte</td>
+      <td>System.SByte</td>
+    </tr>
+    <tr>
+      <td>char</td>
+      <td>System.Char</td>
+    </tr>
+    <tr>
+      <td>decimal</td>
+      <td>System.Decimal</td>
+    </tr>
+    <tr>
+      <td>double</td>
+      <td>System.Double</td>
+    </tr>
+    <tr>
+      <td>float</td>
+      <td>System.Single</td>
+    </tr>
+    <tr>
+      <td>int</td>
+      <td>System.Int32</td>
+    </tr>
+    <tr>
+      <td>uint</td>
+      <td>System.UInt32</td>
+    </tr>
+    <tr>
+      <td>long</td>
+      <td>System.Int64</td>
+    </tr>
+    <tr>
+      <td>ulong</td>
+      <td>System.UInt64</td>
+    </tr>
+    <tr>
+      <td>short</td>
+      <td>System.Int16</td>
+    </tr>
+    <tr>
+      <td>ushort</td>
+      <td>System.UInt16</td>
+    </tr>
+    <tr>
+      <td>string</td>
+      <td>System.String</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Noncompliant Code Example</h2>
+<pre>
+namespace myLib
+{
+  public class Foo
+  {
+    static readonly int x = 1;  // Noncompliant
+    static readonly int y = x + 4; // Noncompliant
+    static readonly string s = "Bar";  // Noncompliant
+  }
+}
+</pre>
+<h2>Compliant Solution</h2>
+<pre>
+namespace myLib
+{
+  public class Foo
+  {
+    const int x = 1;
+    const int y = x + 4;
+    const string s = "Bar";
+  }
+}
+</pre>
+
+]]></description>
+    <tag>performance</tag>
   </rule>
   <rule>
     <key>S121</key>
@@ -8646,7 +9188,6 @@ if (GetTrue() || GetFalse()) // true short-circuit logic
 </ul>
 
 ]]></description>
-    <tag>bug</tag>
     <tag>cert</tag>
   </rule>
   <rule>
@@ -8940,8 +9481,7 @@ interface IMyService
 </pre>
 
 ]]></description>
-    <tag>bug</tag>
-    <tag>suspicious</tag>
+    <tag>api-design</tag>
   </rule>
   <rule>
     <key>S3598</key>
