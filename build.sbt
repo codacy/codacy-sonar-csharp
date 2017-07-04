@@ -42,7 +42,7 @@ val installAll =
     |apk add bash wget unzip &&
     |wget --no-check-certificate -O /tmp/sonar-csharp-plugin-"$${SONAR_VERSION}".jar https://oss.sonatype.org/content/repositories/releases/org/sonarsource/dotnet/sonar-csharp-plugin/"$${SONAR_VERSION}"/sonar-csharp-plugin-"$${SONAR_VERSION}".jar &&
     |unzip /tmp/sonar-csharp-plugin-"$${SONAR_VERSION}".jar -d /tmp/sonar-plugin &&
-    |unzip /tmp/sonar-plugin/SonarAnalyzer.Scanner.zip -d "$${SONAR_BINS}" &&
+    |unzip /tmp/sonar-plugin/static/SonarAnalyzer-"$${SONAR_VERSION}".zip -d "$${SONAR_BINS}" &&
     |rm -rf /tmp/sonar-plugin /tmp/sonar-csharp-plugin-"$${SONAR_VERSION}".jar &&
     |rm -rf /tmp/* &&
     |rm -rf /var/cache/apk/*""".stripMargin.replaceAll(System.lineSeparator(), " ")
