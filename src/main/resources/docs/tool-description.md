@@ -1,0 +1,1 @@
+SonarC# is a static code analyser for C# language. It will allow you to produce stable and easily supported code by helping you to find and to correct bugs, vulnerabilities and smells in your code. [Learn more](https://github.com/SonarSource/sonar-csharp)
