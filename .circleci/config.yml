@@ -81,7 +81,7 @@ jobs:
       - *restore_dependencies
       - run:
           name: Compile
-          command: sbt -Dbuild.number=$(cat .version) compile test:compile publishLocal
+          command: sbt -Dbuild.number=$(cat .version) compile test:compile
       - persist_to_workspace:
           root: ~/
           paths:
@@ -140,8 +140,8 @@ jobs:
               docker tag $CIRCLE_PROJECT_REPONAME codacy/$CIRCLE_PROJECT_REPONAME
               docker tag $CIRCLE_PROJECT_REPONAME codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
               docker push codacy/$CIRCLE_PROJECT_REPONAME
+              docker push codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
             fi
-
 
 workflows:
   version: 2
