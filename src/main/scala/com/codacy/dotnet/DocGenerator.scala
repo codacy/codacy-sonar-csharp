@@ -1,7 +1,10 @@
 package com.codacy.dotnet
 
-import codacy.docker.api.{Pattern, Result, Tool}
+
+import better.files.File
 import com.codacy.dotnet.helpers.ResourceHelper
+import com.codacy.plugins.api.languages.Languages
+import com.codacy.plugins.api.results.{Pattern, Result, Tool}
 import com.github.tkqubo.html2md.Html2Markdown
 import play.api.libs.json.Json
 
@@ -33,7 +36,7 @@ object DocGenerator {
           } yield {
             (
               Pattern.Description(patternId, Pattern.Title(title), None, None, None),
-              Pattern.Specification(patternId, level, category, None, Some(Set(Pattern.Language("CSharp")))),
+              Pattern.Specification(patternId, level, category, None, Some(Set(Languages.CSharp))),
               PatternExtendedDescription(patternId, description)
             )
           }
@@ -42,7 +45,8 @@ object DocGenerator {
     }.flatten match {
       case Success(rules) =>
         val (patternDescriptions, patternSpecifications, extendedDescriptions) = rules.unzip3
-        val spec = Tool.Specification(Tool.Name("Sonar C#"), patternSpecifications)
+        val version = File("./.SONAR_VERSION").contentAsString.trim
+        val spec = Tool.Specification(Tool.Name("Sonar C#"), version = Some(Tool.Version(version)), patternSpecifications)
         val jsonSpecifications = Json.prettyPrint(Json.toJson(spec))
         val jsonDescriptions = Json.prettyPrint(Json.toJson(patternDescriptions))
 

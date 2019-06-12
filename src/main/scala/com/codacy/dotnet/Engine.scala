@@ -1,5 +1,6 @@
 package com.codacy.dotnet
 
-import codacy.dockerApi.DockerEngine
+import com.codacy.tools.scala.seed.DockerEngine
 
-object Engine extends DockerEngine(SonarCSharp)
+
+object Engine extends DockerEngine(SonarCSharp)()

@@ -6,7 +6,7 @@ name := "codacy-sonar-csharp"
 
 version := "1.0.0-SNAPSHOT"
 
-val languageVersion = "2.11.8"
+val languageVersion = "2.12.7"
 
 scalaVersion := languageVersion
 
@@ -16,8 +16,8 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play-json" % "2.4.8",
-  "com.codacy" %% "codacy-engine-scala-seed" % "2.7.7" withSources(),
+  "com.typesafe.play" %% "play-json" % "2.7.3",
+  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.9" withSources(),
   "org.scala-lang.modules" %% "scala-xml" % "1.0.6",
   "com.google.protobuf" % "protobuf-java" % "3.2.0",
   "com.github.tkqubo" % "html-to-markdown" % "0.3.0"
