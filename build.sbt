@@ -6,7 +6,7 @@ name := "codacy-sonar-csharp"
 
 version := "1.0.0-SNAPSHOT"
 
-val languageVersion = "2.11.8"
+val languageVersion = "2.12.7"
 
 scalaVersion := languageVersion
 
@@ -16,8 +16,8 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "com.typesafe.play" %% "play-json" % "2.4.8",
-  "com.codacy" %% "codacy-engine-scala-seed" % "2.7.7" withSources(),
+  "com.typesafe.play" %% "play-json" % "2.7.3",
+  "com.codacy" %% "codacy-engine-scala-seed" % "3.0.9" withSources(),
   "org.scala-lang.modules" %% "scala-xml" % "1.0.6",
   "com.google.protobuf" % "protobuf-java" % "3.2.0",
   "com.github.tkqubo" % "html-to-markdown" % "0.3.0"
@@ -47,15 +47,19 @@ val installAll =
     |rm -rf /tmp/* &&
     |rm -rf /var/cache/apk/*""".stripMargin.replaceAll(System.lineSeparator(), " ")
 
-mappings in Universal <++= (resourceDirectory in Compile) map { (resourceDir: File) =>
-  val src = resourceDir / "docs"
-  val dest = "/docs"
+mappings.in(Universal) ++= resourceDirectory
+  .in(Compile)
+  .map { resourceDir: File =>
+    val src = resourceDir / "docs"
+    val dest = "/docs"
 
-  for {
-    path <- (src ***).get
-    if !path.isDirectory
-  } yield path -> path.toString.replaceFirst(src.toString, dest)
-}
+    (for {
+      path <- better.files.File(src.toPath).listRecursively()
+      if !path.isDirectory
+    } yield path.toJava -> path.toString.replaceFirst(src.toString, dest)).toSeq
+  }
+  .value
+
 
 val dockerUser = "docker"
 val dockerGroup = "docker"
@@ -69,12 +73,11 @@ dockerBaseImage := "codacy/codacy-sonar-csharp-base:latest"
 mainClass in Compile := Some("com.codacy.dotnet.Engine")
 
 dockerCommands := dockerCommands.value.flatMap {
-  case cmd@Cmd("WORKDIR", _) => List(cmd,
-    Cmd("RUN", installAll)
-  )
-  case cmd@(Cmd("ADD", "opt /opt")) => List(cmd,
-    Cmd("RUN", "mv /opt/docker/docs /docs"),
+  case cmd@(Cmd("ADD", _)) => List(
     Cmd("RUN", s"adduser -u 2004 -D $dockerUser"),
+    cmd,
+    Cmd("RUN", installAll),
+    Cmd("RUN", "mv /opt/docker/docs /docs"),
     ExecCmd("RUN", Seq("chown", "-R", s"$dockerUser:$dockerGroup", "/docs"): _*)
   )
   case other => List(other)
