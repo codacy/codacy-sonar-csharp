@@ -1,9 +1,10 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff929008ec754fe790738a9a15821f93)](https://www.codacy.com/app/Codacy/codacy-sonar-csharp?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-sonar-csharp&utm_campaign=Badge_Grade)
 [![Build Status](https://circleci.com/gh/codacy/codacy-sonar-csharp.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/codacy/codacy-sonar-csharp)
 
-# Codacy Sonar C#
+# Codacy SonarC#
 
-This is the docker engine we use at Codacy to have run [Sonar C#](https://github.com/SonarSource/sonar-csharp).
+This is the docker engine we use at Codacy to run [SonarC#](https://github.com/SonarSource/sonar-csharp) developed by SonarSource.
+
 You can also create a docker to integrate the tool and language of your choice!
 Check the **Docs** section for more information.
 
