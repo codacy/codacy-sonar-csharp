@@ -18,7 +18,7 @@ sbt 'set version in Docker := "dev"' 'set name := "codacy-sonar-csharp"' docker:
 #### Run the docker
 
 ```
-docker run --user=docker --rm=true -v <PATH-TO-CODE>:/src -v <PATH-TO>/.codacy.json:/src/.codacy.json codacy/codacy-sonar-csharp:dev
+docker run --user=docker --rm=true -v <PATH-TO-CODE>:/src -v <PATH-TO>/.codacyrc:/.codacyrc codacy/codacy-sonar-csharp:dev
 ```
 > Make sure all the volumes mounted have the right permissions for user `docker`
 
