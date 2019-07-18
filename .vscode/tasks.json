@@ -1,0 +1,89 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "CodacyCSharp",
+			"type": "process",
+			"command": "make",
+			"args": [
+				"build-all"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "silent",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "CodacyCSharp.Analyzer",
+			"type": "process",
+			"command": "make",
+			"args": [
+				"build"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "silent",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			}
+		},
+		{
+			"label": "CodacyCSharp.Seed",
+			"type": "process",
+			"command": "make",
+			"args": [
+				"build-seed"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/src/Seed"
+			},
+			"problemMatcher": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "silent",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			}
+		},
+		{
+			"label": "CodacyCSharp.DocsGenerator",
+			"type": "process",
+			"command": "make",
+			"args": [
+				"build-docs"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/src/DocsGenerator"
+			},
+			"problemMatcher": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "silent",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"clear": false
+			}
+		}
+	]
+}
