@@ -1,0 +1,48 @@
+export FrameworkPathOverride=$(shell dirname $(shell which mono))/../lib/mono/4.5/
+SONAR_VERSION=$(shell cat .SONAR_VERSION | tr -d '\n')
+BUILD_CMD=dotnet build --no-restore /property:GenerateFullPaths=true
+
+LIBRARIES_FOLDER=.lib
+PACKAGES_FOLDER=.packages
+RESOURCE_FOLDER=.res
+
+all: configure build
+
+configure:
+	nuget install SonarAnalyzer.CSharp -Version $(SONAR_VERSION) -OutputDirectory $(PACKAGES_FOLDER)
+	ln -sf "$(PACKAGES_FOLDER)/SonarAnalyzer.CSharp.$(SONAR_VERSION)/analyzers/" $(LIBRARIES_FOLDER)
+	dotnet restore
+
+build-all:
+	$(BUILD_CMD)
+
+build: src/Analyzer
+
+build:
+	$(BUILD_CMD) $^
+
+build-seed:
+	$(BUILD_CMD) src/Seed
+
+build-docs:
+	$(BUILD_CMD) src/DocsGenerator
+
+update-docs:
+	curl -L "https://github.com/SonarSource/sonar-dotnet/releases/download/7.15.0.8572/sonar-csharp-plugin-$(SONAR_VERSION).jar" \
+		-o sonar-csharp-plugin.jar
+	mkdir -p $(RESOURCE_FOLDER)
+	unzip sonar-csharp-plugin.jar -d '$(RESOURCE_FOLDER)/sonar-csharp-plugin'
+	cp $(RESOURCE_FOLDER)/sonar-csharp-plugin/org/sonar/plugins/csharp/rules.xml "$(RESOURCE_FOLDER)/sonar-csharp-rules.xml"
+	rm sonar-csharp-plugin.jar
+	rm -rf $(RESOURCE_FOLDER)/sonar-csharp-plugin/
+
+documentation: update-docs build-docs
+
+documentation:
+	mono src/DocsGenerator/bin/Debug/net461/DocsGenerator.exe
+
+publish:
+	dotnet publish -c Release -f net461
+
+clean:
+	rm -rf .lib/ .packages/ .res/
