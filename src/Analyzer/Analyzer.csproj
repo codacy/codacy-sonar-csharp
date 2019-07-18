@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFrameworks>net461</TargetFrameworks>
+        <RootNamespace>CodacyCSharp.Analyzer</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <DotNetCliToolReference Include="dotnet-mono" Version="0.5.6" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.1.0" />
+        <PackageReference Include="SQLitePCLRaw.core" Version="1.0.0" />
+        <PackageReference Include="SonarAnalyzer.CSharp" Version="7.15.0.8572" />
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="SonarAnalyzer.CSharp">
+        <HintPath>../../packages/sonaranalyzer.csharp/7.15.0.8572/analyzers/SonarAnalyzer.CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="SonarAnalyzer">
+        <HintPath>../../packages/sonaranalyzer.csharp/7.15.0.8572/analyzers/SonarAnalyzer.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Seed\Seed.csproj" />
+    </ItemGroup>
+</Project>
