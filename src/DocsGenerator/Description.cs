@@ -2,7 +2,8 @@ using Newtonsoft.Json;
 
 namespace CodacyCSharp.DocsGenerator.Results
 {
-	public class Description {
+	public class Description
+	{
 		[JsonProperty (PropertyName = "patternId")]
 		public string PatternId { get; set; }
 

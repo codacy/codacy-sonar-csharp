@@ -6,20 +6,24 @@ using System.Xml.Linq;
 using CodacyCSharp.Seed.Patterns;
 using Newtonsoft.Json;
 
-namespace CodacyCSharp.DocsGenerator {
+namespace CodacyCSharp.DocsGenerator
+{
 	using Helpers;
 
-	class Program {
+	static class Program
+	{
 		private const string docsFolder = "docs/";
 		private const string descriptionFolder = docsFolder + "description/";
 
-		static void Main (string[] args) {
+		static void Main (string[] args)
+		{
 			string sonarVersion = File.ReadAllText (".SONAR_VERSION").TrimEnd (Environment.NewLine.ToCharArray ());
 
 			Directory.CreateDirectory (docsFolder);
 			Directory.CreateDirectory (descriptionFolder);
 
-			CodacyPatterns patternsFile = new CodacyPatterns {
+			CodacyPatterns patternsFile = new CodacyPatterns
+			{
 				Name = "Sonar C#",
 					Version = sonarVersion,
 					Patterns = new List<Pattern> ()
@@ -28,21 +32,26 @@ namespace CodacyCSharp.DocsGenerator {
 			List<Results.Description> descriptions = new List<Results.Description> ();
 
 			var doc = XDocument.Load (@".res/sonar-csharp-rules.xml");
-			foreach (var rule in doc.Root.Elements ()) {
-				Pattern pattern = new Pattern {
+			foreach (var rule in doc.Root.Elements ())
+			{
+				var lvl = LevelHelper.ToLevel ((rule.Element ("severity") ?? new XElement ("undefined")).Value);
+				Pattern pattern = new Pattern
+				{
 					PatternId = rule.Element ("key").Value,
-						Level = LevelHelper.ToLevel ((rule.Element ("severity") ?? new XElement ("undefined")).Value),
-						Category = CategoryHelper.ToCategory (rule.Element ("tag")),
+						Level = lvl,
+						Category = CategoryHelper.ToCategory (rule, lvl),
 						Parameters = (from param in rule.Elements () where param.Name == "param"
-							select new Parameter {
+							select new Parameter
+							{
 								Name = param.Element ("key").Value,
 									Default = param.Element ("defaultValue").Value ?? ""
 							}).ToArray ()
 				};
 
-				Results.Description description = new Results.Description {
+				Results.Description description = new Results.Description
+				{
 					PatternId = pattern.PatternId,
-						Title = rule.Element ("name").Value
+					Title = rule.Element ("name").Value
 				};
 
 				patternsFile.Patterns.Add (pattern);
@@ -55,13 +64,15 @@ namespace CodacyCSharp.DocsGenerator {
 
 			string patternsJson = JsonConvert.SerializeObject (patternsFile,
 				Newtonsoft.Json.Formatting.Indented,
-				new JsonSerializerSettings {
+				new JsonSerializerSettings
+				{
 					NullValueHandling = NullValueHandling.Ignore
 				});
 
 			string descriptionJson = JsonConvert.SerializeObject (descriptions,
 				Newtonsoft.Json.Formatting.Indented,
-				new JsonSerializerSettings {
+				new JsonSerializerSettings
+				{
 					NullValueHandling = NullValueHandling.Ignore
 				});
 
