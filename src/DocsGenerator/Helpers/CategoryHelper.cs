@@ -1,5 +1,5 @@
-using CodacyCSharp.Seed.Patterns;
 using System.Xml.Linq;
+using CodacyCSharp.Seed.Patterns;
 
 namespace CodacyCSharp.DocsGenerator.Helpers
 {
