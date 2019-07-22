@@ -13,7 +13,8 @@ Check the **Docs** section for more information.
 #### Publish the docker
 
 ```
-sbt 'set version in Docker := "dev"' 'set name := "codacy-sonar-csharp"' docker:publishLocal
+make publish
+docker build . -t codacy-sonar-csharp:dev
 ```
 
 #### Run the docker
