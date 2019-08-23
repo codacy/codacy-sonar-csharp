@@ -1,6 +1,6 @@
 {
   "name": "Sonar C#",
-  "version": "7.15.0.8572",
+  "version": "7.16.0.8981",
   "patterns": [
     {
       "patternId": "S3442",

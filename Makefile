@@ -26,7 +26,7 @@ build-docs:
 	$(BUILD_CMD) src/DocsGenerator
 
 update-docs:
-	curl -L "https://github.com/SonarSource/sonar-dotnet/releases/download/7.15.0.8572/sonar-csharp-plugin-$(SONAR_VERSION).jar" \
+	curl -L "https://github.com/SonarSource/sonar-dotnet/releases/download/$(SONAR_VERSION)/sonar-csharp-plugin-$(SONAR_VERSION).jar" \
 		-o sonar-csharp-plugin.jar
 	mkdir -p $(RESOURCE_FOLDER)
 	unzip sonar-csharp-plugin.jar -d '$(RESOURCE_FOLDER)/sonar-csharp-plugin'
