@@ -33,14 +33,12 @@ namespace CodacyCSharp.Analyzer
                     .ToArray());
 
             var additionalFiles = new List<AnalyzerAdditionalFile>();
-            if (File.Exists(defaultSonarConfiguration))
-            {
-                additionalFiles.Add(new AnalyzerAdditionalFile(defaultSonarConfiguration));
-            }
 
             if (!(PatternIds is null) && PatternIds.Any())
             {
-                var tmpSonarLintPath = Path.Combine(Path.GetTempPath(), "sonarlint_" + Guid.NewGuid() + ".tmp");
+                var tmpSonarLintFolder = Path.Combine(Path.GetTempPath(), "sonarlint_" + Guid.NewGuid());
+				Directory.CreateDirectory(tmpSonarLintFolder);
+				var tmpSonarLintPath = Path.Combine(tmpSonarLintFolder, "SonarLint.xml");
                 var rules = new XElement("Rules");
                 foreach (var pattern in CurrentTool.Patterns)
                 {
@@ -60,6 +58,8 @@ namespace CodacyCSharp.Analyzer
 
                 new XDocument(new XElement("AnalysisInput", rules)).Save(tmpSonarLintPath);
                 additionalFiles.Add(new AnalyzerAdditionalFile(tmpSonarLintPath));
+            } else if (File.Exists(defaultSonarConfiguration)) {
+                additionalFiles.Add(new AnalyzerAdditionalFile(defaultSonarConfiguration));
             }
 
             diagnosticsRunner = new DiagnosticsRunner(GetAnalyzers(), GetUtilityAnalyzers(), additionalFiles.ToArray());
