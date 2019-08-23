@@ -10,14 +10,14 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.1.0" />
         <PackageReference Include="SQLitePCLRaw.core" Version="1.0.0" />
-        <PackageReference Include="SonarAnalyzer.CSharp" Version="7.15.0.8572" />
+        <PackageReference Include="SonarAnalyzer.CSharp" Version="7.16.0.8981" />
     </ItemGroup>
     <ItemGroup>
         <Reference Include="SonarAnalyzer.CSharp">
-        <HintPath>../../packages/sonaranalyzer.csharp/7.15.0.8572/analyzers/SonarAnalyzer.CSharp.dll</HintPath>
+        <HintPath>../../packages/sonaranalyzer.csharp/7.16.0.8981/analyzers/SonarAnalyzer.CSharp.dll</HintPath>
         </Reference>
         <Reference Include="SonarAnalyzer">
-        <HintPath>../../packages/sonaranalyzer.csharp/7.15.0.8572/analyzers/SonarAnalyzer.dll</HintPath>
+        <HintPath>../../packages/sonaranalyzer.csharp/7.16.0.8981/analyzers/SonarAnalyzer.dll</HintPath>
         </Reference>
     </ItemGroup>
     <ItemGroup>
