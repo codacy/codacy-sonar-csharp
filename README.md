@@ -27,12 +27,7 @@ docker run --user=docker --rm=true -v <PATH-TO-CODE>:/src -v <PATH-TO>/.codacyrc
 #### Generate Docs
 
 ```sh
-./scripts/update-docs.sh
-```
-
-**Use current rules.xml**
-```sh
-./scripts/update-docs.sh skip-download
+make documentation
 ```
 
 ## Docs
