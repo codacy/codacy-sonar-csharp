@@ -58,7 +58,8 @@ namespace CodacyCSharp.DocsGenerator
                         {
                             Name = param.Element("key").Value,
                             Description = param.Element("description").Value
-                        }).ToArray()
+                        }).ToArray(),
+                    TimeToFix = TTFHelper.ToCodacyTimeToFix(rule.Element("remediationFunctionBaseEffort")?.Value ?? "")
                 };
 
                 patternsFile.Patterns.Add(pattern);
