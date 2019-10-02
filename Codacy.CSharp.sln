@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analyzer", "src\Analyzer\Analyzer.csproj", "{01A7D773-C70A-4790-96AF-F25E19F25006}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seed", "src\Seed\Seed.csproj", "{241F9524-407D-4C1A-92DA-B4F266E41326}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocsGenerator", "src\DocsGenerator\DocsGenerator.csproj", "{2142898A-040E-4AAC-A8CE-CF9869FB388B}"
 EndProject
 Global
@@ -17,10 +15,6 @@ Global
 		{01A7D773-C70A-4790-96AF-F25E19F25006}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01A7D773-C70A-4790-96AF-F25E19F25006}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01A7D773-C70A-4790-96AF-F25E19F25006}.Release|Any CPU.Build.0 = Release|Any CPU
-		{241F9524-407D-4C1A-92DA-B4F266E41326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{241F9524-407D-4C1A-92DA-B4F266E41326}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{241F9524-407D-4C1A-92DA-B4F266E41326}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{241F9524-407D-4C1A-92DA-B4F266E41326}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2142898A-040E-4AAC-A8CE-CF9869FB388B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2142898A-040E-4AAC-A8CE-CF9869FB388B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2142898A-040E-4AAC-A8CE-CF9869FB388B}.Release|Any CPU.ActiveCfg = Release|Any CPU

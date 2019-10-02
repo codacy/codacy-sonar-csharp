@@ -1,17 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
-	<PropertyGroup>
-		<OutputType>Exe</OutputType>
-		<TargetFramework>net461</TargetFramework>
-		<RootNamespace>CodacyCSharp.DocsGenerator</RootNamespace>
-	</PropertyGroup>
-	<ItemGroup>
-		<DotNetCliToolReference Include="dotnet-mono" Version="0.5.6" />
-	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
-		<PackageReference Include="ReverseMarkdown" Version="3.8.0" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\Seed\Seed.csproj" />
-	</ItemGroup>
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net461</TargetFramework>
+        <RootNamespace>CodacyCSharp.DocsGenerator</RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <DotNetCliToolReference Include="dotnet-mono" Version="0.5.6" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+        <PackageReference Include="ReverseMarkdown" Version="3.8.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Codacy.Engine.Seed" Version="0.0.3" />
+    </ItemGroup>
 </Project>

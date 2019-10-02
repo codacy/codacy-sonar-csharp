@@ -21,6 +21,6 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\Seed\Seed.csproj" />
+        <PackageReference Include="Codacy.Engine.Seed" Version="0.0.3" />
     </ItemGroup>
 </Project>
