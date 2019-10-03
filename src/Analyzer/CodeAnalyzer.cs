@@ -24,6 +24,8 @@ namespace CodacyCSharp.Analyzer
         private readonly ImmutableArray<DiagnosticAnalyzer> availableAnalyzers;
         private readonly DiagnosticsRunner diagnosticsRunner;
 
+        private readonly string tmpSonarLintFolder;
+
         public CodeAnalyzer() : base(csharpExtension)
         {
             availableAnalyzers = ImmutableArray.Create(
@@ -36,9 +38,10 @@ namespace CodacyCSharp.Analyzer
 
             if (!(PatternIds is null) && PatternIds.Any())
             {
-                var tmpSonarLintFolder = Path.Combine(Path.GetTempPath(), "sonarlint_" + Guid.NewGuid());
-				Directory.CreateDirectory(tmpSonarLintFolder);
-				var tmpSonarLintPath = Path.Combine(tmpSonarLintFolder, "SonarLint.xml");
+                // create temporary directory
+                this.tmpSonarLintFolder = Path.Combine(Path.GetTempPath(), "sonarlint_" + Guid.NewGuid());
+                Directory.CreateDirectory(tmpSonarLintFolder);
+                var tmpSonarLintPath = Path.Combine(tmpSonarLintFolder, defaultSonarConfiguration);
                 var rules = new XElement("Rules");
                 foreach (var pattern in CurrentTool.Patterns)
                 {
@@ -63,6 +66,12 @@ namespace CodacyCSharp.Analyzer
             }
 
             diagnosticsRunner = new DiagnosticsRunner(GetAnalyzers(), GetUtilityAnalyzers(), additionalFiles.ToArray());
+        }
+
+        ~CodeAnalyzer()
+        {
+            // delete created temporary directory
+            Directory.Delete(tmpSonarLintFolder, true);
         }
 
         protected override async Task Analyze(CancellationToken cancellationToken)
