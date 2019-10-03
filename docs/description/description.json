@@ -79,6 +79,11 @@
     "parameters": []
   },
   {
+    "patternId": "S4583",
+    "title": "Calls to delegate's method \"BeginInvoke\" should be paired with calls to \"EndInvoke\"",
+    "parameters": []
+  },
+  {
     "patternId": "S1764",
     "title": "Identical expressions should not be used on both sides of a binary operator",
     "parameters": []
@@ -284,6 +289,11 @@
   {
     "patternId": "S1699",
     "title": "Constructors should only call non-overridable methods",
+    "parameters": []
+  },
+  {
+    "patternId": "S5034",
+    "title": "\"ValueTask\" should be consumed correctly",
     "parameters": []
   },
   {
@@ -726,6 +736,11 @@
     "parameters": []
   },
   {
+    "patternId": "S2252",
+    "title": "For-loop conditions should be true at least once",
+    "parameters": []
+  },
+  {
     "patternId": "S127",
     "title": "\"for\" loop stop conditions should be invariant",
     "parameters": []
@@ -1071,6 +1086,11 @@
     "parameters": []
   },
   {
+    "patternId": "S4136",
+    "title": "Method overloads should be grouped together",
+    "parameters": []
+  },
+  {
     "patternId": "S3600",
     "title": "\"params\" should not be introduced on overrides",
     "parameters": []
@@ -1153,6 +1173,11 @@
   {
     "patternId": "S4200",
     "title": "Native methods should be wrapped",
+    "parameters": []
+  },
+  {
+    "patternId": "S1199",
+    "title": "Nested code blocks should not be used",
     "parameters": []
   },
   {
@@ -1413,6 +1438,11 @@
   {
     "patternId": "S3610",
     "title": "Nullable type comparison should not be redundant",
+    "parameters": []
+  },
+  {
+    "patternId": "S4201",
+    "title": "Null checks should not be used with \"is\"",
     "parameters": []
   },
   {
@@ -1782,6 +1812,11 @@
   {
     "patternId": "S3264",
     "title": "Events should be invoked",
+    "parameters": []
+  },
+  {
+    "patternId": "S1128",
+    "title": "Unused \"using\" should be removed",
     "parameters": []
   },
   {
