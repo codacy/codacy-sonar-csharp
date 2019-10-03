@@ -92,6 +92,11 @@
     "timeToFix": 2
   },
   {
+    "patternId": "S4583",
+    "title": "Calls to delegate's method \"BeginInvoke\" should be paired with calls to \"EndInvoke\"",
+    "parameters": []
+  },
+  {
     "patternId": "S1764",
     "title": "Identical expressions should not be used on both sides of a binary operator",
     "parameters": [],
@@ -336,6 +341,11 @@
     "title": "Constructors should only call non-overridable methods",
     "parameters": [],
     "timeToFix": 10
+  },
+  {
+    "patternId": "S5034",
+    "title": "\"ValueTask\" should be consumed correctly",
+    "parameters": []
   },
   {
     "patternId": "S3330",
@@ -860,6 +870,11 @@
     "timeToFix": 15
   },
   {
+    "patternId": "S2252",
+    "title": "For-loop conditions should be true at least once",
+    "parameters": []
+  },
+  {
     "patternId": "S127",
     "title": "\"for\" loop stop conditions should be invariant",
     "parameters": [],
@@ -1271,6 +1286,11 @@
     "timeToFix": 10
   },
   {
+    "patternId": "S4136",
+    "title": "Method overloads should be grouped together",
+    "parameters": []
+  },
+  {
     "patternId": "S3600",
     "title": "\"params\" should not be introduced on overrides",
     "parameters": [],
@@ -1370,6 +1390,11 @@
     "title": "Native methods should be wrapped",
     "parameters": [],
     "timeToFix": 30
+  },
+  {
+    "patternId": "S1199",
+    "title": "Nested code blocks should not be used",
+    "parameters": []
   },
   {
     "patternId": "S4581",
@@ -1682,6 +1707,11 @@
     "title": "Nullable type comparison should not be redundant",
     "parameters": [],
     "timeToFix": 5
+  },
+  {
+    "patternId": "S4201",
+    "title": "Null checks should not be used with \"is\"",
+    "parameters": []
   },
   {
     "patternId": "S1110",
@@ -2119,6 +2149,11 @@
     "title": "Events should be invoked",
     "parameters": [],
     "timeToFix": 10
+  },
+  {
+    "patternId": "S1128",
+    "title": "Unused \"using\" should be removed",
+    "parameters": []
   },
   {
     "patternId": "S1144",

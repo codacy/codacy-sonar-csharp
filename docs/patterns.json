@@ -1,6 +1,6 @@
 {
   "name": "Sonar C#",
-  "version": "7.16.0.8981",
+  "version": "7.17.0.9346",
   "patterns": [
     {
       "patternId": "S3442",
@@ -93,6 +93,12 @@
       "category": "Performance",
       "parameters": [],
       "level": "Info"
+    },
+    {
+      "patternId": "S4583",
+      "category": "ErrorProne",
+      "parameters": [],
+      "level": "Error"
     },
     {
       "patternId": "S1764",
@@ -336,6 +342,12 @@
     },
     {
       "patternId": "S1699",
+      "category": "ErrorProne",
+      "parameters": [],
+      "level": "Error"
+    },
+    {
+      "patternId": "S5034",
       "category": "ErrorProne",
       "parameters": [],
       "level": "Error"
@@ -863,6 +875,12 @@
       "level": "Error"
     },
     {
+      "patternId": "S2252",
+      "category": "ErrorProne",
+      "parameters": [],
+      "level": "Warning"
+    },
+    {
       "patternId": "S127",
       "category": "ErrorProne",
       "parameters": [],
@@ -1274,6 +1292,12 @@
       "level": "Error"
     },
     {
+      "patternId": "S4136",
+      "category": "CodeStyle",
+      "parameters": [],
+      "level": "Info"
+    },
+    {
       "patternId": "S3600",
       "category": "ErrorProne",
       "parameters": [],
@@ -1373,6 +1397,12 @@
       "category": "ErrorProne",
       "parameters": [],
       "level": "Warning"
+    },
+    {
+      "patternId": "S1199",
+      "category": "ErrorProne",
+      "parameters": [],
+      "level": "Info"
     },
     {
       "patternId": "S4581",
@@ -1685,6 +1715,12 @@
       "category": "UnusedCode",
       "parameters": [],
       "level": "Warning"
+    },
+    {
+      "patternId": "S4201",
+      "category": "UnusedCode",
+      "parameters": [],
+      "level": "Info"
     },
     {
       "patternId": "S1110",
@@ -2122,6 +2158,12 @@
       "category": "UnusedCode",
       "parameters": [],
       "level": "Warning"
+    },
+    {
+      "patternId": "S1128",
+      "category": "UnusedCode",
+      "parameters": [],
+      "level": "Info"
     },
     {
       "patternId": "S1144",
