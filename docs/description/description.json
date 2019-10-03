@@ -94,7 +94,8 @@
   {
     "patternId": "S4583",
     "title": "Calls to delegate's method \"BeginInvoke\" should be paired with calls to \"EndInvoke\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S1764",
@@ -345,7 +346,8 @@
   {
     "patternId": "S5034",
     "title": "\"ValueTask\" should be consumed correctly",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3330",
@@ -872,7 +874,8 @@
   {
     "patternId": "S2252",
     "title": "For-loop conditions should be true at least once",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S127",
@@ -1288,7 +1291,8 @@
   {
     "patternId": "S4136",
     "title": "Method overloads should be grouped together",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S3600",
@@ -1394,7 +1398,8 @@
   {
     "patternId": "S1199",
     "title": "Nested code blocks should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S4581",
@@ -1711,7 +1716,8 @@
   {
     "patternId": "S4201",
     "title": "Null checks should not be used with \"is\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1110",
@@ -2153,7 +2159,8 @@
   {
     "patternId": "S1128",
     "title": "Unused \"using\" should be removed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1144",
