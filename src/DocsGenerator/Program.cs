@@ -6,8 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using CodacyCSharp.DocsGenerator.Helpers;
-using CodacyCSharp.DocsGenerator.Results;
-using CodacyCSharp.Seed.Patterns;
+using Codacy.Engine.Seed.Patterns;
 using Newtonsoft.Json;
 using ReverseMarkdown;
 
@@ -59,7 +58,8 @@ namespace CodacyCSharp.DocsGenerator
                         {
                             Name = param.Element("key").Value,
                             Description = param.Element("description").Value
-                        }).ToArray()
+                        }).ToArray(),
+                    TimeToFix = TTFHelper.ToCodacyTimeToFix(rule.Element("remediationFunctionBaseEffort")?.Value ?? "")
                 };
 
                 patternsFile.Patterns.Add(pattern);

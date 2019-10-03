@@ -2,52 +2,62 @@
   {
     "patternId": "S3442",
     "title": "\"abstract\" classes should not have \"public\" constructors",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S4432",
     "title": "AES encryption algorithm should be used with secured mode",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3923",
     "title": "All branches in a conditional structure should not have exactly the same implementation",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S3244",
     "title": "Anonymous delegates should not be used to unsubscribe from Events",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S3236",
     "title": "Caller information arguments should not be provided explicitly",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S2330",
     "title": "Array covariance should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S3415",
     "title": "Assertion arguments should be passed in the correct order",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1121",
     "title": "Assignments should not be made from within sub-expressions",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2306",
     "title": "\"async\" and \"await\" should not be used as identifiers",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3168",
     "title": "\"async\" methods should not return \"void\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S1200",
@@ -57,7 +67,8 @@
         "name": "max",
         "description": "Maximum number of classes a single class is allowed to depend upon"
       }
-    ]
+    ],
+    "timeToFix": 120
   },
   {
     "patternId": "S110",
@@ -71,67 +82,80 @@
         "name": "filteredClasses",
         "description": "Comma-separated list of classes to be filtered out of the count of inheritance. Depth counting will stop when a filtered class is reached. For example: System.Windows.Controls.UserControl, System.Windows.*. (String)"
       }
-    ]
+    ],
+    "timeToFix": 5
   },
   {
     "patternId": "S4060",
     "title": "Non-abstract attributes should be sealed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1764",
     "title": "Identical expressions should not be used on both sides of a binary operator",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1940",
     "title": "Boolean checks should not be inverted",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1125",
     "title": "Boolean literals should not be redundant",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1227",
     "title": "break statements should not be used except for switch cases",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3343",
     "title": "Caller information parameters should come at the end of the parameter list",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4462",
     "title": "Calls to \"async\" methods should not be blocking",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S3215",
     "title": "\"interface\" instances should not be cast to concrete types",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 60
   },
   {
     "patternId": "S3247",
     "title": "Duplicate casts should not be made",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2486",
     "title": "Generic exceptions should not be ignored",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 60
   },
   {
     "patternId": "S2737",
     "title": "\"catch\" clauses should do more than rethrow",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3928",
     "title": "Parameter names used into ArgumentException constructors should match an existing one ",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1451",
@@ -145,37 +169,44 @@
         "name": "isRegularExpression",
         "description": "Whether the headerFormat is a regular expression."
       }
-    ]
+    ],
+    "timeToFix": 5
   },
   {
     "patternId": "S101",
     "title": "Types should be named in PascalCase",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S100",
     "title": "Methods and properties should be named in PascalCase",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3453",
     "title": "Classes should not have only \"private\" constructors",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1694",
     "title": "An abstract class should have both abstract and concrete methods",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3897",
     "title": "Classes that provide \"Equals(<T>)\" should implement \"IEquatable<T>\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1118",
     "title": "Utility classes should not have public constructors",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3776",
@@ -189,237 +220,284 @@
         "name": "propertyThreshold ",
         "description": "The maximum authorized complexity in a property."
       }
-    ]
+    ],
+    "timeToFix": 10
   },
   {
     "patternId": "S1155",
     "title": "\"Any()\" should be used to test for emptiness",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S4004",
     "title": "Collection properties should be readonly",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2971",
     "title": "\"IEnumerable\" LINQs should be simplified",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3909",
     "title": "Collections should implement the generic interface",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S125",
     "title": "Sections of code should not be commented out",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1134",
     "title": "Track uses of \"FIXME\" tags",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1135",
     "title": "Track uses of \"TODO\" tags",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1210",
     "title": "\"Equals\" and the comparison operators should be overridden when implementing \"IComparable\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S2688",
     "title": "\"NaN\" should not be used in comparisons",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3240",
     "title": "The simplest possible condition syntax should be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3972",
     "title": "Conditionals should start on new lines",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S1862",
     "title": "Related \"if/else if\" statements should not have the same condition",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S1871",
     "title": "Two branches in a conditional structure should not have exactly the same implementation",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2760",
     "title": "Sequential tests should not check the same condition",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2583",
     "title": "Conditionally executed blocks should be reachable",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S2589",
     "title": "Boolean expressions should not be gratuitous",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2228",
     "title": "Console logging should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4260",
     "title": "\"ConstructorArgument\" parameters should exist in constructors",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1699",
     "title": "Constructors should only call non-overridable methods",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3330",
     "title": "\"HttpOnly\" should be set on cookies",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2092",
     "title": "Creating cookies without the \"secure\" flag is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4426",
     "title": "Cryptographic keys should not be too short",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3869",
     "title": "\"SafeHandle.DangerousGetHandle\" should not be called",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S1854",
     "title": "Dead stores should be removed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S3346",
     "title": "Expressions used in \"Debug.Assert\" should not produce side effects",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3906",
     "title": "Event Handlers should have the correct signature",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3903",
     "title": "Types should be defined in named namespaces",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4524",
     "title": "\"default\" clauses should be first or last",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3172",
     "title": "Delegates should not be subtracted",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S2931",
     "title": "Classes with \"IDisposable\" members should implement \"IDisposable\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2930",
     "title": "\"IDisposables\" should be disposed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2997",
     "title": "\"IDisposables\" created in a \"using\" statement should not be returned",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4002",
     "title": "Disposable types should declare finalizers",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2952",
     "title": "Classes should \"Dispose\" of members from the classes' own \"Dispose\" methods",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S2953",
     "title": "Methods named \"Dispose\" should implement \"IDisposable.Dispose\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3902",
     "title": "\"Assembly.GetExecutingAssembly\" should not be called",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3885",
     "title": "\"Assembly.Load\" should be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1147",
     "title": "Exit methods should not be called",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S1215",
     "title": "\"GC.Collect\" should not be called",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S3971",
     "title": "\"GC.SuppressFinalize\" should not be called",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1696",
     "title": "NullReferenceException should not be caught",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2221",
     "title": "\"Exception\" should not be caught when not required by called methods",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S3981",
     "title": "Collection sizes and array length comparisons should make sense",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S2365",
     "title": "Properties should not make collection or array copies",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4015",
     "title": "Inherited member visibility should not be decreased",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3956",
     "title": "\"Generic.List\" instances should not be part of public APIs",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2068",
@@ -429,142 +507,170 @@
         "name": "credentialWords",
         "description": "Comma separated list of words identifying potential credentials"
       }
-    ]
+    ],
+    "timeToFix": 30
   },
   {
     "patternId": "S4019",
     "title": "Base class methods should not be hidden",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4277",
     "title": "\"Shared\" parts should not be created with \"new\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2551",
     "title": "Shared resources should not be used for locking",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S3998",
     "title": "Threads should not lock on objects with weak identity",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S4070",
     "title": "Non-flags enums should not be marked with \"FlagsAttribute\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3358",
     "title": "Ternary operators should not be nested",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4017",
     "title": "Method signatures should not contain nested generic types",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S4143",
     "title": "Collection elements should not be replaced unconditionally",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4142",
     "title": "Duplicate values should not be passed as arguments",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2183",
     "title": "Integral numbers should not be shifted by zero or more than their number of bits-1",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3060",
     "title": "\"is\" should not be used with \"this\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S1048",
     "title": "Destructors should not throw exceptions",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S2114",
     "title": "Collections should not be passed as arguments to their own methods",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S2701",
     "title": "Literal boolean values should not be used in assertions",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3874",
     "title": "\"out\" and \"ref\" parameters should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S2245",
     "title": "Using pseudorandom number generators (PRNGs) is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S106",
     "title": "Standard outputs should not be used directly to log anything",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S881",
     "title": "Increment (++) and decrement (--) operators should not be used in a method call or mixed with other operators in an expression",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3875",
     "title": "\"operator==\" should not be overloaded on reference types",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S4158",
     "title": "Empty collections should not be accessed or iterated",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S1186",
     "title": "Methods should not be empty",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3261",
     "title": "Namespaces should not be empty",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S108",
     "title": "Nested blocks of code should not be left empty",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3655",
     "title": "Empty nullable value should not be accessed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S1116",
     "title": "Empty statements should be removed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S2291",
     "title": "Overflow checking should not be disabled for \"Enumerable.Sum\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S2344",
     "title": "Enumeration type names should not have \"Flags\" or \"Enum\" suffixes",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2342",
@@ -578,72 +684,86 @@
         "name": "flagsAttributeFormat",
         "description": "Regular expression used to check the flags enumeration type names against."
       }
-    ]
+    ],
+    "timeToFix": 5
   },
   {
     "patternId": "S4016",
     "title": "Enumeration members should not be named \"Reserved\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S4022",
     "title": "Enumerations should have \"Int32\" storage",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1244",
     "title": "Floating point numbers should not be tested for equality",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2197",
     "title": "Modulus results should not be checked for direct equality",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4035",
     "title": "Classes implementing \"IEquatable<T>\" should be sealed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S4220",
     "title": "Events should have proper arguments",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3693",
     "title": "Exception constructors should not throw exceptions",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S3445",
     "title": "Exceptions should not be explicitly rethrown",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3877",
     "title": "Exceptions should not be thrown from unexpected methods",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S4027",
     "title": "Exceptions should provide standard constructors",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3871",
     "title": "Exception types should be \"public\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3984",
     "title": "Exception should not be created without being thrown",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3431",
     "title": "\"[ExpectedException]\" should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1067",
@@ -653,42 +773,50 @@
         "name": "max",
         "description": "Maximum number of allowed conditional operators in an expression"
       }
-    ]
+    ],
+    "timeToFix": 3
   },
   {
     "patternId": "S4226",
     "title": "Extensions should be in separate namespaces",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S4225",
     "title": "Extension methods should not extend \"object\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S2387",
     "title": "Child class fields should not shadow parent class fields",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4025",
     "title": "Child class fields should not differ from parent class fields only by capitalization",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2933",
     "title": "Fields that are only assigned in the constructor should be \"readonly\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S2357",
     "title": "Fields should be private",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S1104",
     "title": "Fields should not have public accessibility",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S104",
@@ -698,47 +826,56 @@
         "name": "maximumFileLocThreshold",
         "description": "Maximum authorized lines in a file."
       }
-    ]
+    ],
+    "timeToFix": 60
   },
   {
     "patternId": "S113",
     "title": "Files should contain an empty newline at the end",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S3880",
     "title": "Finalizers should not be empty",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S2345",
     "title": "Flags enumerations should explicitly initialize all their members",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2346",
     "title": "Flags enumerations zero-value members should be named \"None\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3217",
     "title": "\"Explicit\" conversions of \"foreach\" loops should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S127",
     "title": "\"for\" loop stop conditions should be invariant",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S1994",
     "title": "\"for\" loop increment clauses should modify the loops' counters",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S3376",
     "title": "Attribute, EventArgs, and Exception type names should end with the type being extended",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1541",
@@ -748,7 +885,8 @@
         "name": "maximumFunctionComplexityThreshold",
         "description": "The maximum authorized complexity."
       }
-    ]
+    ],
+    "timeToFix": 10
   },
   {
     "patternId": "S134",
@@ -758,227 +896,272 @@
         "name": "max",
         "description": "Maximum allowed control flow statement nesting depth."
       }
-    ]
+    ],
+    "timeToFix": 10
   },
   {
     "patternId": "S3464",
     "title": "Type inheritance should not be recursive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 60
   },
   {
     "patternId": "S2934",
     "title": "Property assignments should not be made for \"readonly\" fields not constrained to reference types",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S2955",
     "title": "Generic parameters not constrained to reference types should not be compared to \"null\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3246",
     "title": "Generic type parameters should be co/contravariant when possible",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4018",
     "title": "Generic methods should provide type parameters",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S2326",
     "title": "Unused type parameters should be removed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3249",
     "title": "Classes directly extending \"object\" should not call \"base\" in \"GetHashCode\" or \"Equals\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S2328",
     "title": "\"GetHashCode\" should not reference mutable fields",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2219",
     "title": "Runtime type checking should be simplified",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S907",
     "title": "\"goto\" statement should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3397",
     "title": "\"base.Equals\" should not be used to check for reference equality in \"Equals\" if \"base\" is not \"object\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1313",
     "title": "Using hardcoded IP addresses is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S3011",
     "title": "Changing or bypassing accessibility is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S4792",
     "title": "Configuring loggers is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4834",
     "title": "Controlling permissions is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4790",
     "title": "Hashing data is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4507",
     "title": "Delivering code in production with debug features activated is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S4787",
     "title": "Encrypting data is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2077",
     "title": "Formatting SQL queries is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S5042",
     "title": "Expanding archive files is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S4818",
     "title": "Using Sockets is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4823",
     "title": "Using command line arguments is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2255",
     "title": "Writing cookies is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4784",
     "title": "Using regular expressions is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4564",
     "title": "ASP.NET HTTP request validation feature should not be disabled",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S126",
     "title": "\"if ... else if\" constructs should end with \"else\" clauses",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1066",
     "title": "Collapsible \"if\" statements should be merged",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1145",
     "title": "Useless \"if(true) {...}\" and \"if(false){...}\" blocks should be removed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3881",
     "title": "\"IDisposable\" should be implemented correctly",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3925",
     "title": "\"ISerializable\" should be implemented correctly",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S3927",
     "title": "Serialization event handlers should be implemented correctly",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S3973",
     "title": "A conditionally executed single line should be denoted by indentation",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2692",
     "title": "\"IndexOf\" checks should not be for positive numbers",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S2190",
     "title": "Recursion should not be infinite",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S3444",
     "title": "Interfaces should not simply inherit from base interfaces with colliding members",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3963",
     "title": "\"static\" fields should be initialized inline",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2278",
     "title": "Neither DES (Data Encryption Standard) nor DESede (3DES) should be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S2070",
     "title": "SHA-1 and Message-Digest hash algorithms should not be used in secure contexts",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S4039",
     "title": "Interface methods should be callable by derived types",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4023",
     "title": "Interfaces should not be empty",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1944",
     "title": "Inappropriate casts should not be made",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S3220",
     "title": "Method calls should not resolve ambiguously to overloads with \"params\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S1309",
     "title": "Track uses of in-source issue suppressions",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S4433",
     "title": "LDAP connections should be authenticated",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S103",
@@ -988,127 +1171,152 @@
         "name": "maximumLineLength",
         "description": "The maximum authorized line length."
       }
-    ]
+    ],
+    "timeToFix": 1
   },
   {
     "patternId": "S4055",
     "title": "Literals should not be passed as localized parameters",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S818",
     "title": "Literal suffixes should be upper case",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S2184",
     "title": "Results of integer division should not be assigned to floating point variables",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S109",
     "title": "Magic numbers should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3904",
     "title": "Assemblies should have version information",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3990",
     "title": "Assemblies should be marked as CLS compliant",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S3992",
     "title": "Assemblies should explicitly specify COM visibility",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S4026",
     "title": "Assemblies should be marked with \"NeutralResourcesLanguageAttribute\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S4210",
     "title": "Windows Forms entry points should be marked with STAThread",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3052",
     "title": "Members should not be initialized to default values",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3604",
     "title": "Member initializer values should not be redundant",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S1185",
     "title": "Overriding members should do more than simply call the same member in the base class",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3218",
     "title": "Inner class members should not shadow outer class \"static\" or type members",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2325",
     "title": "Methods and properties that don't access instance data should be static",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4211",
     "title": "Members should not have conflicting transparency annotations",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3427",
     "title": "Method overloads with default parameter values should not overlap ",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3600",
     "title": "\"params\" should not be introduced on overrides",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S1006",
     "title": "Method overrides should not change parameter defaults",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3262",
     "title": "\"params\" should be used on overrides",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3450",
     "title": "Parameters with \"[DefaultParameterValue]\" attributes should also be marked \"[Optional]\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1172",
     "title": "Unused method parameters should be removed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4261",
     "title": "Methods should be named according to their synchronicities",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3400",
     "title": "Methods should not return constants",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4144",
     "title": "Methods should not have identical implementations",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S138",
@@ -1118,467 +1326,560 @@
         "name": "max",
         "description": "Maximum authorized lines of code in a method"
       }
-    ]
+    ],
+    "timeToFix": 20
   },
   {
     "patternId": "S3242",
     "title": "Method parameters should be declared with base types",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2681",
     "title": "Multiline blocks should be enclosed in curly braces",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1659",
     "title": "Multiple variables should not be declared on the same line",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3887",
     "title": "Mutable, non-private fields should not be \"readonly\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S2386",
     "title": "Mutable fields should not be \"public static\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S2302",
     "title": "\"nameof\" should be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4200",
     "title": "Native methods should be wrapped",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S4581",
     "title": "\"new Guid()\" should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1163",
     "title": "Exceptions should not be thrown in finally blocks",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S4586",
     "title": "Non-async \"Task/Task<T>\" methods should not return null",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3265",
     "title": "Non-flags enums should not be used in bitwise operations",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S4040",
     "title": "Strings should be normalized to uppercase",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3459",
     "title": "Unassigned members should be removed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2259",
     "title": "Null pointers should not be dereferenced",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3937",
     "title": "Number patterns should be regular",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S1848",
     "title": "Objects should not be created to be dropped immediately without being used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3966",
     "title": "Objects should not be disposed more than once",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S1123",
     "title": "\"Obsolete\" attributes should include explanations",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4069",
     "title": "Operator overloads should have named alternatives",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4050",
     "title": "Operators should be overloaded consistently",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2360",
     "title": "Optional parameters should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3466",
     "title": "Optional parameters should be passed to \"base\" calls",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3451",
     "title": "\"[DefaultValue]\" should not be used when \"[DefaultParameterValue]\" is meant",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3447",
     "title": "\"[Optional]\" should not be used on \"ref\" or \"out\" parameters",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3169",
     "title": "Multiple \"OrderBy\" calls should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1206",
     "title": "\"Equals(Object)\" and \"GetHashCode()\" should be overridden in pairs",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S1226",
     "title": "Method parameters, caught exceptions and foreach variables' initial values should not be ignored",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S927",
     "title": "parameter names should match base declaration and other partial definitions",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3872",
     "title": "Parameter names should not duplicate the names of their methods",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2234",
     "title": "Parameters should be passed in the correct order",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4457",
     "title": "Parameter validation in \"async\"/\"await\" methods should be wrapped",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S4456",
     "title": "Parameter validation in yielding methods should be wrapped",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S4428",
     "title": "\"PartCreationPolicyAttribute\" should be used with \"ExportAttribute\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3251",
     "title": "Implementations should be provided for \"partial\" methods",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S4214",
     "title": "\"P/Invoke\" methods should not be visible",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S4000",
     "title": "Pointers to unmanaged memory should not be visible",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3967",
     "title": "Multidimensional arrays should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1450",
     "title": "Private fields only used as local variables in methods should become local variables",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4275",
     "title": "Getters and setters should access the expected fields",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4049",
     "title": "Properties should be preferred",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2372",
     "title": "Exceptions should not be thrown from property getters",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S4059",
     "title": "Property names should not match get methods",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S2292",
     "title": "Trivial properties should be auto-implemented",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2376",
     "title": "Write-only properties should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S3926",
     "title": "Deserialization methods should be provided for \"OptionalField\" members",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2339",
     "title": "Public constant members should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3900",
     "title": "Arguments of public methods should be validated against null",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2368",
     "title": "Public methods should not have multidimensional array parameters",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 60
   },
   {
     "patternId": "S3603",
     "title": "Methods with \"Pure\" attribute should return a value ",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4829",
     "title": "Reading the Standard Input is security-sensitive",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3253",
     "title": "Constructor and destructor declarations should not be redundant",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3254",
     "title": "Default parameter values should not be passed as arguments",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1905",
     "title": "Redundant casts should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3440",
     "title": "Variables should not be checked against the values they're about to be assigned",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3257",
     "title": "Declarations and initializations should be as concise as possible",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S1939",
     "title": "Inheritance list should not be redundant",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S3626",
     "title": "Jump statements should not be redundant",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S2333",
     "title": "Redundant modifiers should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3610",
     "title": "Nullable type comparison should not be redundant",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1110",
     "title": "Redundant pairs of parentheses should be removed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S3235",
     "title": "Redundant parentheses should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3441",
     "title": "Redundant property names should be omitted in anonymous classes",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3456",
     "title": "\"string.ToCharArray()\" should not be called redundantly",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1858",
     "title": "\"ToString()\" calls should not be redundant",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1698",
     "title": "\"==\" should not be used when \"Equals\" is overridden",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S2995",
     "title": "\"Object.ReferenceEquals\" should not be used for value types",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S3993",
     "title": "Custom attributes should be marked with \"System.AttributeUsageAttribute\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1168",
     "title": "Empty arrays and collections should be returned instead of null",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S2201",
     "title": "Return values from functions without side effects should not be ignored",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2757",
     "title": "\"=+\" should not be used instead of \"+=\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1109",
     "title": "A close curly brace should be located at the beginning of a line",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S3884",
     "title": "\"CoSetProxyBlanket\" and \"CoInitializeSecurity\" should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S1656",
     "title": "Variables should not be self-assigned",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 3
   },
   {
     "patternId": "S4212",
     "title": "Serialization constructors should be secured",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4057",
     "title": "Locales should be set for data types",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3449",
     "title": "Right operands of shift operators should be integers",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S1697",
     "title": "Short-circuit logic should be used to prevent null pointer dereferences in conditionals",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S4159",
     "title": "Classes should implement their \"ExportAttribute\" interfaces",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S2437",
     "title": "Silly bit operations should not be performed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S122",
     "title": "Statements should be on separate lines",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S4056",
     "title": "Overloads with a \"CultureInfo\" or an \"IFormatProvider\" parameter should be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4058",
     "title": "Overloads with a \"StringComparison\" parameter should be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S2743",
     "title": "Static fields should not be used in generic types",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3263",
     "title": "Static fields should appear in the order they must be initialized ",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2223",
     "title": "Non-constant static fields should not be visible",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S3010",
     "title": "Static fields should not be updated in constructors",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S2696",
     "title": "Instance members should not write to \"static\" fields",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S2156",
     "title": "\"sealed\" classes should not have \"protected\" members",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2674",
     "title": "The length returned from a stream read should be checked",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S1643",
     "title": "Strings should not be concatenated using '+' in a loop",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2275",
     "title": "Composite format strings should not lead to unexpected behavior at runtime",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3457",
     "title": "Composite format strings should be used correctly",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S1192",
@@ -1588,37 +1889,44 @@
         "name": "threshold",
         "description": "Number of times a literal must be duplicated to trigger an issue."
       }
-    ]
+    ],
+    "timeToFix": 10
   },
   {
     "patternId": "S1449",
     "title": "Culture should be specified for \"string\" operations",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3876",
     "title": "Strings or integral types should be used for indexers",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S3234",
     "title": "\"GC.SuppressFinalize\" should not be invoked for types without destructors",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3458",
     "title": "Empty \"case\" clauses that fall through to the \"default\" should be omitted",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S1301",
     "title": "\"switch\" statements should have at least 3 \"case\" clauses",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3532",
     "title": "Empty \"default\" clauses should be removed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 1
   },
   {
     "patternId": "S1151",
@@ -1628,77 +1936,92 @@
         "name": "max",
         "description": "Maximum number of statements."
       }
-    ]
+    ],
+    "timeToFix": 5
   },
   {
     "patternId": "S1821",
     "title": "\"switch\" statements should not be nested",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S131",
     "title": "\"switch/Select\" statements should contain a \"default/Case Else\" clauses",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S105",
     "title": "Tabulation characters should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3216",
     "title": "\"ConfigureAwait(false)\" should be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S2758",
     "title": "The ternary operator should not return the same value regardless of the condition",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2187",
     "title": "TestCases should contain tests",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2699",
     "title": "Tests should include assertions",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3433",
     "title": "Test method signatures should be correct",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1607",
     "title": "Tests should not be ignored",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3366",
     "title": "\"this\" should not be exposed from constructors",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 30
   },
   {
     "patternId": "S3889",
     "title": "Neither \"Thread.Resume\" nor \"Thread.Suspend\" should be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S3005",
     "title": "\"ThreadStatic\" should not be used on non-static fields",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2996",
     "title": "\"ThreadStatic\" fields should not be initialized",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S112",
     "title": "General exceptions should never be thrown",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S2436",
@@ -1712,7 +2035,8 @@
         "name": "maxMethod",
         "description": "Maximum authorized number of generic parameters for methods."
       }
-    ]
+    ],
+    "timeToFix": 20
   },
   {
     "patternId": "S1479",
@@ -1722,7 +2046,8 @@
         "name": "maximum",
         "description": "Maximum number of case"
       }
-    ]
+    ],
+    "timeToFix": 30
   },
   {
     "patternId": "S107",
@@ -1732,181 +2057,217 @@
         "name": "max",
         "description": "Maximum authorized number of parameters"
       }
-    ]
+    ],
+    "timeToFix": 20
   },
   {
     "patternId": "S2225",
     "title": "\"ToString()\" method should not return null",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3717",
     "title": "Track use of \"NotImplementedException\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2327",
     "title": "\"try\" statements with identical \"catch\" and/or \"finally\" blocks should be merged",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S3443",
     "title": "Type should not be examined on \"System.Type\" instances",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4041",
     "title": "Type names should not match namespaces",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S4052",
     "title": "Types should not extend outdated base types",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2761",
     "title": "Doubled prefix operators \"!!\" and \"~~\" should not be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3353",
     "title": "Unchanged local variables should be \"const\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1751",
     "title": "Loops with at most one iteration should be refactored",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3264",
     "title": "Events should be invoked",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S1144",
     "title": "Unused private types or members should be removed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3241",
     "title": "Methods should not return values that are never used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S1075",
     "title": "URIs should not be hardcoded",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S3962",
     "title": "\"static readonly\" constants should be \"const\" instead",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S121",
     "title": "Control structures should use curly braces",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3908",
     "title": "Generic event handlers should be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   },
   {
     "patternId": "S4047",
     "title": "Generics should be used when appropriate",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S2148",
     "title": "Underscores should be used to make large numbers readable",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4061",
     "title": "\"params\" should be used instead of \"varargs\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2178",
     "title": "Short-circuit logic should be used in boolean contexts",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3256",
     "title": "\"string.IsNullOrEmpty\" should be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3994",
     "title": "URI Parameters should not be strings",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3995",
     "title": "URI return values should not be strings",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3996",
     "title": "URI properties should not be strings",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 10
   },
   {
     "patternId": "S3997",
     "title": "String URI overloads should call \"System.Uri\" overloads",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S4005",
     "title": "\"System.Uri\" arguments should be used instead of strings",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3237",
     "title": "\"value\" parameters should be used",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1264",
     "title": "A \"while\" loop should be used instead of a \"for\" loop",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2123",
     "title": "Values should not be uselessly incremented",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3898",
     "title": "Value types should implement \"IEquatable<T>\"",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S1117",
     "title": "Local variables should not shadow class fields",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1481",
     "title": "Unused local variables should be removed",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S2290",
     "title": "Field-like events should not be virtual",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 20
   },
   {
     "patternId": "S3597",
     "title": "\"ServiceContract\" and \"OperationContract\" attributes should be used together",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 2
   },
   {
     "patternId": "S3598",
     "title": "One-way \"OperationContract\" methods should have \"void\" return type",
-    "parameters": []
+    "parameters": [],
+    "timeToFix": 15
   }
 ]
