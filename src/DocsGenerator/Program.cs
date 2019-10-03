@@ -19,7 +19,9 @@ namespace CodacyCSharp.DocsGenerator
 
         private static void Main()
         {
-            var sonarVersion = File.ReadAllText(".SONAR_VERSION").TrimEnd(Environment.NewLine.ToCharArray());
+            var sonarVersion = File.ReadAllText(".SONAR_VERSION")
+                .TrimEnd(Environment.NewLine.ToCharArray())
+                .Split('.');
 
             Directory.CreateDirectory(docsFolder);
             Directory.CreateDirectory(descriptionFolder);
@@ -27,7 +29,7 @@ namespace CodacyCSharp.DocsGenerator
             var patternsFile = new CodacyPatterns
             {
                 Name = "Sonar C#",
-                Version = sonarVersion,
+                Version = string.Format("{0}.{1}", sonarVersion),
                 Patterns = new List<Pattern>()
             };
 
