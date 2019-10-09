@@ -55,17 +55,18 @@
     {
       "patternId": "S1200",
       "category": "Complexity",
+      "level": "Warning",
       "parameters": [
         {
           "name": "max",
           "default": "30"
         }
-      ],
-      "level": "Warning"
+      ]
     },
     {
       "patternId": "S110",
       "category": "ErrorProne",
+      "level": "Warning",
       "parameters": [
         {
           "name": "max",
@@ -75,8 +76,7 @@
           "name": "filteredClasses",
           "default": ""
         }
-      ],
-      "level": "Warning"
+      ]
     },
     {
       "patternId": "S4060",
@@ -131,6 +131,7 @@
     {
       "patternId": "S2486",
       "category": "Security",
+      "subcategory": "NoLogging",
       "level": "Error"
     },
     {
@@ -146,6 +147,7 @@
     {
       "patternId": "S4830",
       "category": "Security",
+      "subcategory": "Misconfiguration",
       "level": "Error"
     },
     {
@@ -156,6 +158,7 @@
     {
       "patternId": "S1451",
       "category": "ErrorProne",
+      "level": "Error",
       "parameters": [
         {
           "name": "headerFormat",
@@ -165,8 +168,7 @@
           "name": "isRegularExpression",
           "default": "false"
         }
-      ],
-      "level": "Error"
+      ]
     },
     {
       "patternId": "S101",
@@ -201,6 +203,7 @@
     {
       "patternId": "S3776",
       "category": "Complexity",
+      "level": "Error",
       "parameters": [
         {
           "name": "threshold",
@@ -210,8 +213,7 @@
           "name": "propertyThreshold ",
           "default": "3"
         }
-      ],
-      "level": "Error"
+      ]
     },
     {
       "patternId": "S1155",
@@ -296,6 +298,7 @@
     {
       "patternId": "S2228",
       "category": "Security",
+      "subcategory": "SensitiveData",
       "level": "Info"
     },
     {
@@ -321,16 +324,19 @@
     {
       "patternId": "S3330",
       "category": "Security",
+      "subcategory": "XSS",
       "level": "Info"
     },
     {
       "patternId": "S2092",
       "category": "Security",
+      "subcategory": "SensitiveData",
       "level": "Info"
     },
     {
       "patternId": "S4426",
       "category": "Security",
+      "subcategory": "VulnerableComponent",
       "level": "Error"
     },
     {
@@ -531,6 +537,7 @@
     {
       "patternId": "S2245",
       "category": "Security",
+      "subcategory": "SensitiveData",
       "level": "Error"
     },
     {
@@ -581,6 +588,7 @@
     {
       "patternId": "S5542",
       "category": "Security",
+      "subcategory": "Misconfiguration",
       "level": "Error"
     },
     {
@@ -596,6 +604,7 @@
     {
       "patternId": "S2342",
       "category": "CodeStyle",
+      "level": "Info",
       "parameters": [
         {
           "name": "format",
@@ -605,8 +614,7 @@
           "name": "flagsAttributeFormat",
           "default": "^([A-Z]{1,3}[a-z0-9]+)*([A-Z]{2})?s$"
         }
-      ],
-      "level": "Info"
+      ]
     },
     {
       "patternId": "S4016",
@@ -676,13 +684,13 @@
     {
       "patternId": "S1067",
       "category": "Complexity",
+      "level": "Error",
       "parameters": [
         {
           "name": "max",
           "default": "3"
         }
-      ],
-      "level": "Error"
+      ]
     },
     {
       "patternId": "S4226",
@@ -722,13 +730,13 @@
     {
       "patternId": "S104",
       "category": "Complexity",
+      "level": "Warning",
       "parameters": [
         {
           "name": "maximumFileLocThreshold",
           "default": "1000"
         }
-      ],
-      "level": "Warning"
+      ]
     },
     {
       "patternId": "S113",
@@ -783,24 +791,24 @@
     {
       "patternId": "S1541",
       "category": "Complexity",
+      "level": "Error",
       "parameters": [
         {
           "name": "maximumFunctionComplexityThreshold",
           "default": "10"
         }
-      ],
-      "level": "Error"
+      ]
     },
     {
       "patternId": "S134",
       "category": "Complexity",
+      "level": "Error",
       "parameters": [
         {
           "name": "max",
           "default": "3"
         }
-      ],
-      "level": "Error"
+      ]
     },
     {
       "patternId": "S3464",
@@ -860,82 +868,97 @@
     {
       "patternId": "S1313",
       "category": "Security",
+      "subcategory": "SensitiveData",
       "level": "Warning"
     },
     {
       "patternId": "S3011",
       "category": "Security",
+      "subcategory": "SensitiveData",
       "level": "Error"
     },
     {
       "patternId": "S4792",
       "category": "Security",
+      "subcategory": "NoLogging",
       "level": "Error"
     },
     {
       "patternId": "S4834",
       "category": "Security",
+      "subcategory": "BrokenAccess",
       "level": "Error"
     },
     {
       "patternId": "S4790",
       "category": "Security",
+      "subcategory": "Misconfiguration",
       "level": "Error"
     },
     {
       "patternId": "S4507",
       "category": "Security",
+      "subcategory": "SensitiveData",
       "level": "Info"
     },
     {
       "patternId": "S2068",
       "category": "Security",
+      "subcategory": "BrokenAuth",
+      "level": "Error",
       "parameters": [
         {
           "name": "credentialWords",
           "default": "password, passwd, pwd"
         }
-      ],
-      "level": "Error"
+      ]
     },
     {
       "patternId": "S4787",
       "category": "Security",
+      "subcategory": "Misconfiguration",
       "level": "Error"
     },
     {
       "patternId": "S2077",
       "category": "Security",
+      "subcategory": "Injection",
       "level": "Error"
     },
     {
       "patternId": "S5042",
       "category": "Security",
+      "subcategory": "BrokenAccess",
       "level": "Error"
     },
     {
       "patternId": "S4818",
       "category": "Security",
+      "subcategory": "SensitiveData",
       "level": "Error"
     },
     {
       "patternId": "S4823",
       "category": "Security",
+      "subcategory": "Injection",
       "level": "Error"
     },
     {
       "patternId": "S2255",
       "category": "Security",
+      "subcategory": "SensitiveData",
       "level": "Info"
     },
     {
       "patternId": "S4784",
       "category": "Security",
+      "subcategory": "Injection",
       "level": "Error"
     },
     {
       "patternId": "S4564",
       "category": "Security",
+      "subcategory": "XSS",
       "level": "Warning"
     },
     {
@@ -1001,11 +1024,13 @@
     {
       "patternId": "S5547",
       "category": "Security",
+      "subcategory": "Misconfiguration",
       "level": "Error"
     },
     {
       "patternId": "S2070",
       "category": "Security",
+      "subcategory": "Misconfiguration",
       "level": "Error"
     },
     {
@@ -1036,18 +1061,19 @@
     {
       "patternId": "S4433",
       "category": "Security",
+      "subcategory": "BrokenAuth",
       "level": "Error"
     },
     {
       "patternId": "S103",
       "category": "CodeStyle",
+      "level": "Warning",
       "parameters": [
         {
           "name": "maximumLineLength",
           "default": "200"
         }
-      ],
-      "level": "Warning"
+      ]
     },
     {
       "patternId": "S4055",
@@ -1122,6 +1148,7 @@
     {
       "patternId": "S4211",
       "category": "Security",
+      "subcategory": "Misconfiguration",
       "level": "Warning"
     },
     {
@@ -1177,13 +1204,13 @@
     {
       "patternId": "S138",
       "category": "Complexity",
+      "level": "Warning",
       "parameters": [
         {
           "name": "max",
           "default": "80"
         }
-      ],
-      "level": "Warning"
+      ]
     },
     {
       "patternId": "S3242",
@@ -1553,6 +1580,7 @@
     {
       "patternId": "S3884",
       "category": "Security",
+      "subcategory": "Misconfiguration",
       "level": "Error"
     },
     {
@@ -1562,7 +1590,8 @@
     },
     {
       "patternId": "S4212",
-      "category": "ErrorProne",
+      "category": "Security",
+      "subcategory": "BadDeserialization",
       "level": "Error"
     },
     {
@@ -1663,13 +1692,13 @@
     {
       "patternId": "S1192",
       "category": "ErrorProne",
+      "level": "Info",
       "parameters": [
         {
           "name": "threshold",
           "default": "3"
         }
-      ],
-      "level": "Info"
+      ]
     },
     {
       "patternId": "S4635",
@@ -1709,13 +1738,13 @@
     {
       "patternId": "S1151",
       "category": "Complexity",
+      "level": "Warning",
       "parameters": [
         {
           "name": "max",
           "default": "8"
         }
-      ],
-      "level": "Warning"
+      ]
     },
     {
       "patternId": "S1821",
@@ -1790,6 +1819,7 @@
     {
       "patternId": "S2436",
       "category": "Complexity",
+      "level": "Warning",
       "parameters": [
         {
           "name": "max",
@@ -1799,30 +1829,29 @@
           "name": "maxMethod",
           "default": "3"
         }
-      ],
-      "level": "Warning"
+      ]
     },
     {
       "patternId": "S1479",
       "category": "Complexity",
+      "level": "Warning",
       "parameters": [
         {
           "name": "maximum",
           "default": "30"
         }
-      ],
-      "level": "Warning"
+      ]
     },
     {
       "patternId": "S107",
       "category": "Complexity",
+      "level": "Warning",
       "parameters": [
         {
           "name": "max",
           "default": "7"
         }
-      ],
-      "level": "Warning"
+      ]
     },
     {
       "patternId": "S2225",
