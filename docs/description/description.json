@@ -350,8 +350,14 @@
     "timeToFix": 5
   },
   {
+    "patternId": "S2479",
+    "title": "Whitespace and control characters in string literals should be explicit",
+    "parameters": [],
+    "timeToFix": 10
+  },
+  {
     "patternId": "S3330",
-    "title": "\"HttpOnly\" should be set on cookies",
+    "title": "Creating cookies without the \"HttpOnly\" flag is security-sensitive",
     "parameters": [],
     "timeToFix": 10
   },
@@ -888,6 +894,12 @@
     "title": "\"for\" loop increment clauses should modify the loops' counters",
     "parameters": [],
     "timeToFix": 20
+  },
+  {
+    "patternId": "S2251",
+    "title": "A \"for\" loop update clause should move the counter in the right direction",
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S3376",
@@ -1858,6 +1870,12 @@
     "timeToFix": 2
   },
   {
+    "patternId": "S2857",
+    "title": "SQL keywords should be delimited by whitespace",
+    "parameters": [],
+    "timeToFix": 2
+  },
+  {
     "patternId": "S2743",
     "title": "Static fields should not be used in generic types",
     "parameters": [],
@@ -1927,6 +1945,12 @@
       }
     ],
     "timeToFix": 10
+  },
+  {
+    "patternId": "S4635",
+    "title": "String offset-based methods should be preferred for finding substrings from offsets",
+    "parameters": [],
+    "timeToFix": 5
   },
   {
     "patternId": "S1449",
@@ -2165,6 +2189,12 @@
   {
     "patternId": "S1144",
     "title": "Unused private types or members should be removed",
+    "parameters": [],
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S4487",
+    "title": "Unread \"private\" fields should be removed",
     "parameters": [],
     "timeToFix": 5
   },

@@ -1,6 +1,6 @@
 {
   "name": "Sonar C#",
-  "version": "7.17",
+  "version": "8.0",
   "patterns": [
     {
       "patternId": "S3442",
@@ -353,10 +353,16 @@
       "level": "Error"
     },
     {
+      "patternId": "S2479",
+      "category": "ErrorProne",
+      "parameters": [],
+      "level": "Error"
+    },
+    {
       "patternId": "S3330",
       "category": "Security",
       "parameters": [],
-      "level": "Error"
+      "level": "Info"
     },
     {
       "patternId": "S2092",
@@ -891,6 +897,12 @@
       "category": "ErrorProne",
       "parameters": [],
       "level": "Error"
+    },
+    {
+      "patternId": "S2251",
+      "category": "ErrorProne",
+      "parameters": [],
+      "level": "Warning"
     },
     {
       "patternId": "S3376",
@@ -1861,6 +1873,12 @@
       "level": "Info"
     },
     {
+      "patternId": "S2857",
+      "category": "ErrorProne",
+      "parameters": [],
+      "level": "Error"
+    },
+    {
       "patternId": "S2743",
       "category": "ErrorProne",
       "parameters": [],
@@ -1930,6 +1948,12 @@
         }
       ],
       "level": "Info"
+    },
+    {
+      "patternId": "S4635",
+      "category": "Performance",
+      "parameters": [],
+      "level": "Error"
     },
     {
       "patternId": "S1449",
@@ -2170,6 +2194,12 @@
       "category": "UnusedCode",
       "parameters": [],
       "level": "Warning"
+    },
+    {
+      "patternId": "S4487",
+      "category": "Security",
+      "parameters": [],
+      "level": "Error"
     },
     {
       "patternId": "S3241",
