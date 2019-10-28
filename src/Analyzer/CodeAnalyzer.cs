@@ -17,7 +17,7 @@ using SonarAnalyzer.Helpers;
 
 namespace CodacyCSharp.Analyzer
 {
-    public class CodeAnalyzer : Codacy.Engine.Seed.CodeAnalyzer
+    public class CodeAnalyzer : Codacy.Engine.Seed.CodeAnalyzer, IDisposable
     {
         private const string csharpExtension = ".cs";
         private const string defaultSonarConfiguration = "SonarLint.xml";
@@ -68,8 +68,26 @@ namespace CodacyCSharp.Analyzer
             diagnosticsRunner = new DiagnosticsRunner(GetAnalyzers(), GetUtilityAnalyzers(), additionalFiles.ToArray());
         }
 
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        /// <summary>
+        ///     Free temporary resources created on object construction.
+        /// </summary>
         ~CodeAnalyzer()
         {
+            Dispose(false);
+        }
+
+        private void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                GC.SuppressFinalize(this);
+            }
+
             // delete created temporary directory
             Directory.Delete(tmpSonarLintFolder, true);
         }

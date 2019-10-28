@@ -4,8 +4,11 @@
     {
         private static int Main()
         {
-            new CodeAnalyzer().Run()
-                .GetAwaiter().GetResult();
+            using (var analyzer = new CodeAnalyzer())
+            {
+                analyzer.Run()
+                    .GetAwaiter().GetResult();
+            }
 
             return 0;
         }
