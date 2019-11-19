@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="4.3">
+    <file name="S2068.cs">
+        <error source="S2068" line="5" message="&apos;passwor&apos; detected in this expression, review this potentially hardcoded credential." severity="error" />
+        <error source="S2068" line="7" message="&apos;passwords&apos; detected in this expression, review this potentially hardcoded credential." severity="error" />
+    </file>
+    <file name="S2223.cs">
+        <error source="S2223" line="6" message="Change the visibility of &apos;Empty&apos; or make it &apos;const&apos; or &apos;readonly&apos;." severity="error" />
+    </file>
+</checkstyle>
