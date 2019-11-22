@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <module name="root">
     <module name="BeforeExecutionExclusionFileFilter">
-        <property name="fileNamePattern" value="SonarLint.xml"/>
+        <property name="fileNamePattern" value="SonarLint\.xml"/>
     </module>
-    <module name="S2068" />
     <module name="S2223" />
+    <module name="S2068">
+        <property name="credentialWords" value="passwor,passwords" />
+    </module>
 </module>
