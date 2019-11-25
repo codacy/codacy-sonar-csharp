@@ -21,6 +21,7 @@ namespace CodacyCSharp.Analyzer
     {
         private const string csharpExtension = ".cs";
         private const string defaultSonarConfiguration = "SonarLint.xml";
+        private readonly string sonarConfigurationPath;
         private readonly ImmutableArray<DiagnosticAnalyzer> availableAnalyzers;
         private readonly DiagnosticsRunner diagnosticsRunner;
 
@@ -28,6 +29,7 @@ namespace CodacyCSharp.Analyzer
 
         public CodeAnalyzer() : base(csharpExtension)
         {
+            sonarConfigurationPath = Path.Combine(DefaultSourceFolder, defaultSonarConfiguration);
             availableAnalyzers = ImmutableArray.Create(
                 new RuleFinder()
                     .GetAnalyzerTypes()
@@ -61,8 +63,8 @@ namespace CodacyCSharp.Analyzer
 
                 new XDocument(new XElement("AnalysisInput", rules)).Save(tmpSonarLintPath);
                 additionalFiles.Add(new AnalyzerAdditionalFile(tmpSonarLintPath));
-            } else if (File.Exists(defaultSonarConfiguration)) {
-                additionalFiles.Add(new AnalyzerAdditionalFile(defaultSonarConfiguration));
+            } else if (File.Exists(sonarConfigurationPath)) {
+                additionalFiles.Add(new AnalyzerAdditionalFile(sonarConfigurationPath));
             }
 
             diagnosticsRunner = new DiagnosticsRunner(GetAnalyzers(), GetUtilityAnalyzers(), additionalFiles.ToArray());
@@ -89,7 +91,10 @@ namespace CodacyCSharp.Analyzer
             }
 
             // delete created temporary directory
-            Directory.Delete(tmpSonarLintFolder, true);
+            if(tmpSonarLintFolder != null)
+            {
+                Directory.Delete(tmpSonarLintFolder, true);
+            }
         }
 
         protected override async Task Analyze(CancellationToken cancellationToken)
@@ -141,9 +146,9 @@ namespace CodacyCSharp.Analyzer
         {
             if (PatternIds is null)
             {
-                if (File.Exists(defaultSonarConfiguration))
+                if (File.Exists(sonarConfigurationPath))
                 {
-                    var xmlDoc = XDocument.Load(defaultSonarConfiguration);
+                    var xmlDoc = XDocument.Load(sonarConfigurationPath);
                     PatternIds = xmlDoc.Descendants("Rule").Select(e => e.Elements("Key").Single().Value)
                         .ToImmutableList();
                 }
