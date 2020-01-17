@@ -40,11 +40,11 @@ namespace CodacyCSharp.DocsGenerator
             {
                 var lvl = LevelHelper.ToLevel((rule.Element("severity") ?? new XElement("undefined")).Value);
                 var parameters = rule.Elements().Where(e => e.Name == "param");
-                var patternsParameters = (parameters.Count() == 0) ? null : parameters.Select(param => new Parameter
+                var patternsParameters = parameters.Any() ? parameters.Select(param => new Parameter
                 {
                     Name = param.Element("key").Value,
                     Default = param.Element("defaultValue")?.Value ?? ""
-                }).ToArray();
+                }).ToArray() : null;
                 var pattern = new Pattern
                 {
                     PatternId = rule.Element("key").Value,
@@ -52,11 +52,11 @@ namespace CodacyCSharp.DocsGenerator
                     Category = CategoryHelper.ToCategory(rule, lvl),
                     Parameters = patternsParameters
                 };
-                var descriptionParameters = (parameters.Count() == 0) ? null : parameters.Select(param => new DescriptionParameter
+                var descriptionParameters = parameters.Any() ? parameters.Select(param => new DescriptionParameter
                 {
                     Name = param.Element("key").Value,
                     Description = param.Element("description").Value
-                }).ToArray();
+                }).ToArray() : null;
                 var description = new Description
                 {
                     PatternId = pattern.PatternId,
