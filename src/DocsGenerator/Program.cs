@@ -40,27 +40,28 @@ namespace CodacyCSharp.DocsGenerator
             {
                 var lvl = LevelHelper.ToLevel((rule.Element("severity") ?? new XElement("undefined")).Value);
                 var parameters = rule.Elements().Where(e => e.Name == "param");
+                var patternsParameters = parameters.Any() ? parameters.Select(param => new Parameter
+                {
+                    Name = param.Element("key").Value,
+                    Default = param.Element("defaultValue")?.Value ?? ""
+                }).ToArray() : null;
                 var pattern = new Pattern
                 {
                     PatternId = rule.Element("key").Value,
                     Level = lvl,
                     Category = CategoryHelper.ToCategory(rule, lvl),
-                    Parameters = parameters.Select(param => new Parameter
-                        {
-                            Name = param.Element("key").Value,
-                            Default = param.Element("defaultValue")?.Value ?? ""
-                        }).ToArray()
+                    Parameters = patternsParameters
                 };
-
+                var descriptionParameters = parameters.Any() ? parameters.Select(param => new DescriptionParameter
+                {
+                    Name = param.Element("key").Value,
+                    Description = param.Element("description").Value
+                }).ToArray() : null;
                 var description = new Description
                 {
                     PatternId = pattern.PatternId,
                     Title = rule.Element("name").Value,
-                    Parameters = parameters.Select(param => new DescriptionParameter
-                        {
-                            Name = param.Element("key").Value,
-                            Description = param.Element("description").Value
-                        }).ToArray(),
+                    Parameters = descriptionParameters,
                     TimeToFix = TTFHelper.ToCodacyTimeToFix(rule.Element("remediationFunctionBaseEffort")?.Value ?? "")
                 };
 
@@ -86,8 +87,8 @@ namespace CodacyCSharp.DocsGenerator
                     NullValueHandling = NullValueHandling.Ignore
                 });
 
-            File.WriteAllText("docs/patterns.json", patternsJson);
-            File.WriteAllText("docs/description/description.json", descriptionJson);
+            File.WriteAllText("docs/patterns.json", patternsJson + Environment.NewLine);
+            File.WriteAllText("docs/description/description.json", descriptionJson + Environment.NewLine);
         }
     }
 }

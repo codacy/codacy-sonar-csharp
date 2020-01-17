@@ -1,65 +1,55 @@
 {
   "name": "Sonar C#",
-  "version": "8.0",
+  "version": "8.2",
   "patterns": [
     {
       "patternId": "S3442",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4432",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3923",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3244",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3236",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2330",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3415",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1121",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2306",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3168",
       "category": "Performance",
-      "parameters": [],
       "level": "Warning"
     },
     {
@@ -91,79 +81,76 @@
     {
       "patternId": "S4060",
       "category": "Performance",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4583",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1764",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1940",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1125",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1227",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3343",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4462",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3215",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3247",
       "category": "Performance",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2486",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2737",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
+    },
+    {
+      "patternId": "S3949",
+      "category": "Security",
+      "level": "Warning"
+    },
+    {
+      "patternId": "S4830",
+      "category": "Security",
+      "level": "Error"
     },
     {
       "patternId": "S3928",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
@@ -184,37 +171,31 @@
     {
       "patternId": "S101",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S100",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3453",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1694",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3897",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1118",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
@@ -235,462 +216,381 @@
     {
       "patternId": "S1155",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4004",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2971",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3909",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S125",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1134",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1135",
       "category": "Security",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1210",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2688",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3240",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3972",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1862",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1871",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2760",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2583",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2589",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2228",
       "category": "Security",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4260",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1699",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S5034",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2479",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3330",
       "category": "Security",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2092",
       "category": "Security",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4426",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3869",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1854",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3346",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3906",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3903",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4524",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3172",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2931",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2930",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2997",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4002",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2952",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2953",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3902",
       "category": "Performance",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3885",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1147",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1215",
       "category": "Performance",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3971",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1696",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2221",
       "category": "Security",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3981",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2365",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4015",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3956",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
-    },
-    {
-      "patternId": "S2068",
-      "category": "Security",
-      "parameters": [
-        {
-          "name": "credentialWords",
-          "default": "password, passwd, pwd"
-        }
-      ],
-      "level": "Error"
     },
     {
       "patternId": "S4019",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4277",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2551",
       "category": "Performance",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3998",
       "category": "Performance",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4070",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3358",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4017",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4143",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4142",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2183",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3060",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1048",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2114",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2701",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3874",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2245",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S106",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S881",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3875",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4158",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1186",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3261",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S108",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3655",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1116",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Info"
+    },
+    {
+      "patternId": "S5542",
+      "category": "Security",
+      "level": "Error"
     },
     {
       "patternId": "S2291",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2344",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
@@ -711,79 +611,66 @@
     {
       "patternId": "S4016",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4022",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1244",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2197",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4035",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4220",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3693",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3445",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3877",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4027",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3871",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3984",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3431",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
@@ -800,43 +687,36 @@
     {
       "patternId": "S4226",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4225",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2387",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4025",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2933",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2357",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1104",
       "category": "Security",
-      "parameters": [],
       "level": "Info"
     },
     {
@@ -853,61 +733,51 @@
     {
       "patternId": "S113",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3880",
       "category": "Performance",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2345",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2346",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3217",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2252",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S127",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1994",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2251",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3376",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
@@ -935,265 +805,237 @@
     {
       "patternId": "S3464",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2934",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2955",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3246",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4018",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2326",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3249",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2328",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2219",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S907",
       "category": "Complexity",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3397",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1313",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3011",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4792",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4834",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4790",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4507",
       "category": "Security",
-      "parameters": [],
+      "level": "Info"
+    },
+    {
+      "patternId": "S2068",
+      "category": "Security",
+      "parameters": [
+        {
+          "name": "credentialWords",
+          "default": "password, passwd, pwd"
+        }
+      ],
       "level": "Error"
     },
     {
       "patternId": "S4787",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2077",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S5042",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4818",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4823",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2255",
       "category": "Security",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4784",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4564",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S126",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1066",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1145",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3881",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3925",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3927",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3973",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2692",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2190",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3444",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3963",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2278",
       "category": "Security",
-      "parameters": [],
+      "level": "Error"
+    },
+    {
+      "patternId": "S5547",
+      "category": "Security",
       "level": "Error"
     },
     {
       "patternId": "S2070",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4039",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4023",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1944",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3220",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1309",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4433",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
@@ -1210,151 +1052,126 @@
     {
       "patternId": "S4055",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S818",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2184",
       "category": "Security",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S109",
       "category": "Complexity",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3904",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3990",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3992",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4026",
       "category": "Performance",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4210",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3052",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3604",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1185",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3218",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2325",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4211",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3427",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4136",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3600",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1006",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3262",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3450",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1172",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4261",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3400",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4144",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
@@ -1371,571 +1188,476 @@
     {
       "patternId": "S3242",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2681",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1659",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3887",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2386",
       "category": "Security",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2302",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4200",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1199",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4581",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1163",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4586",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3265",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4040",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3459",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2259",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3937",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1848",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3966",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1123",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4069",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4050",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2360",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3466",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3451",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3447",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3169",
       "category": "Performance",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1206",
       "category": "Security",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1226",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S927",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3872",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2234",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4457",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4456",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4428",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3251",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4214",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4000",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3967",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1450",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4275",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4049",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2372",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4059",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2292",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2376",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3926",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2339",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3900",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2368",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3603",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4829",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3253",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3254",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1905",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3440",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3257",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1939",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3626",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2333",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3610",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4201",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1110",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3235",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3441",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3456",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1858",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1698",
       "category": "Security",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2995",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3993",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1168",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2201",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2757",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1109",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3884",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1656",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4212",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4057",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3449",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1697",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4159",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2437",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S122",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4056",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4058",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2857",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2743",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3263",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2223",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3010",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2696",
       "category": "Performance",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2156",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2674",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1643",
       "category": "Performance",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2275",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3457",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
@@ -1952,43 +1674,36 @@
     {
       "patternId": "S4635",
       "category": "Performance",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1449",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3876",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3234",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3458",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1301",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3532",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Info"
     },
     {
@@ -2005,85 +1720,71 @@
     {
       "patternId": "S1821",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S131",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S105",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3216",
       "category": "Performance",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2758",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2187",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S2699",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3433",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1607",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3366",
       "category": "Performance",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3889",
       "category": "Performance",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3005",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S2996",
       "category": "Performance",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S112",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
@@ -2126,223 +1827,186 @@
     {
       "patternId": "S2225",
       "category": "Security",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3717",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2327",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3443",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S4041",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4052",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2761",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3353",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1751",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3264",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1128",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1144",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4487",
       "category": "Security",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3241",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S1075",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3962",
       "category": "Performance",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S121",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3908",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4047",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2148",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S4061",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2178",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3256",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S3994",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3995",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3996",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3997",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S4005",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3237",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S1264",
       "category": "CodeStyle",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2123",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3898",
       "category": "Performance",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1117",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S1481",
       "category": "UnusedCode",
-      "parameters": [],
       "level": "Info"
     },
     {
       "patternId": "S2290",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Error"
     },
     {
       "patternId": "S3597",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     },
     {
       "patternId": "S3598",
       "category": "ErrorProne",
-      "parameters": [],
       "level": "Warning"
     }
   ]
