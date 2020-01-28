@@ -35,6 +35,7 @@ namespace CodacyCSharp.DocsGenerator.Helpers
 
                     case "cert":
                     case "cwe":
+                    case "denial-of-service":
                     case "overflow":
                     case "owasp-a1":
                     case "owasp-a2":
@@ -55,7 +56,6 @@ namespace CodacyCSharp.DocsGenerator.Helpers
 
                     case "multi-threading":
                     case "performance":
-                    case "denial-of-service":
                         return Category.Performance;
 
                     case "brain-overload":

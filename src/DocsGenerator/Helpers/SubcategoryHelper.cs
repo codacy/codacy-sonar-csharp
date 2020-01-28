@@ -14,26 +14,28 @@ namespace CodacyCSharp.DocsGenerator.Helpers
                 {
                     switch (tag.Value)
                     {
+                        case "denial-of-service":
+                            return Subcategory.DoS;
                         case "owasp-a1":
-                            return Subcategory.Injection;
+                            return Subcategory.CommandInjection;
                         case "owasp-a2":
-                            return Subcategory.BrokenAuth;
+                            return Subcategory.Auth;
                         case "owasp-a3":
-                            return Subcategory.SensitiveData;
+                            return Subcategory.Cryptography;
                         case "owasp-a4":
-                            return Subcategory.XXE;
+                            return Subcategory.InputValidation;
                         case "owasp-a5":
-                            return Subcategory.BrokenAccess;
+                            return Subcategory.Auth;
                         case "owasp-a6":
-                            return Subcategory.Misconfiguration;
+                            return Subcategory.FileAccess;
                         case "owasp-a7":
                             return Subcategory.XSS;
                         case "owasp-a8":
-                            return Subcategory.BadDeserialization;
+                            return Subcategory.CommandInjection;
                         case "owasp-a9":
-                            return Subcategory.VulnerableComponent;
+                            return Subcategory.InsecureModulesLibraries;
                         case "owasp-a10":
-                            return Subcategory.NoLogging;
+                            return Subcategory.Auth;
                         default:
                             continue;
                     }

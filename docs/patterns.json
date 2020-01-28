@@ -131,7 +131,7 @@
     {
       "patternId": "S2486",
       "category": "Security",
-      "subcategory": "NoLogging",
+      "subcategory": "Auth",
       "level": "Error"
     },
     {
@@ -147,7 +147,7 @@
     {
       "patternId": "S4830",
       "category": "Security",
-      "subcategory": "Misconfiguration",
+      "subcategory": "FileAccess",
       "level": "Error"
     },
     {
@@ -298,7 +298,7 @@
     {
       "patternId": "S2228",
       "category": "Security",
-      "subcategory": "SensitiveData",
+      "subcategory": "Cryptography",
       "level": "Info"
     },
     {
@@ -330,13 +330,13 @@
     {
       "patternId": "S2092",
       "category": "Security",
-      "subcategory": "SensitiveData",
+      "subcategory": "Cryptography",
       "level": "Info"
     },
     {
       "patternId": "S4426",
       "category": "Security",
-      "subcategory": "VulnerableComponent",
+      "subcategory": "InsecureModulesLibraries",
       "level": "Error"
     },
     {
@@ -377,11 +377,13 @@
     {
       "patternId": "S2931",
       "category": "Security",
+      "subcategory": "DoS",
       "level": "Error"
     },
     {
       "patternId": "S2930",
       "category": "Security",
+      "subcategory": "DoS",
       "level": "Error"
     },
     {
@@ -397,6 +399,7 @@
     {
       "patternId": "S2952",
       "category": "Security",
+      "subcategory": "DoS",
       "level": "Error"
     },
     {
@@ -537,7 +540,7 @@
     {
       "patternId": "S2245",
       "category": "Security",
-      "subcategory": "SensitiveData",
+      "subcategory": "Cryptography",
       "level": "Error"
     },
     {
@@ -588,7 +591,7 @@
     {
       "patternId": "S5542",
       "category": "Security",
-      "subcategory": "Misconfiguration",
+      "subcategory": "FileAccess",
       "level": "Error"
     },
     {
@@ -868,43 +871,43 @@
     {
       "patternId": "S1313",
       "category": "Security",
-      "subcategory": "SensitiveData",
+      "subcategory": "Cryptography",
       "level": "Warning"
     },
     {
       "patternId": "S3011",
       "category": "Security",
-      "subcategory": "SensitiveData",
+      "subcategory": "Cryptography",
       "level": "Error"
     },
     {
       "patternId": "S4792",
       "category": "Security",
-      "subcategory": "NoLogging",
+      "subcategory": "Auth",
       "level": "Error"
     },
     {
       "patternId": "S4834",
       "category": "Security",
-      "subcategory": "BrokenAccess",
+      "subcategory": "Auth",
       "level": "Error"
     },
     {
       "patternId": "S4790",
       "category": "Security",
-      "subcategory": "Misconfiguration",
+      "subcategory": "FileAccess",
       "level": "Error"
     },
     {
       "patternId": "S4507",
       "category": "Security",
-      "subcategory": "SensitiveData",
+      "subcategory": "Cryptography",
       "level": "Info"
     },
     {
       "patternId": "S2068",
       "category": "Security",
-      "subcategory": "BrokenAuth",
+      "subcategory": "Auth",
       "level": "Error",
       "parameters": [
         {
@@ -916,43 +919,43 @@
     {
       "patternId": "S4787",
       "category": "Security",
-      "subcategory": "Misconfiguration",
+      "subcategory": "FileAccess",
       "level": "Error"
     },
     {
       "patternId": "S2077",
       "category": "Security",
-      "subcategory": "Injection",
+      "subcategory": "CommandInjection",
       "level": "Error"
     },
     {
       "patternId": "S5042",
       "category": "Security",
-      "subcategory": "BrokenAccess",
+      "subcategory": "Auth",
       "level": "Error"
     },
     {
       "patternId": "S4818",
       "category": "Security",
-      "subcategory": "SensitiveData",
+      "subcategory": "Cryptography",
       "level": "Error"
     },
     {
       "patternId": "S4823",
       "category": "Security",
-      "subcategory": "Injection",
+      "subcategory": "CommandInjection",
       "level": "Error"
     },
     {
       "patternId": "S2255",
       "category": "Security",
-      "subcategory": "SensitiveData",
+      "subcategory": "Cryptography",
       "level": "Info"
     },
     {
       "patternId": "S4784",
       "category": "Security",
-      "subcategory": "Injection",
+      "subcategory": "CommandInjection",
       "level": "Error"
     },
     {
@@ -1024,13 +1027,13 @@
     {
       "patternId": "S5547",
       "category": "Security",
-      "subcategory": "Misconfiguration",
+      "subcategory": "FileAccess",
       "level": "Error"
     },
     {
       "patternId": "S2070",
       "category": "Security",
-      "subcategory": "Misconfiguration",
+      "subcategory": "FileAccess",
       "level": "Error"
     },
     {
@@ -1061,7 +1064,7 @@
     {
       "patternId": "S4433",
       "category": "Security",
-      "subcategory": "BrokenAuth",
+      "subcategory": "Auth",
       "level": "Error"
     },
     {
@@ -1148,7 +1151,7 @@
     {
       "patternId": "S4211",
       "category": "Security",
-      "subcategory": "Misconfiguration",
+      "subcategory": "FileAccess",
       "level": "Warning"
     },
     {
@@ -1580,7 +1583,7 @@
     {
       "patternId": "S3884",
       "category": "Security",
-      "subcategory": "Misconfiguration",
+      "subcategory": "FileAccess",
       "level": "Error"
     },
     {
@@ -1591,7 +1594,7 @@
     {
       "patternId": "S4212",
       "category": "Security",
-      "subcategory": "BadDeserialization",
+      "subcategory": "CommandInjection",
       "level": "Error"
     },
     {
