@@ -1,4 +1,3 @@
-using Codacy.Engine.Seed.Patterns;
 using System;
 
 namespace CodacyCSharp.DocsGenerator.Helpers

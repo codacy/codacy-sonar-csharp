@@ -39,24 +39,30 @@ namespace CodacyCSharp.DocsGenerator
             foreach (var rule in doc.Root.Elements())
             {
                 var lvl = LevelHelper.ToLevel((rule.Element("severity") ?? new XElement("undefined")).Value);
+
                 var parameters = rule.Elements().Where(e => e.Name == "param");
+
                 var patternsParameters = parameters.Any() ? parameters.Select(param => new Parameter
                 {
                     Name = param.Element("key").Value,
                     Default = param.Element("defaultValue")?.Value ?? ""
                 }).ToArray() : null;
-                var pattern = new Pattern
-                {
-                    PatternId = rule.Element("key").Value,
-                    Level = lvl,
-                    Category = CategoryHelper.ToCategory(rule, lvl),
-                    Parameters = patternsParameters
-                };
+
+                var category = CategoryHelper.ToCategory(rule, lvl);
+
+                var pattern = new Pattern(
+                    rule.Element("key").Value,
+                    lvl,
+                    category,
+                    SubcategoryHelper.ToSubcategory(rule, category),
+                    patternsParameters);
+
                 var descriptionParameters = parameters.Any() ? parameters.Select(param => new DescriptionParameter
                 {
                     Name = param.Element("key").Value,
                     Description = param.Element("description").Value
                 }).ToArray() : null;
+
                 var description = new Description
                 {
                     PatternId = pattern.PatternId,
