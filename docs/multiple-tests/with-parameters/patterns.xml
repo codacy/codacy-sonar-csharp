@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module name="root">
+    <module name="S103">
+        <property name="maximumLineLength" value="24"/>
+    </module>
+</module>

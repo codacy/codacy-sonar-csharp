@@ -282,7 +282,7 @@
   },
   {
     "patternId": "S2583",
-    "title": "Conditionally executed blocks should be reachable",
+    "title": "Conditionally executed code should be reachable",
     "timeToFix": 15
   },
   {
@@ -327,7 +327,7 @@
   },
   {
     "patternId": "S4426",
-    "title": "Cryptographic keys should not be too short",
+    "title": "Cryptographic keys should be robust",
     "timeToFix": 2
   },
   {

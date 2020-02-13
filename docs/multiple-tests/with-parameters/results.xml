@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="4.3">
+    <file name="S103.cs">
+        <error source="S103" line="1" message="Split this 47 characters long line (which is greater than 24 authorized)." severity="warning" />
+        <error source="S103" line="5" message="Split this 25 characters long line (which is greater than 24 authorized)." severity="warning" />
+    </file>
+</checkstyle>
