@@ -1,8 +1,8 @@
 version: 2.1
 
 orbs:
-  codacy: codacy/base@2.0.1
-  codacy_plugins_test: codacy/plugins-test@0.7.1
+  codacy: codacy/base@2.3.1
+  codacy_plugins_test: codacy/plugins-test@0.10.2
 
 jobs:
   build:
@@ -26,6 +26,7 @@ jobs:
           name: Compile
           command: |
             make
+            make documentation
             make publish
       - persist_to_workspace:
           root: ~/workdir
@@ -53,14 +54,7 @@ workflows:
           run_multiple_tests: true
           requires:
             - publish_local
-      - codacy/shell:
-          name: publish
-          cmd: |
-            docker load --input docker-image.tar
-            docker login -u $DOCKER_USER -p $DOCKER_PASS
-            docker tag $CIRCLE_PROJECT_REPONAME codacy/$CIRCLE_PROJECT_REPONAME
-            docker tag $CIRCLE_PROJECT_REPONAME codacy/$CIRCLE_PROJECT_REPONAME:$(cat .version)
-            docker push codacy/$CIRCLE_PROJECT_REPONAME
+      - codacy/publish_docker:
           context: CodacyDocker
           filters:
             branches:
@@ -70,4 +64,4 @@ workflows:
       - codacy/tag_version:
           name: tag_version
           requires:
-            - publish
+            - codacy/publish_docker
