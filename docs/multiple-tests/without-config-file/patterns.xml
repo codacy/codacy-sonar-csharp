@@ -2,4 +2,7 @@
 
 <module name="root">
     <module name="S2223" />
+    <module name="BeforeExecutionExclusionFileFilter">
+        <property name="fileNamePattern" value="\.pylintrc"/>
+    </module>
 </module>
