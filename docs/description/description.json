@@ -2005,5 +2005,10 @@
     "patternId": "S3598",
     "title": "One-way \"OperationContract\" methods should have \"void\" return type",
     "timeToFix": 15
+  },
+  {
+    "patternId": "S2755",
+    "title": "XML parsers should not be vulnerable to XXE attacks",
+    "timeToFix": 15
   }
 ]

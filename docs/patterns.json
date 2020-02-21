@@ -1,6 +1,6 @@
 {
   "name": "Sonar C#",
-  "version": "8.3",
+  "version": "8.4",
   "patterns": [
     {
       "patternId": "S3442",
@@ -2040,6 +2040,12 @@
       "patternId": "S3598",
       "category": "ErrorProne",
       "level": "Warning"
+    },
+    {
+      "patternId": "S2755",
+      "category": "Security",
+      "subcategory": "InputValidation",
+      "level": "Error"
     }
   ]
 }
