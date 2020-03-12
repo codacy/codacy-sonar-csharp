@@ -1,4 +1,4 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff929008ec754fe790738a9a15821f93)](https://www.codacy.com/app/Codacy/codacy-sonar-csharp?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-sonar-csharp&utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff929008ec754fe790738a9a15821f93)](https://www.codacy.com/gh/codacy/codacy-sonar-csharp?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-sonar-csharp&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://circleci.com/gh/codacy/codacy-sonar-csharp.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/codacy/codacy-sonar-csharp)
 
 # Codacy SonarC\#
