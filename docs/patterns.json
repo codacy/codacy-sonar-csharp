@@ -1,6 +1,6 @@
 {
   "name": "Sonar C#",
-  "version": "8.4",
+  "version": "8.5",
   "patterns": [
     {
       "patternId": "S3442",
@@ -912,7 +912,7 @@
       "parameters": [
         {
           "name": "credentialWords",
-          "default": "password, passwd, pwd"
+          "default": "password, passwd, pwd, passphrase"
         }
       ]
     },
@@ -1060,6 +1060,12 @@
       "patternId": "S1309",
       "category": "CodeStyle",
       "level": "Info"
+    },
+    {
+      "patternId": "S5659",
+      "category": "Security",
+      "subcategory": "Cryptography",
+      "level": "Error"
     },
     {
       "patternId": "S4433",
