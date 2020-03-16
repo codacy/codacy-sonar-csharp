@@ -1031,6 +1031,11 @@
     "timeToFix": 10
   },
   {
+    "patternId": "S5659",
+    "title": "JWT should be signed and verified with strong cipher algorithms",
+    "timeToFix": 5
+  },
+  {
     "patternId": "S4433",
     "title": "LDAP connections should be authenticated",
     "timeToFix": 15
