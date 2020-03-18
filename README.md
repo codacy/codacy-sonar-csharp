@@ -1,7 +1,7 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff929008ec754fe790738a9a15821f93)](https://www.codacy.com/gh/codacy/codacy-sonar-csharp?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=codacy/codacy-sonar-csharp&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff929008ec754fe790738a9a15821f93)](https://www.codacy.com/gh/codacy/codacy-sonar-csharp?utm_source=github.com&utm_medium=referral&utm_content=codacy/codacy-sonar-csharp&utm_campaign=Badge_Grade)
 [![Build Status](https://circleci.com/gh/codacy/codacy-sonar-csharp.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/codacy/codacy-sonar-csharp)
 
-# Codacy SonarC\#
+# Codacy SonarC#
 
 This is the docker engine we use at Codacy to run [SonarC#](https://github.com/SonarSource/sonar-csharp) developed by SonarSource.
 
@@ -31,6 +31,27 @@ docker run --user=docker --rm=true -v <PATH-TO-CODE>:/src -v <PATH-TO>/.codacyrc
 make documentation
 ```
 
+## Tool configuration file
+
+Currently, to use your own configuration file, you must add a SonarLint.xml xml file with an AnalysisInput structure inside.
+
+Example:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <AnalysisInput>
+      <Rules>
+        <Rule>
+          <Key>S103</Key>
+          <Parameters>
+            <Parameter>
+              <Key>maximumLineLength</Key>  
+              <Value>24</Value>  
+            </Parameter>
+          </Parameters>
+        </Rule>
+      </Rules>
+    </AnalysisInput>
+
 ## Docs
 
 [Tool Developer Guide](https://support.codacy.com/hc/en-us/articles/207994725-Tool-Developer-Guide)
@@ -48,11 +69,11 @@ You can follow the instructions there to make sure your tool is working as expec
 
 ### Among Codacy’s features:
 
-- Identify new Static Analysis issues
-- Commit and Pull Request Analysis with GitHub, BitBucket/Stash, GitLab (and also direct git repositories)
-- Auto-comments on Commits and Pull Requests
-- Integrations with Slack, HipChat, Jira, YouTrack
-- Track issues in Code Style, Security, Error Proneness, Performance, Unused Code and other categories
+-   Identify new Static Analysis issues
+-   Commit and Pull Request Analysis with GitHub, BitBucket/Stash, GitLab (and also direct git repositories)
+-   Auto-comments on Commits and Pull Requests
+-   Integrations with Slack, HipChat, Jira, YouTrack
+-   Track issues in Code Style, Security, Error Proneness, Performance, Unused Code and other categories
 
 Codacy also helps keep track of Code Coverage, Code Duplication, and Code Complexity.
 
