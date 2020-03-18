@@ -10,17 +10,15 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.5.0" />
         <PackageReference Include="SQLitePCLRaw.core" Version="2.0.2" />
-        <PackageReference Include="SonarAnalyzer.CSharp" Version="8.5.0.15942" />
+        <PackageReference Include="SonarAnalyzer.CSharp" Version="8.5.0.15942" GeneratePathProperty="true" />
+        <PackageReference Include="Codacy.Engine.Seed" Version="2.0.4" />
     </ItemGroup>
     <ItemGroup>
         <Reference Include="SonarAnalyzer.CSharp">
-            <HintPath>../../packages/sonaranalyzer.csharp/8.5.0.15942/analyzers/SonarAnalyzer.CSharp.dll</HintPath>
+            <HintPath>$(PkgSonarAnalyzer_CSharp)/analyzers/SonarAnalyzer.CSharp.dll</HintPath>
         </Reference>
         <Reference Include="SonarAnalyzer">
-            <HintPath>../../packages/sonaranalyzer.csharp/8.5.0.15942/analyzers/SonarAnalyzer.dll</HintPath>
+            <HintPath>$(PkgSonarAnalyzer_CSharp)/analyzers/SonarAnalyzer.dll</HintPath>
         </Reference>
-    </ItemGroup>
-    <ItemGroup>
-        <PackageReference Include="Codacy.Engine.Seed" Version="2.0.4" />
     </ItemGroup>
 </Project>

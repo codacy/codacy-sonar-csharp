@@ -1,5 +1,5 @@
 export FrameworkPathOverride=$(shell dirname $(shell which mono))/../lib/mono/4.5/
-SONAR_VERSION=$(shell cat .SONAR_VERSION | tr -d '\n')
+SONAR_VERSION=$(shell xmllint --xpath 'string(/Project/ItemGroup/PackageReference[@Include="SonarAnalyzer.CSharp"]/@Version)' src/Analyzer/Analyzer.csproj | tr -d '\n')
 BUILD_CMD=dotnet build --no-restore /property:GenerateFullPaths=true
 
 LIBRARIES_FOLDER=.lib
@@ -37,7 +37,9 @@ update-docs:
 documentation: update-docs build-docs
 
 documentation:
+	echo $(SONAR_VERSION) > .SONAR_VERSION
 	mono src/DocsGenerator/bin/Debug/net461/DocsGenerator.exe
+	rm .SONAR_VERSION
 
 publish:
 	dotnet publish -c Release -f net461

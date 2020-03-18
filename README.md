@@ -27,6 +27,20 @@ docker run --user=docker --rm=true -v <PATH-TO-CODE>:/src -v <PATH-TO>/.codacyrc
 
 ### Generate Docs
 
+**Requirements:**
+
+-   `xmllint` utility installed on your system:
+
+    -   On ubuntu:
+
+            apt-get install libxml2-utils
+
+    -   On alpine
+
+            apk add libxml2-utils
+
+**Generate:**
+
 ```sh
 make documentation
 ```
