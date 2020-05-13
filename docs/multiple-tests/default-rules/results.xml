@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="4.3">
+    <file name="example.cs">
+        <error source="S3904" line="1" message="Provide an 'AssemblyVersion' attribute for this assembly." severity="error" />
+        <error source="S125" line="1" message="Remove this commented out code." severity="warning" />
+        <error source="S3990" line="1" message="Mark this assembly with 'System.CLSCompliantAttribute'" severity="warning" />
+        <error source="S1451" line="1" message="Add or update the header of this file." severity="error" />
+        <error source="S3992" line="1" message="Mark this assembly with 'System.Runtime.InteropServices.ComVisibleAttribute'" severity="warning" />
+        <error source="S3903" line="3" message="Move 'Foobar' into a named namespace." severity="warning" />
+        <error source="S2933" line="5" message="Make 'bar' 'readonly'." severity="warning" />
+        <error source="S1144" line="5" message="Remove the unused private field 'bar'." severity="warning" />
+    </file>
+</checkstyle>
