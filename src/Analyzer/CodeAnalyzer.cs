@@ -149,8 +149,17 @@ namespace CodacyCSharp.Analyzer
                 if (File.Exists(sonarConfigurationPath))
                 {
                     var xmlDoc = XDocument.Load(sonarConfigurationPath);
-                    PatternIds = xmlDoc.Descendants("Rule").Select(e => e.Elements("Key").Single().Value)
-                        .ToImmutableList();
+                    var analysisInput = xmlDoc.Element("AnalysisInput");
+                    var rules = analysisInput.Element("Rules"); 
+                    if (rules is null)
+                    {
+                        return availableAnalyzers;
+                    }
+                    else
+                    {
+                        PatternIds = xmlDoc.Descendants("Rule").Select(e => e.Elements("Key").Single().Value)
+                            .ToImmutableList();
+                    }
                 }
                 else
                 {
