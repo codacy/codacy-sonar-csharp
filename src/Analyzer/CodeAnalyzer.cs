@@ -157,7 +157,7 @@ namespace CodacyCSharp.Analyzer
                     }
                     else
                     {
-                        PatternIds = xmlDoc.Descendants("Rule").Select(e => e.Elements("Key").Single().Value)
+                        PatternIds = rules.Elements("Rule").Select(e => e.Elements("Key").Single().Value)
                             .ToImmutableList();
                     }
                 }
