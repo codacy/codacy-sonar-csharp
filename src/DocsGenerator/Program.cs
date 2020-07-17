@@ -28,7 +28,7 @@ namespace CodacyCSharp.DocsGenerator
 
             var patternsFile = new CodacyPatterns
             {
-                Name = "Sonar C#",
+                Name = "sonarscharp",
                 Version = string.Format("{0}.{1}", sonarVersion),
                 Patterns = new List<Pattern>()
             };

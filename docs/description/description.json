@@ -662,7 +662,7 @@
   },
   {
     "patternId": "S3984",
-    "title": "Exception should not be created without being thrown",
+    "title": "Exceptions should not be created without being thrown",
     "timeToFix": 2
   },
   {
@@ -861,7 +861,7 @@
   },
   {
     "patternId": "S3011",
-    "title": "Changing or bypassing accessibility is security-sensitive",
+    "title": "Reflection should not be used to increase accessibility of classes, methods, or fields",
     "timeToFix": 30
   },
   {

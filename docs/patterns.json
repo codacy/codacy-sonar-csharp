@@ -1,6 +1,6 @@
 {
-  "name": "Sonar C#",
-  "version": "8.5",
+  "name": "sonarscharp",
+  "version": "8.7",
   "patterns": [
     {
       "patternId": "S3442",
@@ -132,7 +132,7 @@
       "patternId": "S2486",
       "category": "Security",
       "subcategory": "Auth",
-      "level": "Error"
+      "level": "Info"
     },
     {
       "patternId": "S2737",
@@ -878,7 +878,7 @@
       "patternId": "S3011",
       "category": "Security",
       "subcategory": "Cryptography",
-      "level": "Error"
+      "level": "Warning"
     },
     {
       "patternId": "S4792",
@@ -890,7 +890,7 @@
       "patternId": "S4834",
       "category": "Security",
       "subcategory": "Auth",
-      "level": "Error"
+      "level": "Info"
     },
     {
       "patternId": "S4790",
@@ -1601,7 +1601,7 @@
       "patternId": "S4212",
       "category": "Security",
       "subcategory": "CommandInjection",
-      "level": "Error"
+      "level": "Warning"
     },
     {
       "patternId": "S4057",
