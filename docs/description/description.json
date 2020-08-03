@@ -1,5 +1,50 @@
 [
   {
+    "patternId": "S3655",
+    "title": "Empty nullable value should not be accessed",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "S3966",
+    "title": "Objects should not be disposed more than once",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "S3900",
+    "title": "Arguments of public methods should be validated against null",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S4158",
+    "title": "Empty collections should not be accessed or iterated",
+    "timeToFix": 15
+  },
+  {
+    "patternId": "S2583",
+    "title": "Conditionally executed code should be reachable",
+    "timeToFix": 15
+  },
+  {
+    "patternId": "S2589",
+    "title": "Boolean expressions should not be gratuitous",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "S1944",
+    "title": "Inappropriate casts should not be made",
+    "timeToFix": 20
+  },
+  {
+    "patternId": "S2259",
+    "title": "Null pointers should not be dereferenced",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "S5773",
+    "title": "Types allowed to be deserialized should be restricted",
+    "timeToFix": 30
+  },
+  {
     "patternId": "S3442",
     "title": "\"abstract\" classes should not have \"public\" constructors",
     "timeToFix": 2
@@ -281,16 +326,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "S2583",
-    "title": "Conditionally executed code should be reachable",
-    "timeToFix": 15
-  },
-  {
-    "patternId": "S2589",
-    "title": "Boolean expressions should not be gratuitous",
-    "timeToFix": 10
-  },
-  {
     "patternId": "S2228",
     "title": "Console logging should not be used",
     "timeToFix": 5
@@ -546,11 +581,6 @@
     "timeToFix": 15
   },
   {
-    "patternId": "S4158",
-    "title": "Empty collections should not be accessed or iterated",
-    "timeToFix": 15
-  },
-  {
     "patternId": "S1186",
     "title": "Methods should not be empty",
     "timeToFix": 5
@@ -564,11 +594,6 @@
     "patternId": "S108",
     "title": "Nested blocks of code should not be left empty",
     "timeToFix": 5
-  },
-  {
-    "patternId": "S3655",
-    "title": "Empty nullable value should not be accessed",
-    "timeToFix": 10
   },
   {
     "patternId": "S1116",
@@ -876,7 +901,7 @@
   },
   {
     "patternId": "S4790",
-    "title": "Hashing data is security-sensitive",
+    "title": "Using weak hashing algorithms is security-sensitive",
     "timeToFix": 5
   },
   {
@@ -991,6 +1016,11 @@
     "timeToFix": 5
   },
   {
+    "patternId": "S5766",
+    "title": "Deserializing objects without performing data validation is security-sensitive",
+    "timeToFix": 5
+  },
+  {
     "patternId": "S2278",
     "title": "Neither DES (Data Encryption Standard) nor DESede (3DES) should be used",
     "timeToFix": 20
@@ -1014,11 +1044,6 @@
     "patternId": "S4023",
     "title": "Interfaces should not be empty",
     "timeToFix": 2
-  },
-  {
-    "patternId": "S1944",
-    "title": "Inappropriate casts should not be made",
-    "timeToFix": 20
   },
   {
     "patternId": "S3220",
@@ -1115,11 +1140,6 @@
     "patternId": "S3218",
     "title": "Inner class members should not shadow outer class \"static\" or type members",
     "timeToFix": 10
-  },
-  {
-    "patternId": "S2325",
-    "title": "Methods and properties that don't access instance data should be static",
-    "timeToFix": 5
   },
   {
     "patternId": "S4211",
@@ -1258,11 +1278,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "S2259",
-    "title": "Null pointers should not be dereferenced",
-    "timeToFix": 10
-  },
-  {
     "patternId": "S3937",
     "title": "Number patterns should be regular",
     "timeToFix": 10
@@ -1271,11 +1286,6 @@
     "patternId": "S1848",
     "title": "Objects should not be created to be dropped immediately without being used",
     "timeToFix": 5
-  },
-  {
-    "patternId": "S3966",
-    "title": "Objects should not be disposed more than once",
-    "timeToFix": 10
   },
   {
     "patternId": "S1123",
@@ -1420,11 +1430,6 @@
   {
     "patternId": "S2339",
     "title": "Public constant members should not be used",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "S3900",
-    "title": "Arguments of public methods should be validated against null",
     "timeToFix": 5
   },
   {
@@ -1880,11 +1885,6 @@
     "patternId": "S1128",
     "title": "Unused \"using\" should be removed",
     "timeToFix": 2
-  },
-  {
-    "patternId": "S1144",
-    "title": "Unused private types or members should be removed",
-    "timeToFix": 5
   },
   {
     "patternId": "S4487",

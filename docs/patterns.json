@@ -1,7 +1,53 @@
 {
   "name": "sonarscharp",
-  "version": "8.7",
+  "version": "8.10",
   "patterns": [
+    {
+      "patternId": "S3655",
+      "category": "Security",
+      "level": "Warning"
+    },
+    {
+      "patternId": "S3966",
+      "category": "ErrorProne",
+      "level": "Error"
+    },
+    {
+      "patternId": "S3900",
+      "category": "CodeStyle",
+      "level": "Warning"
+    },
+    {
+      "patternId": "S4158",
+      "category": "ErrorProne",
+      "level": "Info"
+    },
+    {
+      "patternId": "S2583",
+      "category": "Security",
+      "level": "Warning"
+    },
+    {
+      "patternId": "S2589",
+      "category": "Security",
+      "level": "Warning"
+    },
+    {
+      "patternId": "S1944",
+      "category": "Security",
+      "level": "Error"
+    },
+    {
+      "patternId": "S2259",
+      "category": "Security",
+      "level": "Warning"
+    },
+    {
+      "patternId": "S5773",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "level": "Warning"
+    },
     {
       "patternId": "S3442",
       "category": "ErrorProne",
@@ -286,16 +332,6 @@
       "level": "Info"
     },
     {
-      "patternId": "S2583",
-      "category": "Security",
-      "level": "Warning"
-    },
-    {
-      "patternId": "S2589",
-      "category": "Security",
-      "level": "Warning"
-    },
-    {
       "patternId": "S2228",
       "category": "Security",
       "subcategory": "Cryptography",
@@ -559,11 +595,6 @@
       "level": "Error"
     },
     {
-      "patternId": "S4158",
-      "category": "ErrorProne",
-      "level": "Info"
-    },
-    {
       "patternId": "S1186",
       "category": "ErrorProne",
       "level": "Error"
@@ -576,11 +607,6 @@
     {
       "patternId": "S108",
       "category": "ErrorProne",
-      "level": "Warning"
-    },
-    {
-      "patternId": "S3655",
-      "category": "Security",
       "level": "Warning"
     },
     {
@@ -876,8 +902,7 @@
     },
     {
       "patternId": "S3011",
-      "category": "Security",
-      "subcategory": "Cryptography",
+      "category": "ErrorProne",
       "level": "Warning"
     },
     {
@@ -919,7 +944,6 @@
     {
       "patternId": "S4787",
       "category": "Security",
-      "subcategory": "FileAccess",
       "level": "Error"
     },
     {
@@ -937,31 +961,26 @@
     {
       "patternId": "S4818",
       "category": "Security",
-      "subcategory": "Cryptography",
       "level": "Error"
     },
     {
       "patternId": "S4823",
       "category": "Security",
-      "subcategory": "CommandInjection",
       "level": "Error"
     },
     {
       "patternId": "S2255",
       "category": "Security",
-      "subcategory": "Cryptography",
       "level": "Info"
     },
     {
       "patternId": "S4784",
       "category": "Security",
-      "subcategory": "CommandInjection",
       "level": "Error"
     },
     {
       "patternId": "S4564",
       "category": "Security",
-      "subcategory": "XSS",
       "level": "Warning"
     },
     {
@@ -1020,20 +1039,26 @@
       "level": "Info"
     },
     {
+      "patternId": "S5766",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "level": "Warning"
+    },
+    {
       "patternId": "S2278",
       "category": "Security",
+      "subcategory": "FileAccess",
       "level": "Error"
     },
     {
       "patternId": "S5547",
       "category": "Security",
-      "subcategory": "FileAccess",
+      "subcategory": "Cryptography",
       "level": "Error"
     },
     {
       "patternId": "S2070",
       "category": "Security",
-      "subcategory": "FileAccess",
       "level": "Error"
     },
     {
@@ -1045,11 +1070,6 @@
       "patternId": "S4023",
       "category": "CodeStyle",
       "level": "Info"
-    },
-    {
-      "patternId": "S1944",
-      "category": "Security",
-      "level": "Error"
     },
     {
       "patternId": "S3220",
@@ -1148,11 +1168,6 @@
       "patternId": "S3218",
       "category": "ErrorProne",
       "level": "Error"
-    },
-    {
-      "patternId": "S2325",
-      "category": "ErrorProne",
-      "level": "Info"
     },
     {
       "patternId": "S4211",
@@ -1292,11 +1307,6 @@
       "level": "Info"
     },
     {
-      "patternId": "S2259",
-      "category": "Security",
-      "level": "Warning"
-    },
-    {
       "patternId": "S3937",
       "category": "ErrorProne",
       "level": "Error"
@@ -1305,11 +1315,6 @@
       "patternId": "S1848",
       "category": "ErrorProne",
       "level": "Warning"
-    },
-    {
-      "patternId": "S3966",
-      "category": "ErrorProne",
-      "level": "Error"
     },
     {
       "patternId": "S1123",
@@ -1455,11 +1460,6 @@
       "patternId": "S2339",
       "category": "ErrorProne",
       "level": "Error"
-    },
-    {
-      "patternId": "S3900",
-      "category": "CodeStyle",
-      "level": "Warning"
     },
     {
       "patternId": "S2368",
@@ -1916,11 +1916,6 @@
       "patternId": "S1128",
       "category": "UnusedCode",
       "level": "Info"
-    },
-    {
-      "patternId": "S1144",
-      "category": "UnusedCode",
-      "level": "Warning"
     },
     {
       "patternId": "S4487",

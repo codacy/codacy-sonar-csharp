@@ -26,6 +26,11 @@ namespace CodacyCSharp.Analyzer
         private readonly DiagnosticsRunner diagnosticsRunner;
 
         private readonly string tmpSonarLintFolder;
+        private static List<string> blacklist = new List<string> { "S1144", "S2325" };
+
+        public static bool IsInBlacklist(string id) {
+            return blacklist.Contains(id);
+        }
 
         public CodeAnalyzer() : base(csharpExtension)
         {
@@ -45,7 +50,8 @@ namespace CodacyCSharp.Analyzer
                 Directory.CreateDirectory(tmpSonarLintFolder);
                 var tmpSonarLintPath = Path.Combine(tmpSonarLintFolder, defaultSonarConfiguration);
                 var rules = new XElement("Rules");
-                foreach (var pattern in CurrentTool.Patterns)
+                var patterns = CurrentTool.Patterns.Where(pattern => !IsInBlacklist(pattern.PatternId)).ToArray();
+                foreach (var pattern in patterns)
                 {
                     var parameters = new XElement("Parameters");
                     if (!(pattern.Parameters is null))
@@ -127,7 +133,9 @@ namespace CodacyCSharp.Analyzer
                         result.Line = 1;
                     }
 
-                    Console.WriteLine(result);
+                    if(!IsInBlacklist(diagnostic.Id)) {
+                        Console.WriteLine(result);
+                    }
                 }
             }
             catch (Exception e)
