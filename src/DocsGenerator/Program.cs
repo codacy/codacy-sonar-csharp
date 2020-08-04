@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using CodacyCSharp.DocsGenerator.Helpers;
+using CodacyCSharp.Analyzer;
 using Codacy.Engine.Seed.Patterns;
 using Newtonsoft.Json;
 using ReverseMarkdown;
@@ -36,7 +37,10 @@ namespace CodacyCSharp.DocsGenerator
             var descriptions = new List<Description>();
 
             var doc = XDocument.Load(@".res/sonar-csharp-rules.xml");
-            foreach (var rule in doc.Root.Elements())
+
+            var elements = doc.Root.Elements().Where(rule => !CodeAnalyzer.IsInBlacklist(rule.Element("key").Value));
+            
+            foreach (var rule in elements)
             {
                 var lvl = LevelHelper.ToLevel((rule.Element("severity") ?? new XElement("undefined")).Value);
 
