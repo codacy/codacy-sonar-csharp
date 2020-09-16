@@ -53,13 +53,15 @@ namespace CodacyCSharp.DocsGenerator
                 }).ToArray() : null;
 
                 var category = CategoryHelper.ToCategory(rule, lvl);
+                var patternId = rule.Element("key").Value;
 
                 var pattern = new Pattern(
-                    rule.Element("key").Value,
+                    patternId,
                     lvl,
                     category,
                     SubcategoryHelper.ToSubcategory(rule, category),
-                    patternsParameters);
+                    patternsParameters,
+                    DefaultPatterns.defaultPatterns.Contains(patternId));
 
                 var descriptionParameters = parameters.Any() ? parameters.Select(param => new DescriptionParameter
                 {
