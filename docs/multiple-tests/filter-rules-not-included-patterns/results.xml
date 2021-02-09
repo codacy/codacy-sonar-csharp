@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="4.3">
+    <file name="S1134.cs">
+        <error source="S1134" line="5" message="Take the required action to fix the issue indicated by this 'FIXME' comment." severity="warning" />
+    </file>
+</checkstyle>

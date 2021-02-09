@@ -1,17 +1,25 @@
-FROM alpine:3.10
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS builder
 
-RUN apk add --no-cache mono --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing && \
-	apk add --no-cache --virtual=.build-dependencies ca-certificates && \
-	cert-sync /etc/ssl/certs/ca-certificates.crt && \
-	apk del .build-dependencies \
-	rm /tmp/* \
-	rm -rf /var/cache/apk/*
+RUN apt update && \
+    apt install -y apt-transport-https dirmngr gnupg ca-certificates && \
+    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF && \
+    echo "deb https://download.mono-project.com/repo/debian stable-stretch main" | tee /etc/apt/sources.list.d/mono-official-stable.list && \
+    apt update && \
+    apt-get install -y mono-complete build-essential nuget unzip libxml2-utils
 
-COPY src/Analyzer/bin/Release/net461/publish/*.dll /opt/docker/bin/
-COPY src/Analyzer/bin/Release/net461/publish/*.exe /opt/docker/bin/
+COPY . /workdir
+WORKDIR /workdir
+
+RUN make
+RUN make publish
+
+FROM mono:6.10
+
+COPY --from=builder /workdir/src/Analyzer/bin/Release/net461/publish/*dll /opt/docker/bin/
+COPY --from=builder /workdir/src/Analyzer/bin/Release/net461/publish/*.exe /opt/docker/bin/
 COPY docs /docs/
 
-RUN adduser -u 2004 -D docker
+RUN adduser -u 2004 --disabled-password docker
 RUN chown -R docker:docker /docs
 
 ENTRYPOINT [ "mono", "/opt/docker/bin/Analyzer.exe" ]
