@@ -4,43 +4,11 @@ orbs:
   codacy: codacy/base@2.3.1
   codacy_plugins_test: codacy/plugins-test@0.14.5
 
-jobs:
-  build:
-    docker:
-      #TODO: switch to docker image
-      - image: mcr.microsoft.com/dotnet/core/sdk:2.2
-    working_directory: ~/workdir
-    steps:
-      - attach_workspace:
-          at: ~/workdir
-      - run:
-          name: Install packages
-          command: |
-            apt update
-            apt install -y apt-transport-https dirmngr gnupg ca-certificates
-            apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
-            echo "deb https://download.mono-project.com/repo/debian stable-stretch main" | tee /etc/apt/sources.list.d/mono-official-stable.list
-            apt update
-            apt-get install -y mono-complete build-essential nuget unzip libxml2-utils
-      - run:
-          name: Compile
-          command: |
-            make
-            make documentation
-            make publish
-      - persist_to_workspace:
-          root: ~/workdir
-          paths:
-            - "*"
-
 workflows:
   version: 2
   build-and-deploy:
     jobs:
       - codacy/checkout_and_version
-      - build:
-          requires:
-            - codacy/checkout_and_version
       - codacy/shell:
           name: publish_local
           cmd: |
@@ -48,7 +16,7 @@ workflows:
             docker save --output docker-image.tar $CIRCLE_PROJECT_REPONAME:latest
           persist_to_workspace: true
           requires:
-            - build
+            - codacy/checkout_and_version
       - codacy_plugins_test/run:
           name: plugins_test
           run_multiple_tests: true

@@ -73,7 +73,20 @@ namespace CodacyCSharp.Analyzer
                 additionalFiles.Add(new AnalyzerAdditionalFile(sonarConfigurationPath));
             }
 
-            diagnosticsRunner = new DiagnosticsRunner(GetAnalyzers(), GetUtilityAnalyzers(), additionalFiles.ToArray());
+            // if we don't have patterns let's get them from the config file
+            if (PatternIds is null && File.Exists(sonarConfigurationPath))
+            {
+                var xmlDoc = XDocument.Load(sonarConfigurationPath);
+                var analysisInput = xmlDoc.Element("AnalysisInput");
+                var rules = analysisInput.Element("Rules");
+                if (rules != null)
+                {
+                    PatternIds = rules.Elements("Rule").Select(e => e.Elements("Key").Single().Value)
+                        .ToImmutableList();
+                }
+            }
+
+            diagnosticsRunner = new DiagnosticsRunner(GetAnalyzers(), GetUtilityAnalyzers(), additionalFiles.ToArray(), PatternIds);
         }
 
         public void Dispose()
@@ -154,27 +167,8 @@ namespace CodacyCSharp.Analyzer
         {
             if (PatternIds is null)
             {
-                if (File.Exists(sonarConfigurationPath))
-                {
-                    var xmlDoc = XDocument.Load(sonarConfigurationPath);
-                    var analysisInput = xmlDoc.Element("AnalysisInput");
-                    var rules = analysisInput.Element("Rules"); 
-                    if (rules is null)
-                    {
-                        return availableAnalyzers;
-                    }
-                    else
-                    {
-                        PatternIds = rules.Elements("Rule").Select(e => e.Elements("Key").Single().Value)
-                            .ToImmutableList();
-                    }
-                }
-                else
-                {
-                    return availableAnalyzers;
-                }
+                return availableAnalyzers;
             }
-
             var builder = ImmutableArray.CreateBuilder<DiagnosticAnalyzer>();
 
             foreach (var analyzer in availableAnalyzers
