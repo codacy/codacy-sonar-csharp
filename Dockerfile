@@ -12,12 +12,13 @@ WORKDIR /workdir
 
 RUN make
 RUN make publish
+RUN make documentation
 
 FROM mono:6.10
 
 COPY --from=builder /workdir/src/Analyzer/bin/Release/net461/publish/*dll /opt/docker/bin/
 COPY --from=builder /workdir/src/Analyzer/bin/Release/net461/publish/*.exe /opt/docker/bin/
-COPY docs /docs/
+COPY --from=builder /workdir/docs /docs/
 
 RUN adduser -u 2004 --disabled-password docker
 RUN chown -R docker:docker /docs
