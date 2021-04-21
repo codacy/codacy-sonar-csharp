@@ -254,7 +254,7 @@
     {
       "patternId": "S4830",
       "category": "Security",
-      "subcategory": "FileAccess",
+      "subcategory": "Cryptography",
       "level": "Error",
       "enabled": false
     },
@@ -449,7 +449,7 @@
     {
       "patternId": "S4426",
       "category": "Security",
-      "subcategory": "FileAccess",
+      "subcategory": "Cryptography",
       "level": "Error",
       "enabled": false
     },
@@ -735,7 +735,7 @@
     {
       "patternId": "S5542",
       "category": "Security",
-      "subcategory": "FileAccess",
+      "subcategory": "Cryptography",
       "level": "Error",
       "enabled": false
     },
@@ -1105,7 +1105,7 @@
     {
       "patternId": "S4790",
       "category": "Security",
-      "subcategory": "FileAccess",
+      "subcategory": "Cryptography",
       "level": "Error",
       "enabled": false
     },
@@ -1152,14 +1152,14 @@
     {
       "patternId": "S2077",
       "category": "Security",
-      "subcategory": "CommandInjection",
+      "subcategory": "SQLInjection",
       "level": "Warning",
       "enabled": false
     },
     {
       "patternId": "S5042",
       "category": "Security",
-      "subcategory": "FileAccess",
+      "subcategory": "DoS",
       "level": "Error",
       "enabled": false
     },
@@ -1316,7 +1316,7 @@
     {
       "patternId": "S5547",
       "category": "Security",
-      "subcategory": "FileAccess",
+      "subcategory": "Cryptography",
       "level": "Error",
       "enabled": false
     },
@@ -2497,7 +2497,7 @@
     {
       "patternId": "S4423",
       "category": "Security",
-      "subcategory": "FileAccess",
+      "subcategory": "Cryptography",
       "level": "Warning",
       "enabled": false
     },
