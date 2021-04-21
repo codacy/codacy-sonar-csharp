@@ -45,6 +45,21 @@
     "timeToFix": 30
   },
   {
+    "patternId": "S3329",
+    "title": "Cipher Block Chaining IV's should be random and unique",
+    "timeToFix": 15
+  },
+  {
+    "patternId": "S2053",
+    "title": "Hashes should include an unpredictable salt",
+    "timeToFix": 30
+  },
+  {
+    "patternId": "S2612",
+    "title": "Setting loose file permissions is security-sensitive",
+    "timeToFix": 5
+  },
+  {
     "patternId": "S3442",
     "title": "\"abstract\" classes should not have \"public\" constructors",
     "timeToFix": 2
@@ -149,6 +164,11 @@
     "patternId": "S1227",
     "title": "break statements should not be used except for switch cases",
     "timeToFix": 10
+  },
+  {
+    "patternId": "S3011",
+    "title": "Reflection should not be used to increase accessibility of classes, methods, or fields",
+    "timeToFix": 30
   },
   {
     "patternId": "S3343",
@@ -351,16 +371,6 @@
     "timeToFix": 10
   },
   {
-    "patternId": "S3330",
-    "title": "Creating cookies without the \"HttpOnly\" flag is security-sensitive",
-    "timeToFix": 10
-  },
-  {
-    "patternId": "S2092",
-    "title": "Creating cookies without the \"secure\" flag is security-sensitive",
-    "timeToFix": 5
-  },
-  {
     "patternId": "S4426",
     "title": "Cryptographic keys should be robust",
     "timeToFix": 2
@@ -559,11 +569,6 @@
     "patternId": "S3874",
     "title": "\"out\" and \"ref\" parameters should not be used",
     "timeToFix": 20
-  },
-  {
-    "patternId": "S2245",
-    "title": "Using pseudorandom number generators (PRNGs) is security-sensitive",
-    "timeToFix": 10
   },
   {
     "patternId": "S106",
@@ -880,14 +885,14 @@
     "timeToFix": 5
   },
   {
-    "patternId": "S1313",
-    "title": "Using hardcoded IP addresses is security-sensitive",
-    "timeToFix": 30
+    "patternId": "S5332",
+    "title": "Using clear-text protocols is security-sensitive",
+    "timeToFix": 5
   },
   {
-    "patternId": "S3011",
-    "title": "Reflection should not be used to increase accessibility of classes, methods, or fields",
-    "timeToFix": 30
+    "patternId": "S4036",
+    "title": "Searching OS commands in PATH is security-sensitive",
+    "timeToFix": 15
   },
   {
     "patternId": "S4792",
@@ -897,6 +902,16 @@
   {
     "patternId": "S4834",
     "title": "Controlling permissions is security-sensitive",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S3330",
+    "title": "Creating cookies without the \"HttpOnly\" flag is security-sensitive",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "S2092",
+    "title": "Creating cookies without the \"secure\" flag is security-sensitive",
     "timeToFix": 5
   },
   {
@@ -910,6 +925,11 @@
     "timeToFix": 1
   },
   {
+    "patternId": "S5753",
+    "title": "Disabling ASP.NET \"Request Validation\" feature is security-sensitive",
+    "timeToFix": 5
+  },
+  {
     "patternId": "S2068",
     "title": "Hard-coded credentials are security-sensitive",
     "parameters": [
@@ -919,6 +939,11 @@
       }
     ],
     "timeToFix": 30
+  },
+  {
+    "patternId": "S2245",
+    "title": "Using pseudorandom number generators (PRNGs) is security-sensitive",
+    "timeToFix": 10
   },
   {
     "patternId": "S4787",
@@ -932,8 +957,39 @@
   },
   {
     "patternId": "S5042",
-    "title": "Expanding archive files is security-sensitive",
+    "title": "Expanding archive files without controlling resource consumption is security-sensitive",
     "timeToFix": 10
+  },
+  {
+    "patternId": "S1313",
+    "title": "Using hardcoded IP addresses is security-sensitive",
+    "timeToFix": 30
+  },
+  {
+    "patternId": "S5766",
+    "title": "Deserializing objects without performing data validation is security-sensitive",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S5443",
+    "title": "Using publicly writable directories is security-sensitive",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S4829",
+    "title": "Reading the Standard Input is security-sensitive",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S5693",
+    "title": "Allowing requests with excessive content length is security-sensitive",
+    "parameters": [
+      {
+        "name": "fileUploadSizeLimit",
+        "description": "The maximum size of HTTP requests handling file uploads (in bytes)."
+      }
+    ],
+    "timeToFix": 5
   },
   {
     "patternId": "S4818",
@@ -949,6 +1005,11 @@
     "patternId": "S2255",
     "title": "Writing cookies is security-sensitive",
     "timeToFix": 5
+  },
+  {
+    "patternId": "S2257",
+    "title": "Using non-standard cryptographic algorithms is security-sensitive",
+    "timeToFix": 480
   },
   {
     "patternId": "S4784",
@@ -1016,11 +1077,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "S5766",
-    "title": "Deserializing objects without performing data validation is security-sensitive",
-    "timeToFix": 5
-  },
-  {
     "patternId": "S2278",
     "title": "Neither DES (Data Encryption Standard) nor DESede (3DES) should be used",
     "timeToFix": 20
@@ -1034,6 +1090,11 @@
     "patternId": "S2070",
     "title": "SHA-1 and Message-Digest hash algorithms should not be used in secure contexts",
     "timeToFix": 30
+  },
+  {
+    "patternId": "S5445",
+    "title": "Insecure temporary file creation methods should not be used",
+    "timeToFix": 5
   },
   {
     "patternId": "S4039",
@@ -1119,7 +1180,7 @@
   {
     "patternId": "S4210",
     "title": "Windows Forms entry points should be marked with STAThread",
-    "timeToFix": 5
+    "timeToFix": 2
   },
   {
     "patternId": "S3052",
@@ -1339,7 +1400,7 @@
   },
   {
     "patternId": "S927",
-    "title": "parameter names should match base declaration and other partial definitions",
+    "title": "Parameter names should match base declaration and other partial definitions",
     "timeToFix": 10
   },
   {
@@ -1440,11 +1501,6 @@
   {
     "patternId": "S3603",
     "title": "Methods with \"Pure\" attribute should return a value ",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "S4829",
-    "title": "Reading the Standard Input is security-sensitive",
     "timeToFix": 5
   },
   {
@@ -2010,6 +2066,11 @@
     "patternId": "S3598",
     "title": "One-way \"OperationContract\" methods should have \"void\" return type",
     "timeToFix": 15
+  },
+  {
+    "patternId": "S4423",
+    "title": "Weak SSL/TLS protocols should not be used",
+    "timeToFix": 2
   },
   {
     "patternId": "S2755",
