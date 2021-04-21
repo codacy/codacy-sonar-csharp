@@ -20,6 +20,12 @@ namespace CodacyCSharp.DocsGenerator.Helpers
                 return long.Parse(sonarTimeToFix.Substring(0, idx)) * 60;
             }
 
+            idx = sonarTimeToFix.IndexOf("d", StringComparison.CurrentCulture);
+            if(idx != -1)
+            {
+                return long.Parse(sonarTimeToFix.Substring(0, idx)) * 60 * 8; // Assuming 8 hours workday
+            }
+
             if(sonarTimeToFix == "")
             {
                 return 5;
