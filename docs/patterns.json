@@ -1,6 +1,6 @@
 {
   "name": "sonarscharp",
-  "version": "8.13",
+  "version": "8.21",
   "patterns": [
     {
       "patternId": "S3655",
@@ -11,7 +11,7 @@
     {
       "patternId": "S3966",
       "category": "ErrorProne",
-      "level": "Error",
+      "level": "Warning",
       "enabled": false
     },
     {
@@ -54,6 +54,27 @@
       "patternId": "S5773",
       "category": "Security",
       "subcategory": "CommandInjection",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S3329",
+      "category": "Security",
+      "subcategory": "FileAccess",
+      "level": "Error",
+      "enabled": false
+    },
+    {
+      "patternId": "S2053",
+      "category": "Security",
+      "subcategory": "Cryptography",
+      "level": "Error",
+      "enabled": false
+    },
+    {
+      "patternId": "S2612",
+      "category": "Security",
+      "subcategory": "Auth",
       "level": "Warning",
       "enabled": false
     },
@@ -179,6 +200,12 @@
       "patternId": "S1227",
       "category": "CodeStyle",
       "level": "Info",
+      "enabled": false
+    },
+    {
+      "patternId": "S3011",
+      "category": "ErrorProne",
+      "level": "Warning",
       "enabled": false
     },
     {
@@ -392,7 +419,6 @@
     {
       "patternId": "S2228",
       "category": "Security",
-      "subcategory": "Cryptography",
       "level": "Info",
       "enabled": true
     },
@@ -421,23 +447,9 @@
       "enabled": false
     },
     {
-      "patternId": "S3330",
-      "category": "Security",
-      "subcategory": "XSS",
-      "level": "Info",
-      "enabled": false
-    },
-    {
-      "patternId": "S2092",
-      "category": "Security",
-      "subcategory": "Cryptography",
-      "level": "Info",
-      "enabled": false
-    },
-    {
       "patternId": "S4426",
       "category": "Security",
-      "subcategory": "InsecureModulesLibraries",
+      "subcategory": "FileAccess",
       "level": "Error",
       "enabled": false
     },
@@ -677,13 +689,6 @@
       "category": "ErrorProne",
       "level": "Error",
       "enabled": true
-    },
-    {
-      "patternId": "S2245",
-      "category": "Security",
-      "subcategory": "Cryptography",
-      "level": "Error",
-      "enabled": false
     },
     {
       "patternId": "S106",
@@ -1057,16 +1062,17 @@
       "enabled": true
     },
     {
-      "patternId": "S1313",
+      "patternId": "S5332",
       "category": "Security",
       "subcategory": "Cryptography",
-      "level": "Warning",
-      "enabled": true
+      "level": "Error",
+      "enabled": false
     },
     {
-      "patternId": "S3011",
-      "category": "ErrorProne",
-      "level": "Warning",
+      "patternId": "S4036",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "level": "Info",
       "enabled": false
     },
     {
@@ -1079,7 +1085,20 @@
     {
       "patternId": "S4834",
       "category": "Security",
-      "subcategory": "Auth",
+      "level": "Info",
+      "enabled": false
+    },
+    {
+      "patternId": "S3330",
+      "category": "Security",
+      "subcategory": "XSS",
+      "level": "Info",
+      "enabled": false
+    },
+    {
+      "patternId": "S2092",
+      "category": "Security",
+      "subcategory": "Cryptography",
       "level": "Info",
       "enabled": false
     },
@@ -1098,6 +1117,13 @@
       "enabled": false
     },
     {
+      "patternId": "S5753",
+      "category": "Security",
+      "subcategory": "XSS",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
       "patternId": "S2068",
       "category": "Security",
       "subcategory": "Auth",
@@ -1111,6 +1137,13 @@
       "enabled": false
     },
     {
+      "patternId": "S2245",
+      "category": "Security",
+      "subcategory": "Cryptography",
+      "level": "Error",
+      "enabled": false
+    },
+    {
       "patternId": "S4787",
       "category": "Security",
       "level": "Error",
@@ -1120,14 +1153,54 @@
       "patternId": "S2077",
       "category": "Security",
       "subcategory": "CommandInjection",
-      "level": "Error",
+      "level": "Warning",
       "enabled": false
     },
     {
       "patternId": "S5042",
       "category": "Security",
+      "subcategory": "FileAccess",
+      "level": "Error",
+      "enabled": false
+    },
+    {
+      "patternId": "S1313",
+      "category": "Security",
+      "subcategory": "Cryptography",
+      "level": "Warning",
+      "enabled": true
+    },
+    {
+      "patternId": "S5766",
+      "category": "Security",
+      "subcategory": "CommandInjection",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S5443",
+      "category": "Security",
       "subcategory": "Auth",
       "level": "Error",
+      "enabled": false
+    },
+    {
+      "patternId": "S4829",
+      "category": "Security",
+      "level": "Error",
+      "enabled": false
+    },
+    {
+      "patternId": "S5693",
+      "category": "Security",
+      "subcategory": "FileAccess",
+      "level": "Warning",
+      "parameters": [
+        {
+          "name": "fileUploadSizeLimit",
+          "default": "8000000"
+        }
+      ],
       "enabled": false
     },
     {
@@ -1146,6 +1219,13 @@
       "patternId": "S2255",
       "category": "Security",
       "level": "Info",
+      "enabled": false
+    },
+    {
+      "patternId": "S2257",
+      "category": "Security",
+      "subcategory": "Cryptography",
+      "level": "Error",
       "enabled": false
     },
     {
@@ -1227,13 +1307,6 @@
       "enabled": false
     },
     {
-      "patternId": "S5766",
-      "category": "Security",
-      "subcategory": "CommandInjection",
-      "level": "Warning",
-      "enabled": false
-    },
-    {
       "patternId": "S2278",
       "category": "Security",
       "subcategory": "FileAccess",
@@ -1252,6 +1325,13 @@
       "category": "Security",
       "level": "Error",
       "enabled": true
+    },
+    {
+      "patternId": "S5445",
+      "category": "Security",
+      "subcategory": "InsecureModulesLibraries",
+      "level": "Error",
+      "enabled": false
     },
     {
       "patternId": "S4039",
@@ -1741,12 +1821,6 @@
       "category": "ErrorProne",
       "level": "Warning",
       "enabled": true
-    },
-    {
-      "patternId": "S4829",
-      "category": "Security",
-      "level": "Error",
-      "enabled": false
     },
     {
       "patternId": "S3253",
@@ -2419,6 +2493,13 @@
       "category": "ErrorProne",
       "level": "Warning",
       "enabled": true
+    },
+    {
+      "patternId": "S4423",
+      "category": "Security",
+      "subcategory": "FileAccess",
+      "level": "Warning",
+      "enabled": false
     },
     {
       "patternId": "S2755",

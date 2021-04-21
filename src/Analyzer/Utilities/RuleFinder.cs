@@ -28,7 +28,6 @@ namespace CodacyCSharp.Analyzer.Utilities
             new[]
             {
                 Assembly.Load(typeof(FlagsEnumZeroMember).Assembly.GetName()),
-                Assembly.Load(typeof(FlagsEnumZeroMemberBase).Assembly.GetName())
             };
 
         public IEnumerable<Type> AllAnalyzerTypes => diagnosticAnalyzers;

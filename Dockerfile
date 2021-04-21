@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS builder
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS builder
 
 RUN apt update && \
     apt install -y apt-transport-https dirmngr gnupg ca-certificates && \
