@@ -1150,13 +1150,6 @@
       "enabled": false
     },
     {
-      "patternId": "S2077",
-      "category": "Security",
-      "subcategory": "SQLInjection",
-      "level": "Warning",
-      "enabled": false
-    },
-    {
       "patternId": "S5042",
       "category": "Security",
       "subcategory": "DoS",

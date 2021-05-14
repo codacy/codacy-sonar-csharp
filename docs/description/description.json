@@ -951,11 +951,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "S2077",
-    "title": "Formatting SQL queries is security-sensitive",
-    "timeToFix": 20
-  },
-  {
     "patternId": "S5042",
     "title": "Expanding archive files without controlling resource consumption is security-sensitive",
     "timeToFix": 10
