@@ -26,7 +26,7 @@ namespace CodacyCSharp.Analyzer
         private readonly DiagnosticsRunner diagnosticsRunner;
 
         private readonly string tmpSonarLintFolder;
-        private static List<string> blacklist = new List<string> { "S1144", "S2325" };
+        private static List<string> blacklist = new List<string> { "S1144", "S2325", "S2077"};
 
         public static bool IsInBlacklist(string id) {
             return blacklist.Contains(id);
