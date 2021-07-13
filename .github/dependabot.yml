@@ -1,0 +1,22 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/"
+  schedule:
+    interval: daily
+    timezone: Europe/Lisbon
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: SonarAnalyzer.CSharp
+    versions:
+    - 8.17.0.26580
+    - 8.18.0.27296
+    - 8.19.0.28253
+    - 8.20.0.28934
+    - 8.21.0.30542
+  - dependency-name: Microsoft.CodeAnalysis.CSharp.Workspaces
+    versions:
+    - 3.9.0
+  - dependency-name: ReverseMarkdown
+    versions:
+    - 3.18.0
