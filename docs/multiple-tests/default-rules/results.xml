@@ -2,7 +2,6 @@
 <checkstyle version="4.3">
     <file name="example.cs">
         <error source="S3904" line="1" message="Provide an 'AssemblyVersion' attribute for assembly 'srcassembly.dll'." severity="error" />
-        <error source="S125" line="1" message="Remove this commented out code." severity="warning" />
         <error source="S3990" line="1" message="Provide a 'CLSCompliant' attribute for assembly 'srcassembly.dll'." severity="warning" />
         <error source="S1451" line="1" message="Add or update the header of this file." severity="error" />
         <error source="S3992" line="1" message="Provide a 'ComVisible' attribute for assembly 'srcassembly.dll'." severity="warning" />
