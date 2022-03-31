@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AnalysisInput>
+<Rules>
+	<Rule>
+		<Key>S3966</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3900</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4158</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2589</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S5773</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3329</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2053</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3923</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3415</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1200</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4060</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4583</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1125</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1227</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3011</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3343</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4462</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3949</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4830</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3928</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S101</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S100</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1694</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3776</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1155</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4004</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2971</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3909</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1134</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1135</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3240</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3972</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4260</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S5034</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2479</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4426</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2115</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3346</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3906</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3903</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4524</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4002</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3902</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3885</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1147</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3971</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1696</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2221</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3981</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2365</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4015</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3956</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4019</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4277</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3998</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4070</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3358</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4017</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4143</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2183</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3060</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1048</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2114</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2701</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S106</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S881</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S5542</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2344</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2342</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4016</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4022</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4035</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4220</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4027</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3984</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3431</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1067</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4226</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4225</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4025</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S104</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S113</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2346</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2252</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2251</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3376</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1541</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S134</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3464</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4018</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2219</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S907</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S5332</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4036</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4792</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4834</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3330</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2092</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4790</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4507</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4502</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S5753</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2068</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2245</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4787</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S5042</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S5766</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2612</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S5122</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S5443</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4829</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S5693</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4818</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4823</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2255</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2257</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4784</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4564</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S126</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1066</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3881</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3925</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3927</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3973</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3963</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S5547</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S5445</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4039</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4023</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1309</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S5659</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4433</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S103</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4055</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S818</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3267</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S109</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3990</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3992</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4026</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4210</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3604</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4211</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4136</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4261</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3400</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4144</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S138</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3242</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1659</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3887</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2302</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4200</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1199</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4581</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4586</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3260</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3265</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4040</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3937</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1848</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1123</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4069</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4050</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4457</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4456</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4428</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4214</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4000</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3967</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4275</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4049</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4059</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2292</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1939</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4201</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1110</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3993</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1168</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1109</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3884</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4212</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4057</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4159</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S122</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4056</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4058</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2857</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1192</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4635</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1151</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1821</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S105</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2187</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2699</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3433</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1607</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3366</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2436</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1479</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S107</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3717</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2327</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3059</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4041</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4052</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3353</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1751</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1128</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4487</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1075</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3962</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3908</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4047</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2148</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4061</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3256</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3994</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3995</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3996</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S3997</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4005</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S1264</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2290</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S4423</Key>
+	</Rule>
+
+	<Rule>
+		<Key>S2755</Key>
+	</Rule>
+
+</Rules>
+</AnalysisInput>
