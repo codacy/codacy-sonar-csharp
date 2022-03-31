@@ -8,7 +8,7 @@ docker cp $container_id:/docs/patterns.json $codacy_rules_file
 docker rm $container_id
 
 # obtain all ids of the rules we have enabled by default
-rules_ids=$(cat $codacy_rules_file | jq -r '.patterns[] | select (.enabled == false) | .patternId')
+rules_ids=$(cat $codacy_rules_file | jq -r '.patterns[] | select (.enabled == true) | .patternId')
 
 cat << EOF > SonarLint.xml
 <?xml version="1.0" encoding="UTF-8"?>
