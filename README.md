@@ -8,6 +8,17 @@ This is the docker engine we use at Codacy to run [SonarC#](https://github.com/S
 You can also create a docker to integrate the tool and language of your choice!
 Check the **Docs** section for more information.
 
+## Local Development
+
+**Requirements**:
+ - unzip, xmllint
+ - mono - implementation of .NET platform including compiler and runtime
+ - dotnet-sdk (on Archlinux also installs dotnet-runtim & dotnet-host & dotnet-targeting-pack) - the .NET Core SDK
+
+Compile the code with `make build-all`, just the main code with `make build`, or just the docs generator with `make build-docs`.
+See other useful targets inside the `Makefile`.
+
+
 ## Usage
 
 ### Publish the docker
