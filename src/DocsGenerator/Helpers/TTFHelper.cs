@@ -1,7 +1,9 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace CodacyCSharp.DocsGenerator.Helpers
 {
+    [SuppressMessage("", "S101")]
     public static class TTFHelper
     {
         public static long ToCodacyTimeToFix(string sonarTimeToFix)

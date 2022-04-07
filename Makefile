@@ -1,9 +1,7 @@
-export FrameworkPathOverride=$(shell dirname $(shell which mono))/../lib/mono/4.5/
 SONAR_VERSION=$(shell xmllint --xpath 'string(/Project/ItemGroup/PackageReference[@Include="SonarAnalyzer.CSharp"]/@Version)' src/Analyzer/Analyzer.csproj | tr -d '\n')
+
 BUILD_CMD=dotnet build --no-restore /property:GenerateFullPaths=true
 
-LIBRARIES_FOLDER=.lib
-PACKAGES_FOLDER=.packages
 RESOURCE_FOLDER=.res
 
 all: configure build
@@ -14,13 +12,8 @@ configure:
 build-all:
 	$(BUILD_CMD)
 
-build: src/Analyzer
-
 build:
-	$(BUILD_CMD) $^
-
-build-seed:
-	$(BUILD_CMD) src/Seed
+	$(BUILD_CMD) src/Analyzer
 
 build-docs:
 	$(BUILD_CMD) src/DocsGenerator

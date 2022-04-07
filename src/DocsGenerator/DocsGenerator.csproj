@@ -5,9 +5,6 @@
         <RootNamespace>CodacyCSharp.DocsGenerator</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
-        <DotNetCliToolReference Include="dotnet-mono" Version="0.5.6" />
-    </ItemGroup>
-    <ItemGroup>
         <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
         <PackageReference Include="ReverseMarkdown" Version="3.23.0" />
     </ItemGroup>
