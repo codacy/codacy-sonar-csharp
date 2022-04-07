@@ -92,6 +92,7 @@ namespace CodacyCSharp.Analyzer
         public void Dispose()
         {
             Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         /// <summary>
@@ -102,15 +103,10 @@ namespace CodacyCSharp.Analyzer
             Dispose(false);
         }
 
-        private void Dispose(bool disposing)
+        protected virtual void Dispose(bool disposing)
         {
-            if (disposing)
-            {
-                GC.SuppressFinalize(this);
-            }
-
             // delete created temporary directory
-            if(tmpSonarLintFolder != null)
+            if (tmpSonarLintFolder != null)
             {
                 Directory.Delete(tmpSonarLintFolder, true);
             }
