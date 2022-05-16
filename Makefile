@@ -1,4 +1,4 @@
-SONAR_VERSION=8.39.0.47922
+SONAR_VERSION=$(shell xmllint --xpath 'string(/Project/ItemGroup/PackageReference[@Include="SonarAnalyzer.CSharp"]/@Version)' src/Analyzer/Analyzer.csproj | tr -d '\n')
 
 BUILD_CMD=dotnet build --no-restore /property:GenerateFullPaths=true
 
