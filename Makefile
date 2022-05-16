@@ -31,11 +31,11 @@ documentation: update-docs build-docs
 
 documentation:
 	echo $(SONAR_VERSION) > .SONAR_VERSION
-	mono src/DocsGenerator/bin/Debug/net461/DocsGenerator.exe
+	mono src/DocsGenerator/bin/Debug/net48/DocsGenerator.exe
 	rm .SONAR_VERSION
 
 publish:
-	dotnet publish -c Release -f net461
+	dotnet publish -c Release -f net48
 
 clean:
 	rm -rf .lib/ .packages/ .res/

@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS builder
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS builder
 
 RUN apt update && \
     apt install -y apt-transport-https dirmngr gnupg ca-certificates && \
@@ -16,7 +16,7 @@ RUN make documentation
 
 FROM ubuntu:20.04
 
-ENV MONO_VERSION 6.10.0.104
+ENV MONO_VERSION 6.12.0.122
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends gnupg dirmngr ca-certificates && \
@@ -36,8 +36,8 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     apt-get install -y -q mono-runtime mono-devel && \
     rm -rf /var/lib/apt/lists/* /tmp/*
 
-COPY --from=builder /workdir/src/Analyzer/bin/Release/net461/publish/*dll /opt/docker/bin/
-COPY --from=builder /workdir/src/Analyzer/bin/Release/net461/publish/*.exe /opt/docker/bin/
+COPY --from=builder /workdir/src/Analyzer/bin/Release/net48/publish/*dll /opt/docker/bin/
+COPY --from=builder /workdir/src/Analyzer/bin/Release/net48/publish/*.exe /opt/docker/bin/
 COPY --from=builder /workdir/docs /docs/
 
 RUN adduser -u 2004 --disabled-password docker
