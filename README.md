@@ -23,7 +23,6 @@ See other useful targets inside the `Makefile`.
 ### Publish the docker
 
 ```bash
-make publish
 docker build -t codacy-sonar-csharp .
 ```
 
