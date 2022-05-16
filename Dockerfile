@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS builder
 COPY . /workdir
 WORKDIR /workdir
 
-RUN apt update && apt install make unzip
+RUN apt update && apt install -y make unzip libxml2-utils
 RUN make
 RUN make publish
 RUN make documentation

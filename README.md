@@ -12,7 +12,6 @@ Check the **Docs** section for more information.
 
 **Requirements**:
   - unzip, xmllint
-  - mono - implementation of .NET platform including compiler and runtime
   - dotnet-sdk (on Archlinux also installs dotnet-runtim & dotnet-host & dotnet-targeting-pack) - the .NET Core SDK
 
 Compile the code with `make build-all`, just the main code with `make build`, or just the docs generator with `make build-docs`.
