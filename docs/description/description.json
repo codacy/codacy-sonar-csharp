@@ -1,72 +1,7 @@
 [
   {
-    "patternId": "S3655",
-    "title": "Empty nullable value should not be accessed",
-    "timeToFix": 10
-  },
-  {
-    "patternId": "S3966",
-    "title": "Objects should not be disposed more than once",
-    "timeToFix": 10
-  },
-  {
-    "patternId": "S3900",
-    "title": "Arguments of public methods should be validated against null",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "S4158",
-    "title": "Empty collections should not be accessed or iterated",
-    "timeToFix": 15
-  },
-  {
-    "patternId": "S2583",
-    "title": "Conditionally executed code should be reachable",
-    "timeToFix": 15
-  },
-  {
-    "patternId": "S2589",
-    "title": "Boolean expressions should not be gratuitous",
-    "timeToFix": 10
-  },
-  {
-    "patternId": "S1944",
-    "title": "Inappropriate casts should not be made",
-    "timeToFix": 20
-  },
-  {
-    "patternId": "S2259",
-    "title": "Null pointers should not be dereferenced",
-    "timeToFix": 10
-  },
-  {
-    "patternId": "S5773",
-    "title": "Types allowed to be deserialized should be restricted",
-    "timeToFix": 30
-  },
-  {
-    "patternId": "S3329",
-    "title": "Cipher Block Chaining IV's should be random and unique",
-    "timeToFix": 15
-  },
-  {
-    "patternId": "S2053",
-    "title": "Hashes should include an unpredictable salt",
-    "timeToFix": 30
-  },
-  {
-    "patternId": "S2612",
-    "title": "Setting loose file permissions is security-sensitive",
-    "timeToFix": 5
-  },
-  {
     "patternId": "S3442",
     "title": "\"abstract\" classes should not have \"public\" constructors",
-    "timeToFix": 2
-  },
-  {
-    "patternId": "S4432",
-    "title": "AES encryption algorithm should be used with secured mode",
     "timeToFix": 2
   },
   {
@@ -115,7 +50,7 @@
     "parameters": [
       {
         "name": "max",
-        "description": "Maximum number of classes a single class is allowed to depend upon"
+        "description": "Maximum number of types a single type is allowed to depend upon"
       }
     ],
     "timeToFix": 120
@@ -130,7 +65,7 @@
       },
       {
         "name": "filteredClasses",
-        "description": "Comma-separated list of classes to be filtered out of the count of inheritance. Depth counting will stop when a filtered class is reached. For example: System.Windows.Controls.UserControl, System.Windows.*. (String)"
+        "description": "Comma-separated list of classes or records to be filtered out of the count of inheritance. Depth counting will stop when a filtered class or record is reached. For example: System.Windows.Controls.UserControl, System.Windows.*. (String)"
       }
     ],
     "timeToFix": 5
@@ -231,13 +166,13 @@
     "timeToFix": 5
   },
   {
-    "patternId": "S101",
-    "title": "Types should be named in PascalCase",
+    "patternId": "S100",
+    "title": "Methods and properties should be named in PascalCase",
     "timeToFix": 5
   },
   {
-    "patternId": "S100",
-    "title": "Methods and properties should be named in PascalCase",
+    "patternId": "S101",
+    "title": "Types should be named in PascalCase",
     "timeToFix": 5
   },
   {
@@ -301,14 +236,14 @@
     "timeToFix": 5
   },
   {
-    "patternId": "S1134",
-    "title": "Track uses of \"FIXME\" tags",
-    "timeToFix": 5
-  },
-  {
     "patternId": "S1135",
     "title": "Track uses of \"TODO\" tags",
-    "timeToFix": 5
+    "timeToFix": 0
+  },
+  {
+    "patternId": "S1134",
+    "title": "Track uses of \"FIXME\" tags",
+    "timeToFix": 0
   },
   {
     "patternId": "S1210",
@@ -381,6 +316,11 @@
     "timeToFix": 20
   },
   {
+    "patternId": "S2115",
+    "title": "A secure password should be used when connecting to a database",
+    "timeToFix": 45
+  },
+  {
     "patternId": "S1854",
     "title": "Unused assignments should be removed",
     "timeToFix": 15
@@ -428,7 +368,7 @@
   {
     "patternId": "S4002",
     "title": "Disposable types should declare finalizers",
-    "timeToFix": 5
+    "timeToFix": 10
   },
   {
     "patternId": "S2952",
@@ -536,11 +476,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "S4142",
-    "title": "Duplicate values should not be passed as arguments",
-    "timeToFix": 5
-  },
-  {
     "patternId": "S2183",
     "title": "Integral numbers should not be shifted by zero or more than their number of bits-1",
     "timeToFix": 5
@@ -608,7 +543,7 @@
   {
     "patternId": "S5542",
     "title": "Encryption algorithms should be used with secure mode and padding scheme",
-    "timeToFix": 5
+    "timeToFix": 20
   },
   {
     "patternId": "S2291",
@@ -664,11 +599,6 @@
     "patternId": "S4220",
     "title": "Events should have proper arguments",
     "timeToFix": 5
-  },
-  {
-    "patternId": "S3693",
-    "title": "Exception constructors should not throw exceptions",
-    "timeToFix": 15
   },
   {
     "patternId": "S3445",
@@ -823,7 +753,7 @@
     "title": "Control flow statements \"if\", \"switch\", \"for\", \"foreach\", \"while\", \"do\"  and \"try\" should not be nested too deeply",
     "parameters": [
       {
-        "name": "max",
+        "name": "maximumNestingLevel",
         "description": "Maximum allowed control flow statement nesting depth."
       }
     ],
@@ -925,6 +855,11 @@
     "timeToFix": 1
   },
   {
+    "patternId": "S4502",
+    "title": "Disabling CSRF protections is security-sensitive",
+    "timeToFix": 5
+  },
+  {
     "patternId": "S5753",
     "title": "Disabling ASP.NET \"Request Validation\" feature is security-sensitive",
     "timeToFix": 5
@@ -963,6 +898,16 @@
   {
     "patternId": "S5766",
     "title": "Deserializing objects without performing data validation is security-sensitive",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S2612",
+    "title": "Setting loose file permissions is security-sensitive",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S5122",
+    "title": "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive",
     "timeToFix": 5
   },
   {
@@ -1027,11 +972,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "S1145",
-    "title": "Useless \"if(true) {...}\" and \"if(false){...}\" blocks should be removed",
-    "timeToFix": 2
-  },
-  {
     "patternId": "S3881",
     "title": "\"IDisposable\" should be implemented correctly",
     "timeToFix": 10
@@ -1072,24 +1012,14 @@
     "timeToFix": 5
   },
   {
-    "patternId": "S2278",
-    "title": "Neither DES (Data Encryption Standard) nor DESede (3DES) should be used",
-    "timeToFix": 20
-  },
-  {
     "patternId": "S5547",
     "title": "Cipher algorithms should be robust",
-    "timeToFix": 5
-  },
-  {
-    "patternId": "S2070",
-    "title": "SHA-1 and Message-Digest hash algorithms should not be used in secure contexts",
-    "timeToFix": 30
+    "timeToFix": 15
   },
   {
     "patternId": "S5445",
     "title": "Insecure temporary file creation methods should not be used",
-    "timeToFix": 5
+    "timeToFix": 10
   },
   {
     "patternId": "S4039",
@@ -1100,6 +1030,11 @@
     "patternId": "S4023",
     "title": "Interfaces should not be empty",
     "timeToFix": 2
+  },
+  {
+    "patternId": "S1944",
+    "title": "Inappropriate casts should not be made",
+    "timeToFix": 20
   },
   {
     "patternId": "S3220",
@@ -1114,7 +1049,7 @@
   {
     "patternId": "S5659",
     "title": "JWT should be signed and verified with strong cipher algorithms",
-    "timeToFix": 5
+    "timeToFix": 30
   },
   {
     "patternId": "S4433",
@@ -1141,6 +1076,11 @@
     "patternId": "S818",
     "title": "Literal suffixes should be upper case",
     "timeToFix": 2
+  },
+  {
+    "patternId": "S3267",
+    "title": "Loops should be simplified with \"LINQ\" expressions",
+    "timeToFix": 5
   },
   {
     "patternId": "S2184",
@@ -1316,6 +1256,11 @@
   {
     "patternId": "S4586",
     "title": "Non-async \"Task/Task<T>\" methods should not return null",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S3260",
+    "title": "Non-derived \"private\" classes and records should be \"sealed\"",
     "timeToFix": 5
   },
   {
@@ -1634,11 +1579,6 @@
     "timeToFix": 10
   },
   {
-    "patternId": "S1697",
-    "title": "Short-circuit logic should be used to prevent null pointer dereferences in conditionals",
-    "timeToFix": 2
-  },
-  {
     "patternId": "S4159",
     "title": "Classes should implement their \"ExportAttribute\" interfaces",
     "timeToFix": 15
@@ -1786,6 +1726,61 @@
     "timeToFix": 5
   },
   {
+    "patternId": "S2222",
+    "title": "Locks should be released",
+    "timeToFix": 20
+  },
+  {
+    "patternId": "S3655",
+    "title": "Empty nullable value should not be accessed",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "S3966",
+    "title": "Objects should not be disposed more than once",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "S3900",
+    "title": "Arguments of public methods should be validated against null",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S4158",
+    "title": "Empty collections should not be accessed or iterated",
+    "timeToFix": 15
+  },
+  {
+    "patternId": "S2583",
+    "title": "Conditionally executed code should be reachable",
+    "timeToFix": 15
+  },
+  {
+    "patternId": "S2589",
+    "title": "Boolean expressions should not be gratuitous",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "S2259",
+    "title": "Null pointers should not be dereferenced",
+    "timeToFix": 10
+  },
+  {
+    "patternId": "S5773",
+    "title": "Types allowed to be deserialized should be restricted",
+    "timeToFix": 30
+  },
+  {
+    "patternId": "S3329",
+    "title": "Cipher Block Chaining IVs should be unpredictable",
+    "timeToFix": 15
+  },
+  {
+    "patternId": "S2053",
+    "title": "Hashes should include an unpredictable salt",
+    "timeToFix": 30
+  },
+  {
     "patternId": "S105",
     "title": "Tabulation characters should not be used",
     "timeToFix": 2
@@ -1794,11 +1789,6 @@
     "patternId": "S3216",
     "title": "\"ConfigureAwait(false)\" should be used",
     "timeToFix": 15
-  },
-  {
-    "patternId": "S2758",
-    "title": "The ternary operator should not return the same value regardless of the condition",
-    "timeToFix": 5
   },
   {
     "patternId": "S2187",
@@ -1890,7 +1880,7 @@
   {
     "patternId": "S3717",
     "title": "Track use of \"NotImplementedException\"",
-    "timeToFix": 5
+    "timeToFix": 60
   },
   {
     "patternId": "S2327",
@@ -1901,6 +1891,11 @@
     "patternId": "S3443",
     "title": "Type should not be examined on \"System.Type\" instances",
     "timeToFix": 5
+  },
+  {
+    "patternId": "S3059",
+    "title": "Types should not have members with visibility set higher than the type's visibility",
+    "timeToFix": 15
   },
   {
     "patternId": "S4041",
@@ -1991,6 +1986,11 @@
     "patternId": "S3256",
     "title": "\"string.IsNullOrEmpty\" should be used",
     "timeToFix": 5
+  },
+  {
+    "patternId": "S6354",
+    "title": "Use a testable date/time provider.",
+    "timeToFix": 20
   },
   {
     "patternId": "S3994",

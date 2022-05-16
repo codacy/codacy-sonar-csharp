@@ -19,8 +19,8 @@ namespace CodacyCSharp.Analyzer.Utilities
         {
             diagnosticAnalyzers = PackagedRuleAssemblies
                 .SelectMany(assembly => assembly.GetTypes())
-                .Where(t => t.IsSubclassOf(typeof(DiagnosticAnalyzer)))
-                .Where(t => t.GetCustomAttributes<RuleAttribute>().Any())
+                .Where(t => t.IsSubclassOf(typeof(DiagnosticAnalyzer)) &&
+                    t.GetCustomAttributes<DiagnosticAnalyzerAttribute>().Any())
                 .ToList();
         }
 
