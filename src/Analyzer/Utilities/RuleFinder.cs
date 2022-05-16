@@ -6,7 +6,6 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Rules;
-using SonarAnalyzer.Rules.Common;
 using SonarAnalyzer.Rules.CSharp;
 
 namespace CodacyCSharp.Analyzer.Utilities
@@ -19,8 +18,8 @@ namespace CodacyCSharp.Analyzer.Utilities
         {
             diagnosticAnalyzers = PackagedRuleAssemblies
                 .SelectMany(assembly => assembly.GetTypes())
-                .Where(t => t.IsSubclassOf(typeof(DiagnosticAnalyzer)))
-                .Where(t => t.GetCustomAttributes<RuleAttribute>().Any())
+                .Where(t => t.IsSubclassOf(typeof(DiagnosticAnalyzer)) && 
+                    t.GetCustomAttributes<DiagnosticAnalyzerAttribute>().Any())
                 .ToList();
         }
 

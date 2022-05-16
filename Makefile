@@ -1,4 +1,4 @@
-SONAR_VERSION=$(shell xmllint --xpath 'string(/Project/ItemGroup/PackageReference[@Include="SonarAnalyzer.CSharp"]/@Version)' src/Analyzer/Analyzer.csproj | tr -d '\n')
+SONAR_VERSION=8.39.0.47922
 
 BUILD_CMD=dotnet build --no-restore /property:GenerateFullPaths=true
 
@@ -31,11 +31,11 @@ documentation: update-docs build-docs
 
 documentation:
 	echo $(SONAR_VERSION) > .SONAR_VERSION
-	mono src/DocsGenerator/bin/Debug/net48/DocsGenerator.exe
+	dotnet "src/DocsGenerator/bin/Debug/net6/DocsGenerator.dll"
 	rm .SONAR_VERSION
 
 publish:
-	dotnet publish -c Release -f net48
+	dotnet publish -c Release -f net6
 
 clean:
 	rm -rf .lib/ .packages/ .res/
