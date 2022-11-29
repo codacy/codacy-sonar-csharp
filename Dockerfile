@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS builder
+FROM mcr.microsoft.com/dotnet/sdk:6.0.403 AS builder
 
 COPY . /workdir
 WORKDIR /workdir
@@ -8,7 +8,7 @@ RUN make
 RUN make publish
 RUN make documentation
 
-FROM mcr.microsoft.com/dotnet/runtime:6.0
+FROM mcr.microsoft.com/dotnet/runtime:6.0.11
 
 COPY --from=builder /workdir/src/Analyzer/bin/Release/net6/publish/ /opt/docker/bin/
 COPY --from=builder /workdir/docs /docs/
