@@ -7,7 +7,7 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.4.0" />
         <PackageReference Include="SQLitePCLRaw.core" Version="2.1.3" />
-        <PackageReference Include="SonarAnalyzer.CSharp" Version="8.39.0.47922" GeneratePathProperty="true" />
+        <PackageReference Include="SonarAnalyzer.CSharp" Version="8.50.0.58025" GeneratePathProperty="true" />
         <PackageReference Include="Codacy.Engine.Seed" Version="2.1.0" />
     </ItemGroup>
     <ItemGroup>
