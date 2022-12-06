@@ -31,5 +31,6 @@ workflows:
             - plugins_test
       - codacy/tag_version:
           name: tag_version
+          context: CodacyAWS
           requires:
             - codacy/publish_docker
