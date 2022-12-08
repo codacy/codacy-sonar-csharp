@@ -5,7 +5,7 @@
         <RootNamespace>CodacyCSharp.DocsGenerator</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
         <PackageReference Include="ReverseMarkdown" Version="3.23.1" />
     </ItemGroup>
     <ItemGroup>
