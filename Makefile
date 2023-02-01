@@ -35,7 +35,7 @@ documentation:
 	rm .SONAR_VERSION
 
 publish:
-	dotnet publish -c Release -f net6
+	dotnet publish -c Release
 
 clean:
 	rm -rf .lib/ .packages/ .res/ packages

@@ -1,5 +1,5 @@
 ## BUILD IMAGE
-ARG DOTNET_VERSION=6.0-alpine3.17
+ARG DOTNET_VERSION=7.0-alpine3.17
 FROM mcr.microsoft.com/dotnet/sdk:$DOTNET_VERSION AS builder
 
 COPY . /workdir
