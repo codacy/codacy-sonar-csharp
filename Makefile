@@ -38,4 +38,4 @@ publish:
 	dotnet publish -c Release -f net6
 
 clean:
-	rm -rf .lib/ .packages/ .res/
+	rm -rf .lib/ .packages/ .res/ packages
