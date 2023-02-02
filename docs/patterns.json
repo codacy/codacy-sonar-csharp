@@ -1,6 +1,6 @@
 {
   "name": "sonarscharp",
-  "version": "8.39",
+  "version": "8.40",
   "patterns": [
     {
       "patternId": "S3442",
@@ -1509,12 +1509,6 @@
       "enabled": false
     },
     {
-      "patternId": "S4581",
-      "category": "ErrorProne",
-      "level": "Warning",
-      "enabled": false
-    },
-    {
       "patternId": "S1163",
       "category": "ErrorProne",
       "level": "Error",
@@ -1674,6 +1668,12 @@
       "patternId": "S4000",
       "category": "ErrorProne",
       "level": "Error",
+      "enabled": false
+    },
+    {
+      "patternId": "S4581",
+      "category": "ErrorProne",
+      "level": "Warning",
       "enabled": false
     },
     {
