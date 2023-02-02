@@ -12,6 +12,7 @@ RUN apk add --no-cache make unzip libxml2-utils &&\
     make publish &&\
     make documentation
 
+
 ## RUNTIME IMAGE
 FROM mcr.microsoft.com/dotnet/runtime:$DOTNET_VERSION-$DOTNET_BASE_OS
 
