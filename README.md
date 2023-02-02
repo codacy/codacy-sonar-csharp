@@ -15,7 +15,7 @@ Check the **Docs** section for more information.
   - xmllint
     * on ubuntu: `apt-get install libxml2-utils`
     * on alpine: `apk add libxml2-utils`
-  - dotnet-sdk - "The .NET Core SDK"
+  - dotnet-sdk-6.0 - "The .NET Core SDK"
     * on archlinux: the above package also installs `dotnet-runtime`, `dotnet-host` and `dotnet-targeting-pack`) - the .NET Core SDK
 
 ### IDE
