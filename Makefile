@@ -33,6 +33,9 @@ documentation:
 	dotnet "src/DocsGenerator/bin/Debug/net6/DocsGenerator.dll"
 	rm .SONAR_VERSION
 
+run:
+	dotnet run --project src/Analyzer -f net6
+
 publish:
 	dotnet publish -c Release -f net6
 
