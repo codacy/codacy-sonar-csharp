@@ -1244,11 +1244,6 @@
     "timeToFix": 10
   },
   {
-    "patternId": "S4581",
-    "title": "\"new Guid()\" should not be used",
-    "timeToFix": 5
-  },
-  {
     "patternId": "S1163",
     "title": "Exceptions should not be thrown in finally blocks",
     "timeToFix": 30
@@ -1381,6 +1376,11 @@
   {
     "patternId": "S4000",
     "title": "Pointers to unmanaged memory should not be visible",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S4581",
+    "title": "\"new Guid()\" should not be used",
     "timeToFix": 5
   },
   {

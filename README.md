@@ -11,54 +11,58 @@ Check the **Docs** section for more information.
 ## Local Development
 
 **Requirements**:
-  - unzip, xmllint
-  - dotnet-sdk (on Archlinux also installs dotnet-runtim & dotnet-host & dotnet-targeting-pack) - the .NET Core SDK
+  - unzip 
+  - xmllint
+    * on ubuntu: `apt-get install libxml2-utils`
+    * on alpine: `apk add libxml2-utils`
+  - dotnet-sdk-6.0 - "The .NET Core SDK"
+    * on archlinux: the above package also installs `dotnet-runtime`, `dotnet-host` and `dotnet-targeting-pack`) - the .NET Core SDK
 
-Compile the code with `make build-all`, just the main code with `make build`, or just the docs generator with `make build-docs`.
+### IDE
+
+This seems to be more or less working in vscode, install the 
+"C# for Visual Studio Code (powered by OmniSharp)" extension 
+and before opening the project in it do `make configure`.
+
+### Commands
+
+  - `make configure` - runs `dotnet restore` which downloads all the required libraries for the projects to work.
+  - `make build` - compiles the *Analyzer* project.
+  - `make build-docs` - compiles the *DocsGenerator* project.
+  - `make build-all` - compiles both the *Analyzer* and *DocsGenerator* projects.
+  - `make documentation` - downloads upstream rules for the *sonar version* we defined in `Analyzer.csproj`,
+    extracts the rules for that version and runs the *DocsGenerator* application.
+
 See other useful targets inside the `Makefile`.
 
 ## Usage
 
-### Publish the docker
+### Publish the docker image locally
 
 ```bash
-docker build -t codacy-sonar-csharp .
+docker build -t codacy-sonar-csharp:local .
 ```
 
-### Run the docker
+### Run the docker locally
 
 ```bash
-docker run --user=docker --rm=true -v <PATH-TO-CODE>:/src -v <PATH-TO>/.codacyrc:/.codacyrc codacy-sonar-csharp
+docker run --user=docker --rm -v <PATH-TO-CODE>:/src:ro -v <PATH-TO>/.codacyrc:/.codacyrc:ro codacy-sonar-csharp:local
+```
+
+### Enter inside the docker image
+
+```bash
+docker run --user=docker --rm -v <PATH-TO-CODE>:/src:ro -v <PATH-TO>/.codacyrc:/.codacyrc:ro -it --entrypoint /bin/sh codacy-sonar-csharp:local
 ```
 
 > Make sure all the volumes mounted have the right permissions for user `docker`
-
-### Generate Docs
-
-**Requirements:**
-
--   `xmllint` utility installed on your system:
-
-    -   On ubuntu:
-
-            apt-get install libxml2-utils
-
-    -   On alpine
-
-            apk add libxml2-utils
-
-**Generate:**
-
-```sh
-make documentation
-```
 
 ## Tool configuration file
 
 Currently, to use your own configuration file, you must add a SonarLint.xml xml file with an AnalysisInput structure inside.
 
 Example:
-
+```
     <?xml version="1.0" encoding="UTF-8"?>
     <AnalysisInput>
       <Rules>
@@ -73,6 +77,7 @@ Example:
         </Rule>
       </Rules>
     </AnalysisInput>
+```
 
 ## Docs
 

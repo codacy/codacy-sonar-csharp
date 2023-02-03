@@ -6,7 +6,6 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 using SonarAnalyzer.Rules;
-using SonarAnalyzer.Rules.Common;
 using SonarAnalyzer.Rules.CSharp;
 
 namespace CodacyCSharp.Analyzer.Utilities

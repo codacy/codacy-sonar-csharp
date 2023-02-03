@@ -1,7 +1,6 @@
 SONAR_VERSION=$(shell xmllint --xpath 'string(/Project/ItemGroup/PackageReference[@Include="SonarAnalyzer.CSharp"]/@Version)' src/Analyzer/Analyzer.csproj | tr -d '\n')
 
 BUILD_CMD=dotnet build --no-restore /property:GenerateFullPaths=true
-
 RESOURCE_FOLDER=.res
 
 all: configure build
@@ -34,8 +33,11 @@ documentation:
 	dotnet "src/DocsGenerator/bin/Debug/net6/DocsGenerator.dll"
 	rm .SONAR_VERSION
 
+run:
+	dotnet run --project src/Analyzer -f net6
+
 publish:
 	dotnet publish -c Release -f net6
 
 clean:
-	rm -rf .lib/ .packages/ .res/
+	rm -rf .res packages
