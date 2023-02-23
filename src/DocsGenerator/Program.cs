@@ -36,7 +36,7 @@ namespace CodacyCSharp.DocsGenerator
 
             var descriptions = new List<Description>();
 
-            var doc = XDocument.Load(@".res/sonar-csharp-rules.xml");
+            var doc = XDocument.Load(@".res/sonar-csharp-rules.json");
 
             var elements = doc.Root.Elements().Where(rule => !CodeAnalyzer.IsInBlacklist(rule.Element("key").Value));
             
