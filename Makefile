@@ -22,7 +22,10 @@ update-docs:
 		-o sonar-csharp-plugin.jar
 	mkdir -p $(RESOURCE_FOLDER)
 	unzip sonar-csharp-plugin.jar -d '$(RESOURCE_FOLDER)/sonar-csharp-plugin'
-	cp $(RESOURCE_FOLDER)/sonar-csharp-plugin/org/sonar/plugins/csharp/rules.xml "$(RESOURCE_FOLDER)/sonar-csharp-rules.xml"
+	cp $(RESOURCE_FOLDER)/sonar-csharp-plugin/org/sonar/plugins/csharp/Rules.json "$(RESOURCE_FOLDER)"
+	cp $(RESOURCE_FOLDER)/sonar-csharp-plugin/org/sonar/plugins/csharp/S*.json "$(RESOURCE_FOLDER)"
+	cp $(RESOURCE_FOLDER)/sonar-csharp-plugin/org/sonar/plugins/csharp/S*.html "$(RESOURCE_FOLDER)"
+	rm $(RESOURCE_FOLDER)/Sonar_way_profile.json
 	rm sonar-csharp-plugin.jar
 	rm -rf $(RESOURCE_FOLDER)/sonar-csharp-plugin/
 

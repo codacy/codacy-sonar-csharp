@@ -36,51 +36,61 @@ namespace CodacyCSharp.DocsGenerator
 
             var descriptions = new List<Description>();
 
-            var doc = XDocument.Load(@".res/sonar-csharp-rules.xml");
+            string[] ruleSourceJsonFiles = Directory.GetFiles(".res", "S*.json");
+            Array.Sort(ruleSourceJsonFiles);
 
-            var elements = doc.Root.Elements().Where(rule => !CodeAnalyzer.IsInBlacklist(rule.Element("key").Value));
-            
-            foreach (var rule in elements)
+            string allSourceParametersJsonFileContent = File.ReadAllText(".res/Rules.json");
+            ParametersIndex[] allSourceParameters = JsonConvert.DeserializeObject<ParametersIndex[]>(allSourceParametersJsonFileContent);
+
+            foreach (string ruleSourceJsonFile in ruleSourceJsonFiles)
             {
-                var lvl = LevelHelper.ToLevel((rule.Element("severity") ?? new XElement("undefined")).Value);
+                string ruleSourceJsonFileContent = File.ReadAllText(ruleSourceJsonFile);
+                Rule rule = JsonConvert.DeserializeObject<Rule>(ruleSourceJsonFileContent);
 
-                var parameters = rule.Elements().Where(e => e.Name == "param");
-
-                var patternsParameters = parameters.Any() ? parameters.Select(param => new Parameter
+                if (CodeAnalyzer.IsInBlacklist(rule.sqKey))
                 {
-                    Name = param.Element("key").Value,
-                    Default = param.Element("defaultValue")?.Value ?? ""
-                }).ToArray() : null;
+                    continue;
+                }
 
-                var category = CategoryHelper.ToCategory(rule, lvl);
-                var patternId = rule.Element("key").Value;
+                var lvl = LevelHelper.ToLevel(rule.defaultSeverity);
+
+                ParametersIndex sourceParameters = allSourceParameters.First(x => x.Id == rule.sqKey);
+                var patternsParameters = sourceParameters.Parameters.Any() ? sourceParameters.Parameters.Select(param =>
+                 new Codacy.Engine.Seed.Patterns.Parameter
+                 {
+                     Name = param.Key,
+                     Default = param.DefaultValue ?? ""
+                 }).ToArray() : null;
+
+                var category = CategoryHelper.ToCategory(rule.tags, rule.type, lvl);
+                var patternId = rule.sqKey;
 
                 var pattern = new Pattern(
                     patternId,
                     lvl,
                     category,
-                    SubcategoryHelper.ToSubcategory(rule, category),
+                    SubcategoryHelper.ToSubcategory(rule.sqKey, rule.tags, category),
                     patternsParameters,
                     DefaultPatterns.defaultPatterns.Contains(patternId));
 
-                var descriptionParameters = parameters.Any() ? parameters.Select(param => new DescriptionParameter
+                var descriptionParameters = sourceParameters.Parameters.Any() ? sourceParameters.Parameters.Select(param => new DescriptionParameter
                 {
-                    Name = param.Element("key").Value,
-                    Description = param.Element("description").Value
+                    Name = param.Key,
+                    Description = param.Description,
                 }).ToArray() : null;
 
                 var description = new Description
                 {
                     PatternId = pattern.PatternId,
-                    Title = rule.Element("name").Value,
+                    Title = rule.title,
                     Parameters = descriptionParameters,
-                    TimeToFix = TTFHelper.ToCodacyTimeToFix(rule.Element("remediationFunctionBaseEffort")?.Value ?? "")
+                    TimeToFix = TTFHelper.ToCodacyTimeToFix(rule.remediation?.constantCost ?? "")
                 };
 
                 patternsFile.Patterns.Add(pattern);
                 descriptions.Add(description);
 
-                var descriptionHTML = rule.Element("description").Value;
+                string descriptionHTML = File.ReadAllText(".res/" + rule.sqKey + ".html");
                 var descriptionMD = new Converter().Convert(descriptionHTML);
                 File.WriteAllText(descriptionFolder + pattern.PatternId + ".md", descriptionMD);
             }

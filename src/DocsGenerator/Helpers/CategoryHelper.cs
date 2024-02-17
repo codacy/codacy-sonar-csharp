@@ -1,20 +1,19 @@
-using System.Xml.Linq;
+using System.Collections.Generic;
 using Codacy.Engine.Seed.Patterns;
 
 namespace CodacyCSharp.DocsGenerator.Helpers
 {
     public static class CategoryHelper
     {
-        public static Category ToCategory(XElement elem, Level lvl)
+        public static Category ToCategory(List<string> tags, string type, Level lvl)
         {
-            var tag = elem.Element("tag") ?? new XElement("undefined");
-            var type = elem.Element("type") ?? new XElement("undefined");
-
-            if(type.Value == "VULNERABILITY")
+            if (type == "VULNERABILITY")
             {
                 return Category.Security;
-            } else {
-                switch (tag.Value)
+            }
+            else if (tags.Count > 0)
+            {
+                switch (tags[0])
                 {
                     case "api-design":
                     case "bad-practice":
@@ -72,22 +71,31 @@ namespace CodacyCSharp.DocsGenerator.Helpers
                         return Category.CodeStyle;
 
                     default:
-                        switch (type.Value)
+                        return DefaultCaseWhenNoTags(type, lvl);
+                }
+            }
+            else
+            {
+                return DefaultCaseWhenNoTags(type, lvl);
+            }
+
+            static Category DefaultCaseWhenNoTags(string type, Level lvl)
+            {
+                switch (type)
+                {
+                    case "CODE_SMELL":
+                        if (lvl == Level.Info)
                         {
-                            case "CODE_SMELL":
-                                if (lvl == Level.Info)
-                                {
-                                    return Category.CodeStyle;
-                                }
-                                else
-                                {
-                                    return Category.ErrorProne;
-                                }
-                            case "BUG":
-                                return Category.ErrorProne;
-                            default:
-                                return Category.CodeStyle;
+                            return Category.CodeStyle;
                         }
+                        else
+                        {
+                            return Category.ErrorProne;
+                        }
+                    case "BUG":
+                        return Category.ErrorProne;
+                    default:
+                        return Category.CodeStyle;
                 }
             }
         }
