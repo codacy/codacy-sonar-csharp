@@ -1,49 +1,47 @@
-using System.Linq;
-using System.Xml.Linq;
+using System.Collections.Generic;
 using Codacy.Engine.Seed.Patterns;
 
 namespace CodacyCSharp.DocsGenerator.Helpers
 {
     public static class SubcategoryHelper
     {
-        public static Subcategory? ToSubcategory(XElement elem, Category category)
+        public static Subcategory? ToSubcategory(string key, List<string> tags, Category category)
         {
             if (category == Category.Security)
             {
-                var tags = elem.Elements("tag").Select((tag, index) => tag.Value);
-                if (tags.Any(tag => tag == "sql"))
+                if (tags.Contains("sql"))
                 {
                     return Subcategory.SQLInjection;
                 }
-                if (elem.Element("key").Value == "S5042" || tags.Any(tag => tag == "denial-of-service"))
+                if (key == "S5042" || tags.Contains("denial-of-service"))
                 {
                     return Subcategory.DoS;
                 }
-                if (tags.Any(tag => tag == "owasp-a1" || tag == "owasp-a8"))
+                if (tags.Contains("owasp-a1") || tags.Contains("owasp-a8"))
                 {
                     return Subcategory.CommandInjection;
                 }
-                if (tags.Any(tag => tag == "owasp-a2" || tag == "owasp-a5" || tag == "owasp-a10"))
+                if (tags.Contains("owasp-a2") || tags.Contains("owasp-a5") || tags.Contains("owasp-a10"))
                 {
                     return Subcategory.Auth;
                 }
-                if (tags.Any(tag => tag == "owasp-a3"))
+                if (tags.Contains("owasp-a3"))
                 {
                     return Subcategory.Cryptography;
                 }
-                if (tags.Any(tag => tag == "owasp-a4"))
+                if (tags.Contains("owasp-a4"))
                 {
                     return Subcategory.InputValidation;
                 }
-                if (tags.Any(tag => tag == "owasp-a6"))
+                if (tags.Contains("owasp-a6"))
                 {
                     return Subcategory.FileAccess;
                 }
-                if (tags.Any(tag => tag == "owasp-a7"))
+                if (tags.Contains("owasp-a7"))
                 {
                     return Subcategory.XSS;
                 }
-                if (tags.Any(tag => tag == "owasp-a9"))
+                if (tags.Contains("owasp-a9"))
                 {
                     return Subcategory.InsecureModulesLibraries;
                 }

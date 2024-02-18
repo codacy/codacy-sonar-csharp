@@ -6,7 +6,7 @@ namespace CodacyCSharp.DocsGenerator.Helpers
     {
         public static Level ToLevel(string severity)
         {
-            switch (severity)
+            switch (severity.ToUpper())
             {
                 case "MAJOR":
                     return Level.Warning;

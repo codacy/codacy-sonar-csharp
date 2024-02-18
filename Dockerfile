@@ -4,11 +4,12 @@ ARG DOTNET_BASE_OS=alpine3.18
 ## BUILD IMAGE
 FROM mcr.microsoft.com/dotnet/sdk:$DOTNET_VERSION-$DOTNET_BASE_OS AS builder
 
+RUN apk add --no-cache make unzip libxml2-utils
+
 COPY . /workdir
 WORKDIR /workdir
 
-RUN apk add --no-cache make unzip libxml2-utils &&\
-    make &&\
+RUN make &&\
     make publish &&\
     make documentation
 

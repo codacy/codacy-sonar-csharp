@@ -35,7 +35,7 @@ namespace CodacyCSharp.Analyzer.Utilities
         {
             return diagnosticAnalyzers
                 .Where(analyzerType => !IsParameterized(analyzerType))
-                .Where(type => GetTargetLanguages(type).IsAlso(AnalyzerLanguage.CSharp));
+                .Where(type => GetTargetLanguages(type) == AnalyzerLanguage.CSharp);
         }
 
         public static bool IsParameterized(Type analyzerType)
@@ -47,7 +47,7 @@ namespace CodacyCSharp.Analyzer.Utilities
         public IEnumerable<Type> GetAnalyzerTypes()
         {
             return diagnosticAnalyzers
-                .Where(type => GetTargetLanguages(type).IsAlso(AnalyzerLanguage.CSharp));
+                .Where(type => GetTargetLanguages(type) == AnalyzerLanguage.CSharp);
         }
 
         public static IEnumerable<Type> GetUtilityAnalyzerTypes()
@@ -55,7 +55,7 @@ namespace CodacyCSharp.Analyzer.Utilities
             return PackagedRuleAssemblies
                 .SelectMany(assembly => assembly.GetTypes())
                 .Where(t => !t.IsAbstract && t.IsSubclassOf(typeof(UtilityAnalyzerBase)))
-                .Where(type => GetTargetLanguages(type).IsAlso(AnalyzerLanguage.CSharp));
+                .Where(type => GetTargetLanguages(type) == AnalyzerLanguage.CSharp);
         }
 
         public static AnalyzerLanguage GetTargetLanguages(Type analyzerType)
@@ -66,14 +66,7 @@ namespace CodacyCSharp.Analyzer.Utilities
                 return null;
             }
 
-            var language = AnalyzerLanguage.None;
-            foreach (var lang in attribute.Languages)
-                if (lang == LanguageNames.CSharp)
-                {
-                    language = language.AddLanguage(AnalyzerLanguage.CSharp);
-                }
-
-            return language;
+            return AnalyzerLanguage.CSharp;
         }
     }
 }

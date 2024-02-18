@@ -1,11 +1,10 @@
 version: 2.1
 
 orbs:
-  codacy: codacy/base@10.1.1
-  codacy_plugins_test: codacy/plugins-test@1.1.1
+  codacy: codacy/base@11.1.1
+  codacy_plugins_test: codacy/plugins-test@2.0.9
 
 workflows:
-  version: 2
   build-and-deploy:
     jobs:
       - codacy/checkout_and_version
