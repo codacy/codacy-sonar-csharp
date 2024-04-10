@@ -238,7 +238,7 @@
         "description": "Number of times a literal must be duplicated to trigger an issue."
       }
     ],
-    "timeToFix": 10
+    "timeToFix": 5
   },
   {
     "patternId": "S1199",
@@ -329,6 +329,11 @@
   {
     "patternId": "S131",
     "title": "\"switch/Select\" statements should contain a \"default/Case Else\" clauses",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S1312",
+    "title": "Logger fields should be \"private static readonly\"",
     "timeToFix": 5
   },
   {
@@ -517,7 +522,7 @@
   },
   {
     "patternId": "S2053",
-    "title": "Hashes should include an unpredictable salt",
+    "title": "Password hashing functions should use an unpredictable salt",
     "timeToFix": 30
   },
   {
@@ -555,6 +560,11 @@
     "patternId": "S2123",
     "title": "Values should not be uselessly incremented",
     "timeToFix": 5
+  },
+  {
+    "patternId": "S2139",
+    "title": "Exceptions should be either logged or rethrown but not both",
+    "timeToFix": 15
   },
   {
     "patternId": "S2148",
@@ -849,6 +859,11 @@
   {
     "patternId": "S2612",
     "title": "Setting loose file permissions is security-sensitive",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S2629",
+    "title": "Logging templates should be constant",
     "timeToFix": 5
   },
   {
@@ -1240,6 +1255,11 @@
     "patternId": "S3415",
     "title": "Assertion arguments should be passed in the correct order",
     "timeToFix": 2
+  },
+  {
+    "patternId": "S3416",
+    "title": "Loggers should be named for their enclosing types",
+    "timeToFix": 5
   },
   {
     "patternId": "S3427",
@@ -2223,6 +2243,85 @@
     "timeToFix": 60
   },
   {
+    "patternId": "S6664",
+    "title": "The code block contains too many logging calls",
+    "parameters": [
+      {
+        "name": "debugThreshold",
+        "description": "The maximum number of DEBUG, TRACE and VERBOSE statements allowed in the same code block."
+      },
+      {
+        "name": "errorThreshold",
+        "description": "The maximum number of ERROR and FATAL statements allowed in the same code block."
+      },
+      {
+        "name": "informationThreshold",
+        "description": "The maximum number of INFORMATION statements allowed in the same code block."
+      },
+      {
+        "name": "warningThreshold",
+        "description": "The maximum number of WARNING statements allowed in the same code block."
+      }
+    ],
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6667",
+    "title": "Logging in a catch clause should pass the caught exception as a parameter.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6668",
+    "title": "Logging arguments should be passed to the correct parameter",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6669",
+    "title": "Logger field or property name should comply with a naming convention",
+    "parameters": [
+      {
+        "name": "format",
+        "description": "Regular expression used to check the field or property names against"
+      }
+    ],
+    "timeToFix": 2
+  },
+  {
+    "patternId": "S6670",
+    "title": "\"Trace.Write\" and \"Trace.WriteLine\" should not be used",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6672",
+    "title": "Generic logger injection should match enclosing type",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6673",
+    "title": "Log message template placeholders should be in the right order",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6674",
+    "title": "Log message template should be syntactically correct",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6675",
+    "title": "\"Trace.WriteLineIf\" should not be used with \"TraceSwitch\" levels",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6677",
+    "title": "Message template placeholders should be unique",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6678",
+    "title": "Use PascalCase for named placeholders",
+    "timeToFix": 1
+  },
+  {
     "patternId": "S6797",
     "title": "Blazor query parameter type should be supported",
     "timeToFix": 5
@@ -2245,6 +2344,21 @@
   {
     "patternId": "S6803",
     "title": "Parameters with SupplyParameterFromQuery attribute should be used only in routable components",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6930",
+    "title": "Backslash should be avoided in route templates",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6931",
+    "title": "ASP.NET controller actions should not have a route template starting with \"/\"",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6934",
+    "title": "A Route attribute should be added to the controller when a route template is specified at the action level",
     "timeToFix": 5
   },
   {
