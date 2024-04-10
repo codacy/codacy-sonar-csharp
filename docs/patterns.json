@@ -1,6 +1,6 @@
 {
   "name": "sonarscharp",
-  "version": "9.19",
+  "version": "9.23",
   "patterns": [
     {
       "patternId": "S100",
@@ -391,6 +391,12 @@
       "enabled": true
     },
     {
+      "patternId": "S1312",
+      "category": "CodeStyle",
+      "level": "Info",
+      "enabled": false
+    },
+    {
       "patternId": "S1313",
       "category": "CodeStyle",
       "level": "Warning",
@@ -651,6 +657,12 @@
       "category": "UnusedCode",
       "level": "Warning",
       "enabled": true
+    },
+    {
+      "patternId": "S2139",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
     },
     {
       "patternId": "S2148",
@@ -999,6 +1011,12 @@
     {
       "patternId": "S2612",
       "category": "Security",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S2629",
+      "category": "Performance",
       "level": "Warning",
       "enabled": false
     },
@@ -1471,6 +1489,12 @@
       "patternId": "S3415",
       "category": "ErrorProne",
       "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S3416",
+      "category": "ErrorProne",
+      "level": "Info",
       "enabled": false
     },
     {
@@ -2649,6 +2673,96 @@
       "enabled": false
     },
     {
+      "patternId": "S6664",
+      "category": "CodeStyle",
+      "level": "Info",
+      "parameters": [
+        {
+          "name": "debugThreshold",
+          "default": "4"
+        },
+        {
+          "name": "errorThreshold",
+          "default": "1"
+        },
+        {
+          "name": "informationThreshold",
+          "default": "2"
+        },
+        {
+          "name": "warningThreshold",
+          "default": "1"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "S6667",
+      "category": "ErrorProne",
+      "level": "Info",
+      "enabled": false
+    },
+    {
+      "patternId": "S6668",
+      "category": "CodeStyle",
+      "level": "Info",
+      "enabled": false
+    },
+    {
+      "patternId": "S6669",
+      "category": "CodeStyle",
+      "level": "Info",
+      "parameters": [
+        {
+          "name": "format",
+          "default": "^_?[Ll]og(ger)?$"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "patternId": "S6670",
+      "category": "CodeStyle",
+      "level": "Info",
+      "enabled": false
+    },
+    {
+      "patternId": "S6672",
+      "category": "ErrorProne",
+      "level": "Info",
+      "enabled": false
+    },
+    {
+      "patternId": "S6673",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6674",
+      "category": "ErrorProne",
+      "level": "Error",
+      "enabled": false
+    },
+    {
+      "patternId": "S6675",
+      "category": "ErrorProne",
+      "level": "Info",
+      "enabled": false
+    },
+    {
+      "patternId": "S6677",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6678",
+      "category": "CodeStyle",
+      "level": "Info",
+      "enabled": false
+    },
+    {
       "patternId": "S6797",
       "category": "ErrorProne",
       "level": "Warning",
@@ -2674,6 +2788,24 @@
     },
     {
       "patternId": "S6803",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6930",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6931",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6934",
       "category": "ErrorProne",
       "level": "Warning",
       "enabled": false
