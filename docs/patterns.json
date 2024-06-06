@@ -128,7 +128,7 @@
     },
     {
       "patternId": "S1104",
-      "category": "Security",
+      "category": "CodeStyle",
       "level": "Info",
       "enabled": true
     },
@@ -164,13 +164,13 @@
     },
     {
       "patternId": "S112",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": true
     },
     {
       "patternId": "S1121",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": true
     },
@@ -206,19 +206,19 @@
     },
     {
       "patternId": "S1134",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": false
     },
     {
       "patternId": "S1135",
-      "category": "Security",
+      "category": "CodeStyle",
       "level": "Info",
       "enabled": false
     },
     {
       "patternId": "S1147",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Error",
       "enabled": false
     },
@@ -302,7 +302,7 @@
     },
     {
       "patternId": "S1206",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Info",
       "enabled": true
     },
@@ -386,7 +386,7 @@
     },
     {
       "patternId": "S131",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Error",
       "enabled": true
     },
@@ -398,7 +398,7 @@
     },
     {
       "patternId": "S1313",
-      "category": "CodeStyle",
+      "category": "Security",
       "level": "Warning",
       "enabled": true
     },
@@ -516,13 +516,13 @@
     },
     {
       "patternId": "S1696",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": false
     },
     {
       "patternId": "S1698",
-      "category": "Security",
+      "category": "CodeStyle",
       "level": "Info",
       "enabled": true
     },
@@ -558,7 +558,7 @@
     },
     {
       "patternId": "S1854",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": true
     },
@@ -600,7 +600,7 @@
     },
     {
       "patternId": "S1944",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Error",
       "enabled": true
     },
@@ -696,7 +696,7 @@
     },
     {
       "patternId": "S2184",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Info",
       "enabled": true
     },
@@ -738,13 +738,13 @@
     },
     {
       "patternId": "S2221",
-      "category": "Security",
+      "category": "CodeStyle",
       "level": "Info",
       "enabled": false
     },
     {
       "patternId": "S2222",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Error",
       "enabled": false
     },
@@ -756,7 +756,7 @@
     },
     {
       "patternId": "S2225",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": true
     },
@@ -792,7 +792,7 @@
     },
     {
       "patternId": "S2259",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": true
     },
@@ -940,7 +940,7 @@
     },
     {
       "patternId": "S2386",
-      "category": "Security",
+      "category": "CodeStyle",
       "level": "Info",
       "enabled": true
     },
@@ -974,7 +974,7 @@
     },
     {
       "patternId": "S2445",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": false
     },
@@ -986,7 +986,7 @@
     },
     {
       "patternId": "S2486",
-      "category": "Security",
+      "category": "CodeStyle",
       "level": "Info",
       "enabled": true
     },
@@ -998,13 +998,13 @@
     },
     {
       "patternId": "S2583",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": true
     },
     {
       "patternId": "S2589",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": false
     },
@@ -1028,7 +1028,7 @@
     },
     {
       "patternId": "S2681",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": true
     },
@@ -1112,15 +1112,13 @@
     },
     {
       "patternId": "S2930",
-      "category": "Security",
-      "subcategory": "DoS",
+      "category": "ErrorProne",
       "level": "Error",
       "enabled": true
     },
     {
       "patternId": "S2931",
-      "category": "Security",
-      "subcategory": "DoS",
+      "category": "ErrorProne",
       "level": "Error",
       "enabled": true
     },
@@ -1138,8 +1136,7 @@
     },
     {
       "patternId": "S2952",
-      "category": "Security",
-      "subcategory": "DoS",
+      "category": "ErrorProne",
       "level": "Error",
       "enabled": true
     },
@@ -1667,7 +1664,7 @@
     },
     {
       "patternId": "S3655",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": true
     },
@@ -1695,7 +1692,7 @@
     },
     {
       "patternId": "S3869",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Error",
       "enabled": true
     },
@@ -1869,7 +1866,7 @@
     },
     {
       "patternId": "S3949",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": false
     },
@@ -2325,7 +2322,7 @@
     },
     {
       "patternId": "S4487",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Error",
       "enabled": false
     },
@@ -2391,7 +2388,7 @@
     },
     {
       "patternId": "S4792",
-      "category": "CodeStyle",
+      "category": "Security",
       "level": "Error",
       "enabled": false
     },
@@ -2542,7 +2539,7 @@
     },
     {
       "patternId": "S6507",
-      "category": "Security",
+      "category": "ErrorProne",
       "level": "Warning",
       "enabled": false
     },
@@ -2668,7 +2665,7 @@
     },
     {
       "patternId": "S6640",
-      "category": "CodeStyle",
+      "category": "Security",
       "level": "Warning",
       "enabled": false
     },

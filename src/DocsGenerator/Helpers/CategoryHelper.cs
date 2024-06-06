@@ -5,15 +5,15 @@ namespace CodacyCSharp.DocsGenerator.Helpers
 {
     public static class CategoryHelper
     {
-        public static Category ToCategory(List<string> tags, string type, Level lvl)
+        public static Category ToCategory(Rule rule, Level lvl)
         {
-            if (type == "VULNERABILITY")
+            if (rule.type == "VULNERABILITY" || rule.type == "SECURITY_HOTSPOT")
             {
                 return Category.Security;
             }
-            else if (tags.Count > 0)
+            else if (rule.tags.Count > 0)
             {
-                switch (tags[0])
+                switch (rule.tags[0])
                 {
                     case "api-design":
                     case "bad-practice":
@@ -32,26 +32,27 @@ namespace CodacyCSharp.DocsGenerator.Helpers
                     case "pinvoke":
                         return Category.ErrorProne;
 
-                    case "cert":
-                    case "cwe":
-                    case "denial-of-service":
-                    case "overflow":
-                    case "owasp-a1":
-                    case "owasp-a2":
-                    case "owasp-a3":
-                    case "owasp-a4":
-                    case "owasp-a5":
-                    case "owasp-a6":
-                    case "owasp-a7":
-                    case "owasp-a8":
-                    case "owasp-a9":
-                    case "owasp-a10":
-                    case "security":
-                    case "leak":
-                    case "sans-top25-risky":
-                    case "sans-top25-porous":
-                    case "sans-top25-insecure":
-                        return Category.Security;
+                    // These are skipped to avoid non-security issues being classified as so.
+                    // case "cert":
+                    // case "cwe":
+                    // case "denial-of-service":
+                    // case "overflow":
+                    // case "owasp-a1":
+                    // case "owasp-a2":
+                    // case "owasp-a3":
+                    // case "owasp-a4":
+                    // case "owasp-a5":
+                    // case "owasp-a6":
+                    // case "owasp-a7":
+                    // case "owasp-a8":
+                    // case "owasp-a9":
+                    // case "owasp-a10":
+                    // case "security":
+                    // case "leak":
+                    // case "sans-top25-risky":
+                    // case "sans-top25-porous":
+                    // case "sans-top25-insecure":
+                    //     return Category.Security;
 
                     case "multi-threading":
                     case "performance":
@@ -71,12 +72,12 @@ namespace CodacyCSharp.DocsGenerator.Helpers
                         return Category.CodeStyle;
 
                     default:
-                        return DefaultCaseWhenNoTags(type, lvl);
+                        return DefaultCaseWhenNoTags(rule.type, lvl);
                 }
             }
             else
             {
-                return DefaultCaseWhenNoTags(type, lvl);
+                return DefaultCaseWhenNoTags(rule.type, lvl);
             }
 
             static Category DefaultCaseWhenNoTags(string type, Level lvl)
