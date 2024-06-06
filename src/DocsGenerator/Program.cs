@@ -62,7 +62,7 @@ namespace CodacyCSharp.DocsGenerator
                      Default = param.DefaultValue ?? ""
                  }).ToArray() : null;
 
-                var category = CategoryHelper.ToCategory(rule.tags, rule.type, lvl);
+                var category = CategoryHelper.ToCategory(rule, lvl);
                 var patternId = rule.sqKey;
 
                 var pattern = new Pattern(
