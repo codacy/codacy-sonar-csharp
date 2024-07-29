@@ -390,7 +390,7 @@
   },
   {
     "patternId": "S1479",
-    "title": "\"switch\" statements should not have too many \"case\" clauses",
+    "title": "\"switch\" statements with many \"case\" clauses should have only one statement",
     "parameters": [
       {
         "name": "maximum",
@@ -1858,7 +1858,7 @@
   },
   {
     "patternId": "S4201",
-    "title": "Null checks should not be used with \"is\"",
+    "title": "Null checks should not be combined with \"is\" operator checks",
     "timeToFix": 5
   },
   {
@@ -1915,6 +1915,11 @@
     "patternId": "S4277",
     "title": "\"Shared\" parts should not be created with \"new\"",
     "timeToFix": 5
+  },
+  {
+    "patternId": "S4347",
+    "title": "Secure random number generators should not output predictable values",
+    "timeToFix": 2
   },
   {
     "patternId": "S4423",
@@ -2037,6 +2042,11 @@
     "timeToFix": 5
   },
   {
+    "patternId": "S5344",
+    "title": "Passwords should not be stored in plaintext or with a fast hashing algorithm",
+    "timeToFix": 30
+  },
+  {
     "patternId": "S5443",
     "title": "Using publicly writable directories is security-sensitive",
     "timeToFix": 5
@@ -2096,6 +2106,11 @@
     "patternId": "S6354",
     "title": "Use a testable date/time provider",
     "timeToFix": 20
+  },
+  {
+    "patternId": "S6377",
+    "title": "XML signatures should be validated securely",
+    "timeToFix": 15
   },
   {
     "patternId": "S6419",
@@ -2322,6 +2337,11 @@
     "timeToFix": 1
   },
   {
+    "patternId": "S6781",
+    "title": "JWT secret keys should not be disclosed",
+    "timeToFix": 30
+  },
+  {
     "patternId": "S6797",
     "title": "Blazor query parameter type should be supported",
     "timeToFix": 5
@@ -2357,8 +2377,53 @@
     "timeToFix": 5
   },
   {
+    "patternId": "S6932",
+    "title": "Use model binding instead of reading raw request data",
+    "timeToFix": 5
+  },
+  {
     "patternId": "S6934",
     "title": "A Route attribute should be added to the controller when a route template is specified at the action level",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6960",
+    "title": "Controllers should not have mixed responsibilities",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6961",
+    "title": "API Controllers should derive from ControllerBase instead of Controller",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6962",
+    "title": "You should pool HTTP connections with HttpClientFactory",
+    "timeToFix": 60
+  },
+  {
+    "patternId": "S6964",
+    "title": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6965",
+    "title": "REST API actions should be annotated with an HTTP verb attribute",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6966",
+    "title": "Awaitable method should be used",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6967",
+    "title": "ModelState.IsValid should be called in controller actions",
+    "timeToFix": 5
+  },
+  {
+    "patternId": "S6968",
+    "title": "Actions that return a value should be annotated with ProducesResponseTypeAttribute containing the return type",
     "timeToFix": 5
   },
   {
