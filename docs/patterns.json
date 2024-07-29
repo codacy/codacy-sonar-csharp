@@ -1,6 +1,6 @@
 {
   "name": "sonarscharp",
-  "version": "9.23",
+  "version": "9.30",
   "patterns": [
     {
       "patternId": "S100",
@@ -2279,6 +2279,12 @@
       "enabled": false
     },
     {
+      "patternId": "S4347",
+      "category": "Security",
+      "level": "Error",
+      "enabled": false
+    },
+    {
       "patternId": "S4423",
       "category": "Security",
       "level": "Error",
@@ -2424,6 +2430,12 @@
       "enabled": false
     },
     {
+      "patternId": "S5344",
+      "category": "Security",
+      "level": "Error",
+      "enabled": false
+    },
+    {
       "patternId": "S5443",
       "category": "Security",
       "level": "Error",
@@ -2492,6 +2504,12 @@
     {
       "patternId": "S6354",
       "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6377",
+      "category": "Security",
       "level": "Warning",
       "enabled": false
     },
@@ -2760,6 +2778,12 @@
       "enabled": false
     },
     {
+      "patternId": "S6781",
+      "category": "Security",
+      "level": "Error",
+      "enabled": false
+    },
+    {
       "patternId": "S6797",
       "category": "ErrorProne",
       "level": "Warning",
@@ -2802,7 +2826,61 @@
       "enabled": false
     },
     {
+      "patternId": "S6932",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
       "patternId": "S6934",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6960",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6961",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6962",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6964",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6965",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6966",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6967",
+      "category": "ErrorProne",
+      "level": "Warning",
+      "enabled": false
+    },
+    {
+      "patternId": "S6968",
       "category": "ErrorProne",
       "level": "Warning",
       "enabled": false
