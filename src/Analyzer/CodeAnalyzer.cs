@@ -114,7 +114,16 @@ namespace CodacyCSharp.Analyzer
 
         protected override async Task Analyze(CancellationToken cancellationToken)
         {
-            foreach (var file in Config.Files) await Analyze(file, cancellationToken).ConfigureAwait(false);
+            foreach (var file in Config.Files) {
+                // skip all files that don't have the main language extension
+                // To allow Semgrep to run on C# configuration files
+                // We are analyzing `Directory.Packages.props` as if it was a C# file
+                // This is to avoid that.
+                // More info here: https://codacy.zendesk.com/agent/tickets/44462
+                if (!file.EndsWith(".cs")) continue;
+
+                await Analyze(file, cancellationToken).ConfigureAwait(false);
+            }
         }
 
         public async Task Analyze(string file, CancellationToken cancellationToken)
