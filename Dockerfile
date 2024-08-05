@@ -1,5 +1,5 @@
 ARG DOTNET_VERSION=6.0
-ARG DOTNET_BASE_OS=alpine3.18
+ARG DOTNET_BASE_OS=alpine3.20
 
 ## BUILD IMAGE
 FROM mcr.microsoft.com/dotnet/sdk:$DOTNET_VERSION-$DOTNET_BASE_OS AS builder
