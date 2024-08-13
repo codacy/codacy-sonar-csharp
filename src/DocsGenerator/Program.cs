@@ -29,7 +29,7 @@ namespace CodacyCSharp.DocsGenerator
 
             var patternsFile = new CodacyPatterns
             {
-                Name = "sonarscharp",
+                Name = "sonarcsharp",
                 Version = string.Format("{0}.{1}", sonarVersion),
                 Patterns = new List<Pattern>()
             };
