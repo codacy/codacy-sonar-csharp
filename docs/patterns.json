@@ -1,6 +1,6 @@
 {
   "name": "sonarcsharp",
-  "version": "9.30",
+  "version": "9.32",
   "patterns": [
     {
       "patternId": "S100",
