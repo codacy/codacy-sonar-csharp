@@ -27,7 +27,6 @@ namespace CodacyCSharp.Analyzer
         private readonly DiagnosticsRunner diagnosticsRunner;
         private readonly string tmpSonarLintFolder;
         private static HashSet<string> blacklist = new HashSet<string> { "S1144", "S2325", "S2077" };
-        private static XElement cachedConfigurationFile;
 
         public static bool IsInBlacklist(string id)
         {
@@ -74,17 +73,13 @@ namespace CodacyCSharp.Analyzer
                 new XDocument(new XElement("AnalysisInput", rules)).Save(tmpSonarLintPath);
                 additionalFiles.Add(new AnalyzerAdditionalFile(tmpSonarLintPath));
             }
-            else if (cachedConfigurationFile == null && File.Exists(sonarConfigurationPath))
+            else if (File.Exists(sonarConfigurationPath))
             {
-                // Cache the configuration file in memory
-                cachedConfigurationFile = XDocument.Load(sonarConfigurationPath).Element("AnalysisInput");
+                var configurationFile = XDocument.Load(sonarConfigurationPath).Element("AnalysisInput");
                 additionalFiles.Add(new AnalyzerAdditionalFile(sonarConfigurationPath));
-            }
-
-            if (PatternIds is null && cachedConfigurationFile != null)
-            {
+                
                 // Load patterns from cached configuration file
-                var rules = cachedConfigurationFile.Element("Rules");
+                var rules = configurationFile.Element("Rules");
                 if (rules != null)
                 {
                     PatternIds = rules.Elements("Rule").Select(e => e.Elements("Key").Single().Value).ToImmutableList();
