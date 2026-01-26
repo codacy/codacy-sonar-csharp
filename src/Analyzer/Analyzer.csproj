@@ -3,6 +3,7 @@
         <OutputType>Exe</OutputType>
         <TargetFrameworks>net6</TargetFrameworks>
         <RootNamespace>CodacyCSharp.Analyzer</RootNamespace>
+        <NoWarn>$(NoWarn);AD0001</NoWarn>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.11.0" />
