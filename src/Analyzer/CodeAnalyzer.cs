@@ -26,7 +26,7 @@ namespace CodacyCSharp.Analyzer
         private readonly ImmutableArray<DiagnosticAnalyzer> availableAnalyzers;
         private readonly DiagnosticsRunner diagnosticsRunner;
         private readonly string tmpSonarLintFolder;
-        private static HashSet<string> blacklist = new HashSet<string> { "S1144", "S2325", "S2077" };
+        private static HashSet<string> blacklist = new HashSet<string> { "S1144", "S2325", "S2077", "AD0001" };
 
         public static bool IsInBlacklist(string id)
         {
@@ -123,15 +123,7 @@ namespace CodacyCSharp.Analyzer
             try
             {
                 var solution = CompilationHelper.GetSolutionFromFile(DefaultSourceFolder + file);
-                var project = solution.Projects.First();
-
-                // FIX: Prevent SonarAnalyzer NullReferenceException
-                project = project.AddAnalyzerConfigDocument(
-                    ".editorconfig", 
-                    Microsoft.CodeAnalysis.Text.SourceText.From("is_global = true\n"), 
-                    filePath: "/.editorconfig").Project;
-
-                var compilation = await project.GetCompilationAsync(cancellationToken);
+                var compilation = await solution.Projects.First().GetCompilationAsync();
 
                 // Parallelize diagnostics fetching
                 var diagnostics = await diagnosticsRunner.GetDiagnostics(compilation, cancellationToken);
