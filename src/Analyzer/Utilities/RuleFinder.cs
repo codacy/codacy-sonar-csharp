@@ -40,8 +40,8 @@ namespace CodacyCSharp.Analyzer.Utilities
 
         public static bool IsParameterized(Type analyzerType)
         {
-            return analyzerType.GetProperties()
-                .Any(p => p.GetCustomAttributes<RuleParameterAttribute>().Any());
+            return Array.Exists(analyzerType.GetProperties(), 
+                p => p.GetCustomAttributes<RuleParameterAttribute>().Any());
         }
 
         public IEnumerable<Type> GetAnalyzerTypes()
