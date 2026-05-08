@@ -123,7 +123,6 @@ namespace CodacyCSharp.Analyzer
             try
             {
                 var solution = CompilationHelper.GetSolutionFromFile(DefaultSourceFolder + file);
-                var project = solution.Projects.First();
                 var compilation = await solution.Projects.First().GetCompilationAsync();
 
                 // Parallelize diagnostics fetching
