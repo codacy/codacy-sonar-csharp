@@ -53,7 +53,8 @@ namespace CodacyCSharp.Analyzer.Runner
             var modifiedCompilation = compilation.WithOptions(compilationOptions);
             var compilationWithAnalyzer = modifiedCompilation.WithAnalyzers(
                 diagnosticsAnalyzers,
-                options);
+                options,
+                cancellationToken);
 
             return compilationWithAnalyzer.GetAnalyzerDiagnosticsAsync(cancellationToken);
         }
