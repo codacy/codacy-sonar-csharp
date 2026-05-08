@@ -59,3 +59,7 @@ x86/
 *.class
 *.log
 .vscode/
+
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md

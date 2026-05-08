@@ -123,7 +123,15 @@ namespace CodacyCSharp.Analyzer
             try
             {
                 var solution = CompilationHelper.GetSolutionFromFile(DefaultSourceFolder + file);
-                var compilation = await solution.Projects.First().GetCompilationAsync();
+                var project = solution.Projects.First();
+
+                // FIX: Prevent SonarAnalyzer NullReferenceException
+                project = project.AddAnalyzerConfigDocument(
+                    ".editorconfig", 
+                    Microsoft.CodeAnalysis.Text.SourceText.From("is_global = true\n"), 
+                    filePath: "/.editorconfig").Project;
+
+                var compilation = await project.GetCompilationAsync(cancellationToken);
 
                 // Parallelize diagnostics fetching
                 var diagnostics = await diagnosticsRunner.GetDiagnostics(compilation, cancellationToken);
