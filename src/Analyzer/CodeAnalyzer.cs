@@ -129,7 +129,7 @@ namespace CodacyCSharp.Analyzer
                 project = project.AddAnalyzerConfigDocument(
                     ".editorconfig", 
                     Microsoft.CodeAnalysis.Text.SourceText.From("is_global = true\n"), 
-                    filePath: "/.editorconfig");
+                    filePath: "/.editorconfig").Project;
 
                 var compilation = await project.GetCompilationAsync(cancellationToken);
 
