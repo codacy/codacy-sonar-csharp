@@ -1522,11 +1522,6 @@
     "timeToFix": 5
   },
   {
-    "patternId": "S3904",
-    "title": "Assemblies should have version information",
-    "timeToFix": 2
-  },
-  {
     "patternId": "S3906",
     "title": "Event Handlers should have the correct signature",
     "timeToFix": 5
@@ -1629,11 +1624,6 @@
   {
     "patternId": "S3990",
     "title": "Assemblies should be marked as CLS compliant",
-    "timeToFix": 1
-  },
-  {
-    "patternId": "S3992",
-    "title": "Assemblies should explicitly specify COM visibility",
     "timeToFix": 1
   },
   {

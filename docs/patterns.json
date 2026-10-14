@@ -1805,12 +1805,6 @@
       "enabled": false
     },
     {
-      "patternId": "S3904",
-      "category": "ErrorProne",
-      "level": "Error",
-      "enabled": false
-    },
-    {
       "patternId": "S3906",
       "category": "CodeStyle",
       "level": "Warning",
@@ -1932,12 +1926,6 @@
     },
     {
       "patternId": "S3990",
-      "category": "ErrorProne",
-      "level": "Warning",
-      "enabled": false
-    },
-    {
-      "patternId": "S3992",
       "category": "ErrorProne",
       "level": "Warning",
       "enabled": false
