@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Diagnostics;
 using SonarAnalyzer.Common;
 
@@ -56,7 +57,51 @@ namespace CodacyCSharp.Analyzer.Runner
                 options,
                 cancellationToken);
 
-            return compilationWithAnalyzer.GetAnalyzerDiagnosticsAsync(cancellationToken);
+            return FilterDiagnostics(modifiedCompilation, compilationWithAnalyzer, cancellationToken);
+        }
+
+        private static async Task<ImmutableArray<Diagnostic>> FilterDiagnostics(
+            Compilation compilation,
+            CompilationWithAnalyzers compilationWithAnalyzer,
+            CancellationToken cancellationToken)
+        {
+            var diagnostics = await compilationWithAnalyzer.GetAnalyzerDiagnosticsAsync(cancellationToken);
+
+            return diagnostics
+                .Where(diagnostic => !IsS1125OnUnresolvedType(compilation, diagnostic, cancellationToken))
+                .ToImmutableArray();
+        }
+
+        // S1125 can only tell `x == true` apart from a valid `bool?` comparison when the
+        // type of `x` is known. Files are compiled in isolation, so types declared in other
+        // files or packages are unresolved and the rule reports false positives on them.
+        private static bool IsS1125OnUnresolvedType(
+            Compilation compilation,
+            Diagnostic diagnostic,
+            CancellationToken cancellationToken)
+        {
+            var tree = diagnostic.Location.SourceTree;
+            if (diagnostic.Id != "S1125" || tree is null)
+            {
+                return false;
+            }
+
+            var binaryExpression = tree.GetRoot(cancellationToken)
+                .FindNode(diagnostic.Location.SourceSpan, getInnermostNodeForTie: true)
+                .AncestorsAndSelf()
+                .OfType<BinaryExpressionSyntax>()
+                .FirstOrDefault();
+
+            if (binaryExpression is null)
+            {
+                return false;
+            }
+
+            var semanticModel = compilation.GetSemanticModel(tree);
+
+            return new[] { binaryExpression.Left, binaryExpression.Right }
+                .Select(operand => semanticModel.GetTypeInfo(operand, cancellationToken).Type)
+                .Any(type => type is null || type.TypeKind == TypeKind.Error);
         }
 
         private ReportDiagnostic GetReportDiagnosticForPattern(string diagnosticId)

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="4.3">
+    <file name="S1128.cs">
+        <error source="S1128" line="3" message="Remove this unnecessary 'using'." severity="info" />
+    </file>
+</checkstyle>
