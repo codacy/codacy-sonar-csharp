@@ -110,12 +110,35 @@ namespace CodacyCSharp.Analyzer
 
         protected override async Task Analyze(CancellationToken cancellationToken)
         {
-            // Process files concurrently for better performance
-            var fileAnalysisTasks = Config.Files
-                .Where(file => file.EndsWith(".cs")) // only analyze C# files
-                .Select(file => Analyze(file, cancellationToken));
+            var files = Config.Files.Where(file => file.EndsWith(".cs"));
+            var options = new ParallelOptions
+            {
+                MaxDegreeOfParallelism = Environment.ProcessorCount,
+                CancellationToken = cancellationToken
+            };
 
-            await Task.WhenAll(fileAnalysisTasks);
+            await Parallel.ForEachAsync(files, options, async (file, ct) =>
+            {
+                Console.Error.WriteLine($"[sonar-csharp] analyzing {file}");
+                await Analyze(file, ct);
+            });
+        }
+
+        private const int MaxSyntaxDepth = 1000; // tune against the crashing file
+
+        private static int GetMaxDepth(SyntaxNode root)
+        {
+            var max = 0;
+            var stack = new Stack<(SyntaxNode Node, int Depth)>();
+            stack.Push((root, 1));
+            while (stack.Count > 0)
+            {
+                var (node, depth) = stack.Pop();
+                if (depth > max) max = depth;
+                foreach (var child in node.ChildNodes())
+                    stack.Push((child, depth + 1));
+            }
+            return max;
         }
 
         public async Task Analyze(string file, CancellationToken cancellationToken)
@@ -124,6 +147,17 @@ namespace CodacyCSharp.Analyzer
             {
                 var solution = CompilationHelper.GetSolutionFromFile(DefaultSourceFolder + file);
                 var compilation = await solution.Projects.First().GetCompilationAsync();
+
+                var root = await compilation.SyntaxTrees.First().GetRootAsync(cancellationToken);
+                if (GetMaxDepth(root) > MaxSyntaxDepth)
+                {
+                    Console.WriteLine(new CodacyResult
+                    {
+                        Filename = file,
+                        Message = "file is too deeply nested to analyze"
+                    });
+                    return;
+                }
 
                 // Parallelize diagnostics fetching
                 var diagnostics = await diagnosticsRunner.GetDiagnostics(compilation, cancellationToken);
