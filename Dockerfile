@@ -31,4 +31,8 @@ USER docker
 # Should make the image even more "read-only".
 ENV DOTNET_EnableDiagnostics=0
 
+# 16 MB stack for all runtime-created threads (value is hex); Roslyn/Sonar
+# analyzers recurse over the syntax tree and overflow the ~1.5 MB default on deep code
+ENV DOTNET_DefaultStackSize=1000000
+
 ENTRYPOINT [ "dotnet", "/opt/docker/bin/Analyzer.dll" ]
