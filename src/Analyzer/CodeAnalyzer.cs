@@ -148,8 +148,6 @@ namespace CodacyCSharp.Analyzer
                 var solution = CompilationHelper.GetSolutionFromFile(DefaultSourceFolder + file);
                 var compilation = await solution.Projects.First().GetCompilationAsync();
 
-                var compilation = await solution.Projects.First().GetCompilationAsync();
-
                 var root = await compilation.SyntaxTrees.First().GetRootAsync(cancellationToken);
                 if (GetMaxDepth(root) > MaxSyntaxDepth)
                 {
